@@ -1,0 +1,17 @@
+[
+  {
+    "record_id": "synthetic-001",
+    "source_alias": "source_01",
+    "title_text": "SYNTHETIC: 示例標題 [META:remove-me]"
+  },
+  {
+    "record_id": "synthetic-002",
+    "source_alias": "source_02",
+    "title_text": "SYNTHETIC: 另一個測試標題"
+  },
+  {
+    "record_id": "synthetic-003",
+    "source_alias": "source_02",
+    "title_text": "SYNTHETIC: 另一個測試標題"
+  }
+]

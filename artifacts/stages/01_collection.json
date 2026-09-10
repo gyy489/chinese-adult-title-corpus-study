@@ -1,0 +1,27 @@
+{
+  "stage_id": "01_collection",
+  "status": "complete_restricted_inputs",
+  "unit": "source record",
+  "inputs": {
+    "pseudonymous_sources": 10,
+    "production_source_configuration": "restricted"
+  },
+  "outputs": {
+    "round_1_records": 25191,
+    "round_2_records": 78552,
+    "total_records": 103743
+  },
+  "public_entry_points": [
+    "src/collection/crawler.py",
+    "src/collection/mysql_store.py",
+    "scripts/demo_collection.py"
+  ],
+  "validation": [
+    "allowed-domain filtering",
+    "detail/list URL separation",
+    "pagination and resumption",
+    "record deduplication",
+    "export checksums"
+  ],
+  "privacy_boundary": "Source names, domains, selectors, credentials, crawl snapshots, and record exports are restricted."
+}

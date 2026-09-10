@@ -1,0 +1,22 @@
+{
+  "stage_id": "05_final_text_deduplication",
+  "status": "complete_restricted_inputs",
+  "unit": "unique final deidentified title text",
+  "inputs": {
+    "contract_valid_record_outputs": 38623
+  },
+  "outputs": {
+    "unique_texts_before_privacy_remediation": 38300,
+    "extra_record_contributions_removed": 323,
+    "repeated_text_groups": 267
+  },
+  "public_entry_points": [
+    "src/preprocessing/pipeline.py"
+  ],
+  "validation": [
+    "exact final-text hash grouping",
+    "deterministic representative selection",
+    "unit reset from source record to unique final text"
+  ],
+  "privacy_boundary": "Group membership, per-title hashes, and representative crosswalks are restricted."
+}

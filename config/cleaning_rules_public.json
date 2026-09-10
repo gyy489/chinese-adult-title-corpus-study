@@ -1,0 +1,29 @@
+{
+  "version": "public-demo-1.0",
+  "notice": "Synthetic rule values demonstrate the production rule interfaces; sensitive production dictionaries are withheld.",
+  "minimum_semantic_cjk_length": 4,
+  "rules": [
+    {
+      "id": "unicode_nfkc",
+      "kind": "unicode_normalize",
+      "form": "NFKC"
+    },
+    {
+      "id": "remove_synthetic_metadata",
+      "kind": "regex_replace",
+      "pattern": "\\[(?:META|PROMO):[^\\]]+\\]",
+      "replacement": ""
+    },
+    {
+      "id": "normalize_variant",
+      "kind": "character_map",
+      "mapping": {
+        "臺": "台"
+      }
+    },
+    {
+      "id": "collapse_whitespace",
+      "kind": "collapse_whitespace"
+    }
+  ]
+}

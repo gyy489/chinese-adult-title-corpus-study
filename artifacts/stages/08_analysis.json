@@ -1,0 +1,30 @@
+{
+  "stage_id": "08_analysis",
+  "status": "complete_aggregate_release",
+  "unit": "unique final deidentified title text",
+  "inputs": {
+    "final_unique_texts": 38298,
+    "probability_track_texts": 36303,
+    "mechanism_enriched_texts": 1995
+  },
+  "outputs": {
+    "primary_opportunity_denominator": 4186,
+    "target_visible_n": 3967,
+    "actor_visible_n": 1053,
+    "target_minus_actor_percentage_points": 69.61
+  },
+  "public_entry_points": [
+    "src/analysis/metrics.py",
+    "scripts/reproduce_results.py",
+    "results/tables"
+  ],
+  "validation": [
+    "corpus accounting identities",
+    "paired-cell totals",
+    "denominator consistency",
+    "percentage recalculation",
+    "cross-stage and sensitivity checks"
+  ],
+  "privacy_boundary": "Only aggregate tables are public; no title-by-label analysis matrix is released.",
+  "inference_boundary": "Results describe the retained analytical sample and are not population estimates for all Chinese-language adult-video titles."
+}

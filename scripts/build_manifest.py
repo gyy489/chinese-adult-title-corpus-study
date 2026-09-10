@@ -10,7 +10,20 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "results" / "release_manifest.json"
-PUBLIC_ROOTS = ("config", "prompts", "results/tables", "results/figures", "results/reproduced")
+
+
+def manifestable_files() -> list[Path]:
+    files = []
+    for path in ROOT.rglob("*"):
+        if not path.is_file() or path == MANIFEST:
+            continue
+        relative = path.relative_to(ROOT)
+        if ".git" in relative.parts or "__pycache__" in relative.parts:
+            continue
+        if path.suffix in {".pyc", ".pyo"} or path.name == ".DS_Store":
+            continue
+        files.append(path)
+    return sorted(files)
 
 
 def sha256(path: Path) -> str:
@@ -23,19 +36,17 @@ def sha256(path: Path) -> str:
 
 def payload() -> dict[str, object]:
     files = []
-    for root_name in PUBLIC_ROOTS:
-        for path in sorted((ROOT / root_name).rglob("*")):
-            if path.is_file() and path != MANIFEST:
-                files.append(
-                    {
-                        "path": path.relative_to(ROOT).as_posix(),
-                        "bytes": path.stat().st_size,
-                        "sha256": sha256(path),
-                    }
-                )
+    for path in manifestable_files():
+        files.append(
+            {
+                "path": path.relative_to(ROOT).as_posix(),
+                "bytes": path.stat().st_size,
+                "sha256": sha256(path),
+            }
+        )
     return {
-        "release_id": "public-results-v1.0.0",
-        "scope": "Aggregate results and public annotation contracts only; no title-level data.",
+        "release_id": "public-pipeline-v2.0.0",
+        "scope": "Final public pipeline code, synthetic fixtures, stage manifests, and aggregate results; no real title-level data.",
         "files": files,
     }
 

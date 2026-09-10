@@ -1,0 +1,24 @@
+{
+  "stage_id": "03_semantic_length_gate",
+  "status": "complete_restricted_inputs",
+  "unit": "record row and unique candidate text",
+  "inputs": {
+    "deidentified_record_rows": 91172,
+    "unique_final_texts": 89538
+  },
+  "outputs": {
+    "candidate_record_rows": 90727,
+    "unique_candidate_texts": 89161,
+    "record_rows_excluded": 445,
+    "unique_texts_excluded": 377
+  },
+  "public_entry_points": [
+    "src/preprocessing/pipeline.py"
+  ],
+  "validation": [
+    "CJK semantic-length calculation",
+    "rule reapplied after preprocessing",
+    "row and unique-text counts kept distinct"
+  ],
+  "privacy_boundary": "Candidate texts and per-record gate outcomes are restricted."
+}

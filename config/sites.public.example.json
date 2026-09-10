@@ -1,0 +1,31 @@
+{
+  "_notice": "Synthetic example only. Production source names, domains, selectors, and crawl settings are restricted.",
+  "sites": [
+    {
+      "name": "source_01",
+      "scope": "synthetic_demo",
+      "start_urls": [
+        "https://example.invalid/page/1"
+      ],
+      "item_selectors": [
+        "article.record a.title"
+      ],
+      "next_page_selectors": [
+        "nav.pagination a.next"
+      ],
+      "allowed_domains": [
+        "example.invalid"
+      ],
+      "exclude_url_patterns": [
+        "/category/"
+      ],
+      "list_url_patterns": [
+        "/page/"
+      ],
+      "detail_url_patterns": [
+        "/record/"
+      ],
+      "fetch_mode": "requests"
+    }
+  ]
+}

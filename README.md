@@ -3,9 +3,10 @@
 [![Release safety and reproducibility](https://github.com/gyy489/chinese-adult-title-metadata-study/actions/workflows/ci.yml/badge.svg)](https://github.com/gyy489/chinese-adult-title-metadata-study/actions/workflows/ci.yml)
 
 Public research companion for an AI-assisted quantitative content analysis of
-Chinese-language adult-video title metadata. This repository presents released
-aggregate results, the frozen annotation contract, and deterministic programs
-that verify and reproduce the public result summaries and figures.
+Chinese-language adult-video title metadata. This repository exposes the final
+research pipeline node by node: collection, cleaning, de-identification,
+sampling, annotation validation, final deduplication, privacy remediation,
+human-review aggregation, analysis, and fail-closed publication.
 
 [中文说明](README.zh-CN.md)
 
@@ -55,19 +56,43 @@ titles.
 
 ## What is included
 
-- 18 aggregate CSV tables covering corpus formation, primary and supporting
-  results, sensitivity checks, cross-model diagnostics, and human review.
-- The frozen v0.3 annotation prompt, codebook, and 42-field JSON Schema.
-- Deterministic, standard-library Python programs that validate the release and
-  regenerate public summaries and SVG figures.
-- Automated tests and a GitHub Actions workflow.
+- The final configurable collection engine: selectors, pagination, domain
+  guards, HTTP/Playwright modes, resumption, MySQL storage, and export.
+- An auditable preprocessing engine, semantic-length gate, exact-final-text
+  deduplication, and public-safe synthetic rule configuration.
+- Fixed-seed stratified sampling and a separately labelled
+  mechanism-enriched component.
+- The complete frozen v0.3 prompt, codebook, 42-field JSON Schema, and layered
+  semantic/evidence validators.
+- Exact-span privacy remediation, mandatory post-remediation deduplication, and
+  a direct-locator release gate.
+- Human-review agreement code, aggregate statistical checks, 18 released CSV
+  tables, two deterministic SVG figures, checksums, tests, and CI.
+- Final aggregate manifests for every consequential stage—not old drafts,
+  retries, handoffs, or run diaries.
 
-The manuscript itself is not distributed here. No raw data or row-level title
-data are included.
+Start with the **[pipeline map](PIPELINE.md)**, then inspect the
+[stage manifests](artifacts/stages/README.md) or run the synthetic demos. The
+manuscript, real titles, raw data, and title-level outputs are not distributed.
+
+## Repository tour
+
+| Area | What it demonstrates |
+| --- | --- |
+| [`src/collection/`](src/collection/) | Reusable acquisition, parsing, persistence, resumption, and export code |
+| [`src/preprocessing/`](src/preprocessing/) | Ordered transformations, provenance-preserving audits, length screening, deduplication |
+| [`src/sampling/`](src/sampling/) | Stable-hash two-track sample construction |
+| [`src/annotation/`](src/annotation/) | Frozen 42-field contract and runtime validation |
+| [`src/privacy/`](src/privacy/) | Exact-span remediation and direct-locator gates |
+| [`src/human_review/`](src/human_review/) | Two-coder and human-versus-AI agreement aggregation |
+| [`src/analysis/`](src/analysis/) | Public estimators and table consistency checks |
+| [`artifacts/stages/`](artifacts/stages/) | Final aggregate state of each private-data pipeline node |
+| [`examples/synthetic/`](examples/synthetic/) | Harmless inputs for exercising restricted-input stages |
+| [`results/`](results/) | Released aggregate tables, figures, summaries, and checksums |
 
 ## Reproduce the public results
 
-Python 3.11 or later is sufficient; the public verification layer has no
+Python 3.11 or later is sufficient. The aggregate verification layer has no
 third-party runtime dependencies.
 
 ```bash
@@ -88,9 +113,24 @@ The public programs reproduce and verify released summaries from aggregate
 tables. Full title-level re-analysis requires the restricted research corpus,
 which is not distributed.
 
+To exercise the complete pipeline interfaces on synthetic inputs, install the
+small optional public environment and run the demos:
+
+```bash
+python -m pip install -r requirements-public.txt
+python -m scripts.demo_collection
+python -m scripts.demo_preprocessing
+python -m scripts.demo_sampling
+python -m scripts.validate_annotation_contract
+python -m scripts.demo_privacy_gate
+python -m scripts.demo_human_review
+```
+
 ## Released results
 
 - [Aggregate tables](results/tables/README.md)
+- [Final pipeline map and disclosure matrix](PIPELINE.md)
+- [Final stage manifests](artifacts/stages/README.md)
 - [Corpus-formation figure](results/figures/corpus_flow.svg)
 - [Target–actor visibility figure](results/figures/target_actor_visibility.svg)
 - [Machine-readable headline summary](results/reproduced/headline_metrics.json)

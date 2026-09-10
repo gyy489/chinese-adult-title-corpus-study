@@ -1,0 +1,26 @@
+{
+  "stage_id": "07_human_review",
+  "status": "complete_aggregate_release",
+  "unit": "reviewed title",
+  "inputs": {
+    "fixed_review_sample": 400,
+    "independent_coders": 2
+  },
+  "outputs": {
+    "reviewed_titles": 400,
+    "public_output": "aggregate agreement, confusion, and paired summaries"
+  },
+  "public_entry_points": [
+    "src/human_review/agreement.py",
+    "scripts/demo_human_review.py",
+    "results/tables/supplement_s4_human_audit_field_agreement.csv"
+  ],
+  "validation": [
+    "same fixed item set",
+    "independent first-exposure coding",
+    "AI labels hidden during review",
+    "complete item accounting"
+  ],
+  "privacy_boundary": "Assignments, title texts, evidence, local reviewer stores, and item-level decisions are restricted.",
+  "interpretation": "The review assesses AI coding accuracy. It is not a gold standard and does not replace full-corpus AI labels."
+}

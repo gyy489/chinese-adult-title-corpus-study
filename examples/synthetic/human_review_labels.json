@@ -1,0 +1,20 @@
+{
+  "coder_a": [
+    {"item_id": "review-01", "label": "visible"},
+    {"item_id": "review-02", "label": "absent"},
+    {"item_id": "review-03", "label": "visible"},
+    {"item_id": "review-04", "label": "unclear"}
+  ],
+  "coder_b": [
+    {"item_id": "review-01", "label": "visible"},
+    {"item_id": "review-02", "label": "absent"},
+    {"item_id": "review-03", "label": "unclear"},
+    {"item_id": "review-04", "label": "unclear"}
+  ],
+  "ai": [
+    {"item_id": "review-01", "label": "visible"},
+    {"item_id": "review-02", "label": "visible"},
+    {"item_id": "review-03", "label": "visible"},
+    {"item_id": "review-04", "label": "unclear"}
+  ]
+}

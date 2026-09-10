@@ -1,0 +1,20 @@
+{
+  "status": "final_aggregate_public_view",
+  "source_identity_policy": "pseudonymous aliases only",
+  "rounds": [
+    {
+      "round_id": "round_1",
+      "source_aliases": ["source_01", "source_02", "source_03", "source_04"],
+      "record_rows": 25191,
+      "engine": "src/collection/crawler.py"
+    },
+    {
+      "round_id": "round_2",
+      "source_aliases": ["source_05", "source_06", "source_07", "source_08", "source_09", "source_10"],
+      "record_rows": 78552,
+      "engine": "src/collection/crawler.py"
+    }
+  ],
+  "total_record_rows": 103743,
+  "restricted": ["real source names", "domains", "selectors", "credentials", "snapshots", "record exports"]
+}

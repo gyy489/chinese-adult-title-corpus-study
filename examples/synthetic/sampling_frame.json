@@ -1,0 +1,14 @@
+[
+  {"record_id": "s01", "source_alias": "source_01", "length_band": "short", "mechanism_group": "none"},
+  {"record_id": "s02", "source_alias": "source_01", "length_band": "short", "mechanism_group": "distribution"},
+  {"record_id": "s03", "source_alias": "source_01", "length_band": "long", "mechanism_group": "none"},
+  {"record_id": "s04", "source_alias": "source_01", "length_band": "long", "mechanism_group": "exposure"},
+  {"record_id": "s05", "source_alias": "source_02", "length_band": "short", "mechanism_group": "none"},
+  {"record_id": "s06", "source_alias": "source_02", "length_band": "short", "mechanism_group": "distribution"},
+  {"record_id": "s07", "source_alias": "source_02", "length_band": "long", "mechanism_group": "none"},
+  {"record_id": "s08", "source_alias": "source_02", "length_band": "long", "mechanism_group": "exposure"},
+  {"record_id": "s09", "source_alias": "source_03", "length_band": "short", "mechanism_group": "none"},
+  {"record_id": "s10", "source_alias": "source_03", "length_band": "long", "mechanism_group": "distribution"},
+  {"record_id": "s11", "source_alias": "source_03", "length_band": "long", "mechanism_group": "exposure"},
+  {"record_id": "s12", "source_alias": "source_03", "length_band": "short", "mechanism_group": "none"}
+]

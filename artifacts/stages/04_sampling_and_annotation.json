@@ -1,0 +1,30 @@
+{
+  "stage_id": "04_sampling_and_annotation",
+  "status": "complete_restricted_inputs",
+  "unit": "record-level annotation output",
+  "inputs": {
+    "candidate_record_rows": 90727,
+    "unique_candidate_texts": 89161
+  },
+  "outputs": {
+    "contract_valid_record_outputs": 38623,
+    "probability_track_record_outputs": 36623,
+    "mechanism_enriched_record_outputs": 2000,
+    "annotation_fields": 42
+  },
+  "public_entry_points": [
+    "src/sampling/fixed_seed.py",
+    "src/annotation/contract_v0_3.py",
+    "config/annotation_codebook_v0_3.json",
+    "config/annotation_output_schema_v0_3.json",
+    "prompts/annotation_prompt_v0_3.md"
+  ],
+  "validation": [
+    "fixed-seed stratified sampling",
+    "separate mechanism-enriched track label",
+    "exact 42-field contract",
+    "conditional dependency checks",
+    "exact-substring evidence checks"
+  ],
+  "privacy_boundary": "Frame membership, title payloads, per-title hashes, model responses, and evidence excerpts are restricted."
+}

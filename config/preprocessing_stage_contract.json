@@ -1,0 +1,67 @@
+{
+  "status": "final_public_stage_order",
+  "unit_policy": "Preserve source records until explicit final-text deduplication; retain source text and provenance in every restricted intermediate layer.",
+  "stages": [
+    {
+      "order": 1,
+      "id": "cross_round_exact_record_deduplication",
+      "operation": "group exact source strings and retain a deterministic canonical contribution",
+      "public_code": "src/preprocessing/pipeline.py:flag_exact_source_duplicates"
+    },
+    {
+      "order": 2,
+      "id": "structural_and_bracket_cleanup",
+      "operation": "apply ordered reviewed bracket and structural metadata rules",
+      "public_code": "src/preprocessing/pipeline.py:apply_rule"
+    },
+    {
+      "order": 3,
+      "id": "brand_and_marketing_cleanup",
+      "operation": "apply reviewed literal and regex rules without deleting the source layer",
+      "public_code": "src/preprocessing/pipeline.py:apply_rule"
+    },
+    {
+      "order": 4,
+      "id": "character_variant_normalization",
+      "operation": "apply an explicit character map and Unicode normalization",
+      "public_code": "src/preprocessing/pipeline.py:apply_rule"
+    },
+    {
+      "order": 5,
+      "id": "date_truncation_and_residue_cleanup",
+      "operation": "apply separately identified regex rules for date stamps, truncation markers, and acquisition residue",
+      "public_code": "src/preprocessing/pipeline.py:apply_rule"
+    },
+    {
+      "order": 6,
+      "id": "scope_exclusions",
+      "operation": "record explicit non-title, non-CJK, or long-form/forum exclusions; never silently drop rows",
+      "public_code": "src/preprocessing/pipeline.py:transform_record"
+    },
+    {
+      "order": 7,
+      "id": "reviewed_deidentification",
+      "operation": "apply only reviewed exact spans after source-match and overlap checks",
+      "public_code": "src/privacy/remediation.py:apply_exact_spans"
+    },
+    {
+      "order": 8,
+      "id": "semantic_length_gate",
+      "operation": "recalculate CJK semantic length after cleaning and de-identification",
+      "public_code": "src/preprocessing/pipeline.py:semantic_cjk_length"
+    },
+    {
+      "order": 9,
+      "id": "final_text_deduplication",
+      "operation": "reset the analytical unit to one exact final deidentified text",
+      "public_code": "src/preprocessing/pipeline.py:deduplicate_final_text"
+    },
+    {
+      "order": 10,
+      "id": "post_remediation_deduplication_and_locator_gate",
+      "operation": "reapply deduplication and fail on direct-locator findings",
+      "public_code": "src/privacy/remediation.py:remediate_records; src/privacy/direct_locator_gate.py:aggregate_gate"
+    }
+  ],
+  "restricted": "Production literal dictionaries, source adapters, title strings, per-title decisions, and audit rows."
+}

@@ -1,0 +1,29 @@
+{
+  "stage_id": "09_publication_gate",
+  "status": "active_fail_closed",
+  "unit": "public repository artifact",
+  "inputs": {
+    "aggregate_csv_tables": 18,
+    "title_level_files": 0,
+    "manuscript_files": 0
+  },
+  "outputs": {
+    "deterministic_figures": 2,
+    "checksum_manifest": "results/release_manifest.json",
+    "continuous_integration": "Python 3.11 and 3.12"
+  },
+  "public_entry_points": [
+    "scripts/verify_release.py",
+    "scripts/build_manifest.py",
+    ".github/workflows/ci.yml"
+  ],
+  "validation": [
+    "forbidden path and extension checks",
+    "row-level field checks",
+    "secret and local-path checks",
+    "artifact size limits",
+    "SHA-256 checksum verification",
+    "deterministic regeneration tests"
+  ],
+  "privacy_boundary": "The release gate is preventive engineering, not an anonymity guarantee."
+}

@@ -1,8 +1,8 @@
 # 中文成人视频标题中的目标—行动者可见性
 
 这是一个面向公开展示的研究结果与复现仓库。项目使用 AI 辅助定量内容分析，研究中文成人视频
-标题元数据如何呈现传播目标与传播行动者。本仓库不发布论文全文、原始数据或任何标题级数据，
-只提供聚合结果、冻结编码合约和公开结果复现程序。
+标题元数据如何呈现传播目标与传播行动者。仓库按节点展示最终研究管线：采集、清洗、脱敏、
+抽样、AI 编码校验、终稿去重、隐私门禁、人工复核、结果分析和发布验收。
 
 [English README](README.md)
 
@@ -18,10 +18,16 @@
 
 ## 仓库内容
 
-- 18 张不含标题文本和来源信息的聚合结果表；
-- v0.3 的 42 字段编码 Schema、码本和提示词；
-- 根据公开聚合表确定性重建汇总结果与 SVG 图的 Python 程序；
-- 发布安全检查、自动化测试和 GitHub Actions。
+- 可配置采集器、页面解析、分页、断点恢复、MySQL 存储与导出代码；
+- 按顺序执行的清洗规则引擎、语义长度门禁和最终文本去重；
+- 固定随机种子分层抽样与独立标记的机制加量轨道；
+- v0.3 的完整 42 字段 Schema、码本、提示词和运行时校验器；
+- 精确区间替换、脱敏后重新去重、直接定位符扫描和人工复核聚合程序；
+- 18 张聚合结果表、确定性图表、每个关键节点的最终状态清单、测试和 CI。
+
+请先看 **[研究管线图](PIPELINE.md)** 和
+[节点状态清单](artifacts/stages/README.md)。仓库不展示多次修改的报告、失败记录或交接稿，
+但会展示研究者检查每个关键节点所需的最终代码、公开配置和聚合状态。
 
 ## 快速验证
 
@@ -34,6 +40,18 @@ python -m unittest discover -s tests -v
 
 公开程序可以复核已发布聚合表之间的数字关系，并重新生成公开汇总和图形。由于标题级研究语料
 不公开，本仓库不宣称能够从原始标题重新完成全量分析。
+
+要用无敏感内容的合成输入跑通各阶段接口：
+
+```bash
+python -m pip install -r requirements-public.txt
+python -m scripts.demo_collection
+python -m scripts.demo_preprocessing
+python -m scripts.demo_sampling
+python -m scripts.validate_annotation_contract
+python -m scripts.demo_privacy_gate
+python -m scripts.demo_human_review
+```
 
 ## 发布边界
 

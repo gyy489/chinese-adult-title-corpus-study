@@ -1,0 +1,25 @@
+{
+  "stage_id": "02_preparation",
+  "status": "complete_restricted_inputs",
+  "unit": "source record and exact final text",
+  "inputs": {
+    "source_records": 103743
+  },
+  "outputs": {
+    "deidentified_record_rows": 91172,
+    "unique_final_texts": 89538,
+    "excluded_records": 12571
+  },
+  "public_entry_points": [
+    "src/preprocessing/pipeline.py",
+    "config/cleaning_rules_public.json",
+    "scripts/demo_preprocessing.py"
+  ],
+  "validation": [
+    "ordered rule execution",
+    "source-text preservation",
+    "per-rule before/after checksums",
+    "explicit exclusion accounting"
+  ],
+  "privacy_boundary": "Production literal dictionaries, source adapters, and title-level transformation logs are restricted."
+}

@@ -13,8 +13,9 @@ deduplication removed two additional record contributions. The post-build
 direct-locator gate found zero matches in the six defined locator classes.
 
 These controls reduce disclosure risk but do not establish complete anonymity
-or independent anonymity certification. Accordingly, the public repository
-contains only aggregate tables and research contracts. It excludes:
+or independent anonymity certification. The public repository therefore shows
+the final algorithms, public-safe configurations, synthetic fixtures, and
+aggregate stage/results artifacts, while excluding:
 
 - raw or de-identified title strings;
 - per-title hashes, record keys, provenance indices, and source identities;

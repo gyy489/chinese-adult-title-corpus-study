@@ -9,6 +9,11 @@ import json
 import re
 from pathlib import Path
 
+try:
+    from scripts.build_manifest import manifestable_files
+except ModuleNotFoundError:  # Support `python scripts/verify_release.py`.
+    from build_manifest import manifestable_files
+
 ROOT = Path(__file__).resolve().parents[1]
 FORBIDDEN_PARTS = {
     "data",
@@ -114,6 +119,12 @@ def verify_manifest() -> list[str]:
         return ["missing results/release_manifest.json"]
     payload = json.loads(path.read_text(encoding="utf-8"))
     errors = []
+    listed = {entry["path"] for entry in payload.get("files", [])}
+    expected = {path.relative_to(ROOT).as_posix() for path in manifestable_files()}
+    if listed != expected:
+        missing = sorted(expected - listed)
+        extra = sorted(listed - expected)
+        errors.append(f"manifest inventory differs; missing={missing}, extra={extra}")
     for entry in payload.get("files", []):
         artifact = ROOT / entry["path"]
         if not artifact.is_file():

@@ -1,0 +1,31 @@
+{
+  "stage_id": "06_privacy_remediation",
+  "status": "complete_researcher_review_not_independent_certification",
+  "unit": "unique final deidentified title text",
+  "inputs": {
+    "unique_texts_before_remediation": 38300,
+    "researcher_confirmed_titles": 111
+  },
+  "outputs": {
+    "titles_with_replacements": 100,
+    "exact_span_replacements": 132,
+    "catalog_number_titles_retained": 11,
+    "titles_excluded": 0,
+    "post_remediation_duplicate_contributions_removed": 2,
+    "final_unique_texts": 38298,
+    "postbuild_direct_locator_findings": 0
+  },
+  "public_entry_points": [
+    "src/privacy/remediation.py",
+    "src/privacy/direct_locator_gate.py",
+    "scripts/demo_privacy_gate.py"
+  ],
+  "validation": [
+    "expected-source exact-span match",
+    "non-overlap check",
+    "post-remediation final-text deduplication",
+    "direct-locator gate"
+  ],
+  "privacy_boundary": "Literal pre-remediation evidence and all item-level review decisions are immutable private provenance and are not released.",
+  "limitation": "The review was conducted by the researcher and must not be described as complete anonymity or independent anonymity certification."
+}
