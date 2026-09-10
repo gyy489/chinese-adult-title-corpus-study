@@ -1,99 +1,71 @@
-# Unequal Target–Actor Visibility in Chinese-Language Adult-Video Titles
+# 中文成人视频标题中的目标—行动者可见性
 
-[![Release safety and reproducibility](https://github.com/gyy489/chinese-adult-title-metadata-study/actions/workflows/ci.yml/badge.svg)](https://github.com/gyy489/chinese-adult-title-metadata-study/actions/workflows/ci.yml)
+[![发布安全与复现验证](https://github.com/gyy489/chinese-adult-title-corpus-study/actions/workflows/ci.yml/badge.svg)](https://github.com/gyy489/chinese-adult-title-corpus-study/actions/workflows/ci.yml)
 
-Public research companion for an AI-assisted quantitative content analysis of
-Chinese-language adult-video title metadata. This repository exposes the final
-research pipeline node by node: collection, cleaning, de-identification,
-sampling, annotation validation, final deduplication, privacy remediation,
-human-review aggregation, analysis, and fail-closed publication.
+这是一个面向公开展示的研究结果与复现仓库。项目使用 AI 辅助定量内容分析，研究中文成人视频
+标题元数据如何呈现传播目标与传播行动者。仓库按节点展示最终研究管线：采集、清洗、脱敏、
+抽样、AI 编码校验、终稿去重、隐私门禁、人工复核、结果分析和发布验收。
 
-[中文说明](README.zh-CN.md)
+[英文说明](README.en.md)
 
-## Abstract
+## 摘要
 
-Adult-video titles are public-facing metadata that may organize visibility
-within distribution narratives by selectively presenting some participant
-positions while leaving others unexpressed. Although pornography research has
-extensively examined gender representation, objectification, and agency,
-participant visibility in Chinese-language adult-video titles remains
-understudied. This study used quantitative content analysis to examine the
-allocation of visibility between targets and actors. The analytical sample
-comprised 38,298 unique final de-identified title texts selected through a
-pre-specified, fixed-seed stratified procedure with a smaller
-mechanism-enriched component. A 42-field coding instrument supported
-AI-assisted analysis, and the primary question was assessed among 4,186
-eligible titles. At the distribution stage, visibility was not evenly allocated
-but was concentrated in the target position: targets were visible in 3,967
-titles (94.77%), whereas actors were visible in only 1,053 (25.16%), a
-difference of 69.61 percentage points. In a separate analysis of
-distribution-target composition, strictly feminine-coded positions formed the
-largest category (64.55%). The findings document, within this retained
-analytical sample, an unequal pattern of participant visibility and show how a
-relational target–actor comparison can complement gender-word-frequency
-analysis. Adult-video titles cannot establish video content or participants'
-actual identities; future research can test the pattern's generalizability and
-interpretive consequences across platforms, languages, and audiences.
+成人视频标题作为面向公众的元数据，可能选择性地呈现部分参与者位置，同时不表达另一些位置。
+本研究考察中文成人视频标题中传播目标与行动者之间的可见性分配。最终分析样本包含 38,298 个
+唯一的最终去标识标题文本，其中 36,303 个来自概率抽样轨道，1,995 个来自预先设定的机制类别
+加量轨道。研究使用 42 字段编码工具进行 AI 辅助分析，并在 4,186 个符合条件的标题中考察主要
+问题。传播目标在 3,967 个标题中可见（94.77%），行动者在 1,053 个标题中可见（25.16%），
+相差 69.61 个百分点。另一项构成分析显示，严格编码为女性的传播目标是最大类别（64.55%）。
+这些结果仅描述保留的分析样本；标题不能证明视频内容、现实事件、参与者身份或真实授权状态。
 
-## Project at a glance
+## 数据角色
 
-| Item | Released description |
-| --- | ---: |
-| Source records collected | 103,743 |
-| Unique texts in the candidate frame | 89,161 |
-| Valid record-level AI outputs | 38,623 |
-| Final unique analytical texts | 38,298 |
-| Probability-track texts | 36,303 |
-| Mechanism-enriched texts | 1,995 |
-| Eligible texts for the primary comparison | 4,186 |
-| Annotation fields | 42 |
-| Independently reviewed titles used to assess AI accuracy | 400 |
+```text
+两轮十来源采集（103,743 条来源记录）
+→ 清洗与去标识（91,172 条记录／89,538 个唯一最终文本）
+→ 语义长度门禁（90,727 条候选记录／89,161 个唯一候选文本）
+→ 固定种子分层概率轨道＋预先设定的机制加量轨道
+→ 42 字段 v0.3 AI 编码（38,623 条合约有效的记录级输出）
+→ 第一次最终文本去重（38,300 个唯一文本）
+→ 研究者隐私复核、精确区间替换与再去重
+→ 最终分析语料（38,298 个唯一去标识文本）
+   ├─ 36,303 个概率轨道文本
+   └─ 1,995 个机制加量轨道文本
+→ 聚合分析与发布验收（主要比较的机会分母为 4,186）
+```
 
-The analytical unit is one unique final de-identified title text, not a source
-record, film, scene, event, or person. Results describe the retained analytical
-sample and are not population estimates for all Chinese-language adult-video
-titles.
+分析单位是一个唯一的最终去标识标题文本，不是来源记录、影片、场景、事件或人物。
+公开仓库只提供聚合结果，不包含用于恢复上述成员关系的标题级索引。
 
-## What is included
+## 仓库内容
 
-- The final configurable collection engine: selectors, pagination, domain
-  guards, HTTP/Playwright modes, resumption, MySQL storage, and export.
-- An auditable preprocessing engine, semantic-length gate, exact-final-text
-  deduplication, and public-safe synthetic rule configuration.
-- Fixed-seed stratified sampling and a separately labelled
-  mechanism-enriched component.
-- The complete frozen v0.3 prompt, codebook, 42-field JSON Schema, and layered
-  semantic/evidence validators.
-- Exact-span privacy remediation, mandatory post-remediation deduplication, and
-  a direct-locator release gate.
-- Human-review agreement code, aggregate statistical checks, 18 released CSV
-  tables, two deterministic SVG figures, checksums, tests, and CI.
-- Final aggregate manifests for every consequential stage—not old drafts,
-  retries, handoffs, or run diaries.
+- 可配置采集器、页面解析、分页、断点恢复、MySQL 存储与导出代码；
+- 按顺序执行的清洗规则引擎、语义长度门禁和最终文本去重；
+- 固定随机种子分层抽样与独立标记的机制加量轨道；
+- v0.3 的完整 42 字段 Schema、码本、提示词和运行时校验器；
+- 精确区间替换、脱敏后重新去重、直接定位符扫描和人工复核聚合程序；
+- 18 张聚合结果表、确定性图表、每个关键节点的最终状态清单、测试和 CI。
 
-Start with the **[pipeline map](PIPELINE.md)**, then inspect the
-[stage manifests](artifacts/stages/README.md) or run the synthetic demos. The
-manuscript, real titles, raw data, and title-level outputs are not distributed.
+请先看 **[研究管线图](PIPELINE.md)** 和
+[节点状态清单](artifacts/stages/README.md)。仓库不展示多次修改的报告、失败记录或交接稿，
+但会展示研究者检查每个关键节点所需的最终代码、公开配置和聚合状态。
 
-## Repository tour
+## 当前文件入口
 
-| Area | What it demonstrates |
-| --- | --- |
-| [`src/collection/`](src/collection/) | Reusable acquisition, parsing, persistence, resumption, and export code |
-| [`src/preprocessing/`](src/preprocessing/) | Ordered transformations, provenance-preserving audits, length screening, deduplication |
-| [`src/sampling/`](src/sampling/) | Stable-hash two-track sample construction |
-| [`src/annotation/`](src/annotation/) | Frozen 42-field contract and runtime validation |
-| [`src/privacy/`](src/privacy/) | Exact-span remediation and direct-locator gates |
-| [`src/human_review/`](src/human_review/) | Two-coder and human-versus-AI agreement aggregation |
-| [`src/analysis/`](src/analysis/) | Public estimators and table consistency checks |
-| [`artifacts/stages/`](artifacts/stages/) | Final aggregate state of each private-data pipeline node |
-| [`examples/synthetic/`](examples/synthetic/) | Harmless inputs for exercising restricted-input stages |
-| [`results/`](results/) | Released aggregate tables, figures, summaries, and checksums |
+- 完整管线、数量流和公开边界：[`PIPELINE.md`](PIPELINE.md)
+- 每个关键节点的最终聚合状态：[`artifacts/stages/`](artifacts/stages/)
+- 采集、断点恢复、存储与导出：[`src/collection/`](src/collection/)
+- 清洗、语义长度门禁和精确文本去重：[`src/preprocessing/`](src/preprocessing/)
+- 公开的最终预处理顺序：[`config/preprocessing_stage_contract.json`](config/preprocessing_stage_contract.json)
+- 固定种子分层抽样与机制加量：[`src/sampling/`](src/sampling/)
+- 42 字段码本、Schema、提示词和校验器：[`src/annotation/`](src/annotation/)
+- 精确区间隐私修复与直接定位符门禁：[`src/privacy/`](src/privacy/)
+- 人工复核一致性与 AI 准确性聚合：[`src/human_review/`](src/human_review/)
+- 18 张公开聚合结果表：[`results/tables/`](results/tables/)
+- 确定性结果复现：[`scripts/reproduce_results.py`](scripts/reproduce_results.py)
+- 发布安全检查与 SHA-256 清单：[`scripts/verify_release.py`](scripts/verify_release.py)、[`results/release_manifest.json`](results/release_manifest.json)
 
-## Reproduce the public results
-
-Python 3.11 or later is sufficient. The aggregate verification layer has no
-third-party runtime dependencies.
+## 快速验证
 
 ```bash
 python scripts/verify_release.py
@@ -102,19 +74,10 @@ python scripts/build_manifest.py --check
 python -m unittest discover -s tests -v
 ```
 
-To regenerate the checked-in summaries and figures:
+公开程序可以复核已发布聚合表之间的数字关系，并重新生成公开汇总和图形。由于标题级研究语料
+不公开，本仓库不宣称能够从原始标题重新完成全量分析。
 
-```bash
-python scripts/reproduce_results.py
-python scripts/build_manifest.py
-```
-
-The public programs reproduce and verify released summaries from aggregate
-tables. Full title-level re-analysis requires the restricted research corpus,
-which is not distributed.
-
-To exercise the complete pipeline interfaces on synthetic inputs, install the
-small optional public environment and run the demos:
+要用无敏感内容的合成输入跑通各阶段接口：
 
 ```bash
 python -m pip install -r requirements-public.txt
@@ -126,26 +89,10 @@ python -m scripts.demo_privacy_gate
 python -m scripts.demo_human_review
 ```
 
-## Released results
+## 发布边界
 
-- [Aggregate tables](results/tables/README.md)
-- [Final pipeline map and disclosure matrix](PIPELINE.md)
-- [Final stage manifests](artifacts/stages/README.md)
-- [Corpus-formation figure](results/figures/corpus_flow.svg)
-- [Target–actor visibility figure](results/figures/target_actor_visibility.svg)
-- [Machine-readable headline summary](results/reproduced/headline_metrics.json)
-- [Release manifest and checksums](results/release_manifest.json)
+仓库不包含真实标题、单标题哈希、记录标识、来源名称与网址、证据片段、模型逐条回答、人工逐条
+审核记录、论文全文、投稿文件或第三方论文 PDF。更详细的边界见
+[数据可用性](DATA_AVAILABILITY.md)与[隐私及发布范围](PRIVACY_AND_ETHICS.md)。
 
-## Privacy and availability
-
-Public artifacts intentionally exclude title text, per-title hashes, record
-identifiers, source names and URLs, evidence spans, model responses, and human
-review records. See [Data availability](DATA_AVAILABILITY.md) and
-[Privacy and release boundary](PRIVACY_AND_ETHICS.md).
-
-## Research status and author
-
-The associated manuscript is under journal review. Repository materials are a
-public research companion rather than the manuscript or a public dataset.
-
-**Ziyang Gu** · [ORCID 0009-0002-9998-1568](https://orcid.org/0009-0002-9998-1568)
+作者：**谷梓阳（Ziyang Gu）** · [ORCID](https://orcid.org/0009-0002-9998-1568)
