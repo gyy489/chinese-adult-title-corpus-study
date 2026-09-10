@@ -1,0 +1,4 @@
+comparison,fields,records,decisions,exact_agreement_n,micro_exact_agreement_percent,design_weighted_micro_exact_agreement_percent,micro_kappa,instruction_context
+Frozen AI vs human coder 1,16,400,6400,5881,91.89,92.52,not computed across distinct field domains,"Independent first-exposure, AI-blind human coding"
+Frozen AI vs human coder 2,16,400,6400,5714,89.28,89.94,not computed across distinct field domains,"Independent first-exposure, AI-blind human coding"
+Human coder 1 vs human coder 2,16,400,6400,5809,90.77,91.24,not computed across distinct field domains,"Two independent first-exposure, AI-blind human coders"

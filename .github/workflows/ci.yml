@@ -1,0 +1,28 @@
+name: Release safety and reproducibility
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify public release boundary
+        run: python scripts/verify_release.py
+      - name: Verify deterministic generated results
+        run: python scripts/reproduce_results.py --check
+      - name: Verify artifact manifest
+        run: python scripts/build_manifest.py --check
+      - name: Run tests
+        run: python -m unittest discover -s tests -v

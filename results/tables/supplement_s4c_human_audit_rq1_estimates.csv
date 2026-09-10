@@ -1,0 +1,10 @@
+scope,source,eligible_n,target_visible_n,unweighted_target_visible_percent,actor_visible_n,unweighted_actor_visible_percent,unweighted_target_minus_actor_pp,design_weighted_target_visible_percent,design_weighted_actor_visible_percent,design_weighted_target_minus_actor_pp,design_weighted_difference_ci95_low_pp,design_weighted_difference_ci95_high_pp,interval_method
+Source-specific eligibility,Frozen AI v0.3,60,57,95.00,13,21.67,73.33,94.69,21.82,72.86,60.75,84.97,stratified_srswor_ratio_linearization_normal_95_with_fpc
+Source-specific eligibility,Human coder 1,61,59,96.72,16,26.23,70.49,95.61,24.00,71.61,59.60,83.61,stratified_srswor_ratio_linearization_normal_95_with_fpc
+Source-specific eligibility,Human coder 2,65,63,96.92,23,35.38,61.54,97.20,39.32,57.88,43.72,72.05,stratified_srswor_ratio_linearization_normal_95_with_fpc
+AI-reference eligibility,Frozen AI v0.3,60,57,95.00,13,21.67,73.33,94.69,21.82,72.86,60.75,84.97,stratified_srswor_ratio_linearization_normal_95_with_fpc
+AI-reference eligibility,Human coder 1,60,52,86.67,12,20.00,66.67,87.36,19.16,68.20,55.62,80.78,stratified_srswor_ratio_linearization_normal_95_with_fpc
+AI-reference eligibility,Human coder 2,60,47,78.33,14,23.33,55.00,78.99,25.13,53.86,40.26,67.47,stratified_srswor_ratio_linearization_normal_95_with_fpc
+All-three common eligibility,Frozen AI v0.3,47,44,93.62,12,25.53,68.09,93.27,24.77,68.50,54.31,82.69,stratified_srswor_ratio_linearization_normal_95_with_fpc
+All-three common eligibility,Human coder 1,47,45,95.74,10,21.28,74.47,94.29,20.39,73.90,60.38,87.42,stratified_srswor_ratio_linearization_normal_95_with_fpc
+All-three common eligibility,Human coder 2,47,46,97.87,14,29.79,68.09,98.98,31.81,67.17,52.69,81.66,stratified_srswor_ratio_linearization_normal_95_with_fpc

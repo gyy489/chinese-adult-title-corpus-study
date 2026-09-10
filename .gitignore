@@ -1,0 +1,23 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+.env
+.env.*
+
+# This public repository must never contain row-level research data.
+data/
+paper/
+references/papers/
+**/private/
+**/sealed/
+**/interim/
+**/raw/
+*.jsonl
+*.sqlite*
+*.db
+*.docx
+*.pdf
+*.xlsx

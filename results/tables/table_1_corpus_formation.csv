@@ -1,0 +1,7 @@
+stage_or_component,included_n,excluded_n,status_or_rule
+Unique-text candidate frame,89161,,Not the inferential population
+Valid v0.3 record-level AI outputs,38623,,Outputs retained after validity screening
+Repeated-text record contributions excluded,,325,"One label-independent representative per final-text hash, reapplied after privacy remediation"
+Unique-text analytical sample,38298,50863,Each final-text hash contributes once
+Probability-track texts,36303,,Sampling-composition component; not a population weight
+Mechanism-enriched texts,1995,,Enriched component

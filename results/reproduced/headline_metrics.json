@@ -1,0 +1,50 @@
+{
+  "cross_stage_consistency": [
+    {
+      "comparison": "Creation to distribution",
+      "consistent_n": 1737,
+      "eligible_n": 1773,
+      "percent": 97.97
+    },
+    {
+      "comparison": "Distribution to exposure",
+      "consistent_n": 3733,
+      "eligible_n": 3743,
+      "percent": 99.73
+    },
+    {
+      "comparison": "Creation, distribution, and exposure",
+      "consistent_n": 1661,
+      "eligible_n": 1697,
+      "percent": 97.88
+    }
+  ],
+  "inference_boundary": "Describes the retained analytical sample; not a population estimate for all Chinese-language adult-video titles.",
+  "primary_result": {
+    "actor_visible_n": 1053,
+    "actor_visible_percent": 25.16,
+    "eligible_n": 4186,
+    "paired_cells": {
+      "actor_only_n": 61,
+      "both_n": 992,
+      "neither_n": 158,
+      "target_only_n": 2975
+    },
+    "paired_difference_percentage_points": 69.61,
+    "target_visible_n": 3967,
+    "target_visible_percent": 94.77
+  },
+  "scope": {
+    "analytical_unique_texts": 38298,
+    "candidate_unique_texts": 89161,
+    "mechanism_enriched_texts": 1995,
+    "probability_track_texts": 36303,
+    "source_records": 103743,
+    "valid_record_level_ai_outputs": 38623
+  },
+  "supporting_result": {
+    "eligible_n": 4186,
+    "percent": 64.55,
+    "strictly_feminine_target_n": 2702
+  }
+}

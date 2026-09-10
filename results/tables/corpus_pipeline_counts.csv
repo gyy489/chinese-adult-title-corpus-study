@@ -1,0 +1,8 @@
+stage,record_rows,unique_texts,excluded_or_removed,notes
+collected,103743,,,Source records from 10 websites
+prepared,91172,89538,12571,"After cleaning, exclusions, and de-identification"
+candidate,90727,89161,445,After semantic-length screening
+valid_ai_outputs,38623,,,Contract-valid record-level outputs
+analytical_sample,,38298,325,After final-text deduplication before and after privacy remediation
+probability_track,,36303,,Final unique texts from the probability track
+mechanism_enriched_track,,1995,,Final unique texts from the mechanism-enriched track

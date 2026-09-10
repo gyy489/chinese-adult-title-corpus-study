@@ -1,0 +1,16 @@
+boundary,source_boundary_id,category,source_category_id,category_n,opportunity_n,percent,interpretation
+Frozen v0.3 labels,frozen_v03,No visible authorization language,no_visible_authorization_language,3417,4186,81.63,Deterministic lexical sensitivity; not actual authorization or consent
+Frozen v0.3 labels,frozen_v03,Explicitly nonauthorized wording,unauthorized_explicit,752,4186,17.96,Deterministic lexical sensitivity; not actual authorization or consent
+Frozen v0.3 labels,frozen_v03,Explicitly authorized wording,authorized_explicit,15,4186,0.36,Deterministic lexical sensitivity; not actual authorization or consent
+Frozen v0.3 labels,frozen_v03,Unclear authorization wording,unclear,0,4186,0.00,Deterministic lexical sensitivity; not actual authorization or consent
+Frozen v0.3 labels,frozen_v03,Mixed or stage-conflicting authorization wording,mixed_or_stage_conflict,2,4186,0.05,Deterministic lexical sensitivity; not actual authorization or consent
+Narrow explicit-victim-or-stealth boundary,narrow_explicit_victim_or_stealth,No visible authorization language,no_visible_authorization_language,2961,4186,70.74,Deterministic lexical sensitivity; not actual authorization or consent
+Narrow explicit-victim-or-stealth boundary,narrow_explicit_victim_or_stealth,Explicitly nonauthorized wording,unauthorized_explicit,1208,4186,28.86,Deterministic lexical sensitivity; not actual authorization or consent
+Narrow explicit-victim-or-stealth boundary,narrow_explicit_victim_or_stealth,Explicitly authorized wording,authorized_explicit,15,4186,0.36,Deterministic lexical sensitivity; not actual authorization or consent
+Narrow explicit-victim-or-stealth boundary,narrow_explicit_victim_or_stealth,Unclear authorization wording,unclear,0,4186,0.00,Deterministic lexical sensitivity; not actual authorization or consent
+Narrow explicit-victim-or-stealth boundary,narrow_explicit_victim_or_stealth,Mixed or stage-conflicting authorization wording,mixed_or_stage_conflict,2,4186,0.05,Deterministic lexical sensitivity; not actual authorization or consent
+Broad leakage-semantics boundary,codex_broad_leakage_semantics,No visible authorization language,no_visible_authorization_language,2364,4186,56.47,Deterministic lexical sensitivity; not actual authorization or consent
+Broad leakage-semantics boundary,codex_broad_leakage_semantics,Explicitly nonauthorized wording,unauthorized_explicit,1805,4186,43.12,Deterministic lexical sensitivity; not actual authorization or consent
+Broad leakage-semantics boundary,codex_broad_leakage_semantics,Explicitly authorized wording,authorized_explicit,15,4186,0.36,Deterministic lexical sensitivity; not actual authorization or consent
+Broad leakage-semantics boundary,codex_broad_leakage_semantics,Unclear authorization wording,unclear,0,4186,0.00,Deterministic lexical sensitivity; not actual authorization or consent
+Broad leakage-semantics boundary,codex_broad_leakage_semantics,Mixed or stage-conflicting authorization wording,mixed_or_stage_conflict,2,4186,0.05,Deterministic lexical sensitivity; not actual authorization or consent

@@ -1,0 +1,186 @@
+scope,measure,comparison,first_value,second_value,records,cell_n,unweighted_cell_percent,design_weighted_cell_percent
+Full 400-record sample,RQ1 eligibility (binary),Frozen AI vs human coder 1,eligible,eligible,400,54,13.50,11.82
+Full 400-record sample,RQ1 eligibility (binary),Frozen AI vs human coder 1,eligible,outside_eligibility,400,6,1.50,1.05
+Full 400-record sample,RQ1 eligibility (binary),Frozen AI vs human coder 1,outside_eligibility,eligible,400,7,1.75,1.39
+Full 400-record sample,RQ1 eligibility (binary),Frozen AI vs human coder 1,outside_eligibility,outside_eligibility,400,333,83.25,85.75
+Full 400-record sample,RQ1 eligibility (binary),Frozen AI vs human coder 2,eligible,eligible,400,48,12.00,10.27
+Full 400-record sample,RQ1 eligibility (binary),Frozen AI vs human coder 2,eligible,outside_eligibility,400,12,3.00,2.60
+Full 400-record sample,RQ1 eligibility (binary),Frozen AI vs human coder 2,outside_eligibility,eligible,400,17,4.25,3.78
+Full 400-record sample,RQ1 eligibility (binary),Frozen AI vs human coder 2,outside_eligibility,outside_eligibility,400,323,80.75,83.35
+Full 400-record sample,RQ1 eligibility (binary),Human coder 1 vs human coder 2,eligible,eligible,400,52,13.00,11.16
+Full 400-record sample,RQ1 eligibility (binary),Human coder 1 vs human coder 2,eligible,outside_eligibility,400,9,2.25,2.05
+Full 400-record sample,RQ1 eligibility (binary),Human coder 1 vs human coder 2,outside_eligibility,eligible,400,13,3.25,2.89
+Full 400-record sample,RQ1 eligibility (binary),Human coder 1 vs human coder 2,outside_eligibility,outside_eligibility,400,326,81.50,83.90
+AI-reference eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 1,outside_visible_set,outside_visible_set,60,2,3.33,4.51
+AI-reference eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 1,outside_visible_set,visible,60,1,1.67,0.80
+AI-reference eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 1,visible,outside_visible_set,60,6,10.00,8.13
+AI-reference eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 1,visible,visible,60,51,85.00,86.56
+AI-reference eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 2,outside_visible_set,outside_visible_set,60,1,1.67,0.80
+AI-reference eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 2,outside_visible_set,visible,60,2,3.33,4.51
+AI-reference eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 2,visible,outside_visible_set,60,12,20.00,20.21
+AI-reference eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 2,visible,visible,60,45,75.00,74.48
+AI-reference eligibility,Distribution-target visibility (binary),Human coder 1 vs human coder 2,outside_visible_set,outside_visible_set,60,5,8.33,7.32
+AI-reference eligibility,Distribution-target visibility (binary),Human coder 1 vs human coder 2,outside_visible_set,visible,60,3,5.00,5.31
+AI-reference eligibility,Distribution-target visibility (binary),Human coder 1 vs human coder 2,visible,outside_visible_set,60,8,13.33,13.69
+AI-reference eligibility,Distribution-target visibility (binary),Human coder 1 vs human coder 2,visible,visible,60,44,73.33,73.67
+AI-reference eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 1,outside_visible_set,outside_visible_set,60,45,75.00,75.12
+AI-reference eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 1,outside_visible_set,visible,60,2,3.33,3.06
+AI-reference eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 1,visible,outside_visible_set,60,3,5.00,5.72
+AI-reference eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 1,visible,visible,60,10,16.67,16.10
+AI-reference eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 2,outside_visible_set,outside_visible_set,60,44,73.33,71.41
+AI-reference eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 2,outside_visible_set,visible,60,3,5.00,6.77
+AI-reference eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 2,visible,outside_visible_set,60,2,3.33,3.46
+AI-reference eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 2,visible,visible,60,11,18.33,18.36
+AI-reference eligibility,Distribution-actor visibility (binary),Human coder 1 vs human coder 2,outside_visible_set,outside_visible_set,60,43,71.67,69.56
+AI-reference eligibility,Distribution-actor visibility (binary),Human coder 1 vs human coder 2,outside_visible_set,visible,60,5,8.33,11.28
+AI-reference eligibility,Distribution-actor visibility (binary),Human coder 1 vs human coder 2,visible,outside_visible_set,60,3,5.00,5.31
+AI-reference eligibility,Distribution-actor visibility (binary),Human coder 1 vs human coder 2,visible,visible,60,9,15.00,13.85
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,feminine,feminine,60,32,53.33,55.56
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,feminine,gender_unspecified,60,1,1.67,0.80
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,feminine,mixed_multiple,60,1,1.67,2.26
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,feminine,not_applicable,60,5,8.33,7.32
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,gender_unspecified,feminine,60,1,1.67,2.26
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,gender_unspecified,gender_unspecified,60,7,11.67,11.84
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,gender_unspecified,mixed_multiple,60,2,3.33,3.06
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,gender_unspecified,not_visible,60,1,1.67,0.80
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,mixed_multiple,feminine,60,3,5.00,5.31
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,mixed_multiple,mixed_multiple,60,4,6.67,5.47
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,not_visible,feminine,60,1,1.67,0.80
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,not_visible,not_visible,60,2,3.33,4.51
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,feminine,feminine,60,25,41.67,45.18
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,feminine,gender_unspecified,60,1,1.67,2.26
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,feminine,masculine,60,1,1.67,0.80
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,feminine,mixed_multiple,60,2,3.33,2.01
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,feminine,not_applicable,60,9,15.00,13.44
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,feminine,not_visible,60,1,1.67,2.26
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,gender_unspecified,feminine,60,3,5.00,3.86
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,gender_unspecified,gender_unspecified,60,4,6.67,6.52
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,gender_unspecified,mixed_multiple,60,2,3.33,3.06
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,gender_unspecified,not_applicable,60,1,1.67,2.26
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,gender_unspecified,not_visible,60,1,1.67,2.26
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,mixed_multiple,feminine,60,3,5.00,4.27
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,mixed_multiple,mixed_multiple,60,4,6.67,6.52
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,not_visible,gender_unspecified,60,2,3.33,4.51
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,not_visible,not_visible,60,1,1.67,0.80
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,feminine,feminine,60,25,41.67,43.72
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,feminine,gender_unspecified,60,2,3.33,4.51
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,feminine,mixed_multiple,60,4,6.67,6.52
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,feminine,not_applicable,60,4,6.67,6.12
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,feminine,not_visible,60,2,3.33,3.06
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,gender_unspecified,feminine,60,2,3.33,3.06
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,gender_unspecified,gender_unspecified,60,3,5.00,4.27
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,gender_unspecified,masculine,60,1,1.67,0.80
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,gender_unspecified,not_applicable,60,1,1.67,2.26
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,gender_unspecified,not_visible,60,1,1.67,2.26
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,mixed_multiple,feminine,60,3,5.00,5.72
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,mixed_multiple,mixed_multiple,60,4,6.67,5.07
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,not_applicable,not_applicable,60,5,8.33,7.32
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,not_visible,feminine,60,1,1.67,0.80
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,not_visible,gender_unspecified,60,2,3.33,4.51
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,feminine,feminine,60,3,5.00,6.77
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,gender_unspecified,feminine,60,1,1.67,0.80
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,gender_unspecified,gender_unspecified,60,2,3.33,3.46
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,gender_unspecified,not_visible,60,3,5.00,5.72
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,masculine,masculine,60,4,6.67,5.07
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,not_visible,gender_unspecified,60,2,3.33,3.06
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,not_visible,not_applicable,60,5,8.33,7.32
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,not_visible,not_visible,60,40,66.67,67.79
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,feminine,feminine,60,1,1.67,2.26
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,feminine,gender_unspecified,60,1,1.67,2.26
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,feminine,not_applicable,60,1,1.67,2.26
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,gender_unspecified,feminine,60,1,1.67,0.80
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,gender_unspecified,gender_unspecified,60,4,6.67,7.97
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,gender_unspecified,not_visible,60,1,1.67,1.21
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,masculine,masculine,60,4,6.67,5.07
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,not_visible,feminine,60,1,1.67,2.26
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,not_visible,gender_unspecified,60,2,3.33,4.51
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,not_visible,not_applicable,60,9,15.00,13.44
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,not_visible,not_visible,60,35,58.33,57.97
+AI-reference eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,feminine,feminine,60,2,3.33,3.06
+AI-reference eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,feminine,gender_unspecified,60,1,1.67,2.26
+AI-reference eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,feminine,not_applicable,60,1,1.67,2.26
+AI-reference eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,gender_unspecified,gender_unspecified,60,2,3.33,3.46
+AI-reference eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,gender_unspecified,not_applicable,60,1,1.67,0.80
+AI-reference eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,gender_unspecified,not_visible,60,1,1.67,2.26
+AI-reference eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,masculine,masculine,60,4,6.67,5.07
+AI-reference eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,not_applicable,not_applicable,60,5,8.33,7.32
+AI-reference eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,not_visible,feminine,60,1,1.67,2.26
+AI-reference eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,not_visible,gender_unspecified,60,4,6.67,9.02
+AI-reference eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,not_visible,not_applicable,60,3,5.00,5.31
+AI-reference eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,not_visible,not_visible,60,35,58.33,56.92
+All-three common eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 1,outside_visible_set,outside_visible_set,47,2,4.26,5.71
+All-three common eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 1,outside_visible_set,visible,47,1,2.13,1.02
+All-three common eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 1,visible,visible,47,44,93.62,93.27
+All-three common eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 2,outside_visible_set,outside_visible_set,47,1,2.13,1.02
+All-three common eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 2,outside_visible_set,visible,47,2,4.26,5.71
+All-three common eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 2,visible,visible,47,44,93.62,93.27
+All-three common eligibility,Distribution-target visibility (binary),Human coder 1 vs human coder 2,outside_visible_set,visible,47,2,4.26,5.71
+All-three common eligibility,Distribution-target visibility (binary),Human coder 1 vs human coder 2,visible,outside_visible_set,47,1,2.13,1.02
+All-three common eligibility,Distribution-target visibility (binary),Human coder 1 vs human coder 2,visible,visible,47,44,93.62,93.27
+All-three common eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 1,outside_visible_set,outside_visible_set,47,34,72.34,72.37
+All-three common eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 1,outside_visible_set,visible,47,1,2.13,2.86
+All-three common eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 1,visible,outside_visible_set,47,3,6.38,7.24
+All-three common eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 1,visible,visible,47,9,19.15,17.53
+All-three common eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 2,outside_visible_set,outside_visible_set,47,32,68.09,66.66
+All-three common eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 2,outside_visible_set,visible,47,3,6.38,8.57
+All-three common eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 2,visible,outside_visible_set,47,1,2.13,1.53
+All-three common eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 2,visible,visible,47,11,23.40,23.24
+All-three common eligibility,Distribution-actor visibility (binary),Human coder 1 vs human coder 2,outside_visible_set,outside_visible_set,47,32,68.09,65.33
+All-three common eligibility,Distribution-actor visibility (binary),Human coder 1 vs human coder 2,outside_visible_set,visible,47,5,10.64,14.28
+All-three common eligibility,Distribution-actor visibility (binary),Human coder 1 vs human coder 2,visible,outside_visible_set,47,1,2.13,2.86
+All-three common eligibility,Distribution-actor visibility (binary),Human coder 1 vs human coder 2,visible,visible,47,9,19.15,17.53
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,feminine,feminine,47,27,57.45,59.74
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,feminine,gender_unspecified,47,1,2.13,1.02
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,feminine,mixed_multiple,47,1,2.13,2.86
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,gender_unspecified,feminine,47,1,2.13,2.86
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,gender_unspecified,gender_unspecified,47,5,10.64,9.27
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,gender_unspecified,mixed_multiple,47,2,4.26,3.87
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,mixed_multiple,feminine,47,3,6.38,6.73
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,mixed_multiple,mixed_multiple,47,4,8.51,6.93
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,not_visible,feminine,47,1,2.13,1.02
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,not_visible,not_visible,47,2,4.26,5.71
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,feminine,feminine,47,25,53.19,57.19
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,feminine,gender_unspecified,47,1,2.13,2.86
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,feminine,masculine,47,1,2.13,1.02
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,feminine,mixed_multiple,47,2,4.26,2.55
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,gender_unspecified,feminine,47,2,4.26,3.87
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,gender_unspecified,gender_unspecified,47,4,8.51,8.26
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,gender_unspecified,mixed_multiple,47,2,4.26,3.87
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,mixed_multiple,feminine,47,3,6.38,5.40
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,mixed_multiple,mixed_multiple,47,4,8.51,8.26
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,not_visible,gender_unspecified,47,2,4.26,5.71
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,not_visible,not_visible,47,1,2.13,1.02
+All-three common eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,feminine,feminine,47,25,53.19,55.35
+All-three common eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,feminine,gender_unspecified,47,2,4.26,5.71
+All-three common eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,feminine,mixed_multiple,47,4,8.51,8.26
+All-three common eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,feminine,not_visible,47,1,2.13,1.02
+All-three common eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,gender_unspecified,feminine,47,2,4.26,3.87
+All-three common eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,gender_unspecified,gender_unspecified,47,3,6.38,5.40
+All-three common eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,gender_unspecified,masculine,47,1,2.13,1.02
+All-three common eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,mixed_multiple,feminine,47,3,6.38,7.24
+All-three common eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,mixed_multiple,mixed_multiple,47,4,8.51,6.42
+All-three common eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,not_visible,gender_unspecified,47,2,4.26,5.71
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,feminine,feminine,47,2,4.26,5.71
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,gender_unspecified,feminine,47,1,2.13,1.02
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,gender_unspecified,gender_unspecified,47,2,4.26,4.38
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,gender_unspecified,not_visible,47,3,6.38,7.24
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,masculine,masculine,47,4,8.51,6.42
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,not_visible,gender_unspecified,47,1,2.13,2.86
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,not_visible,not_visible,47,34,72.34,72.37
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,feminine,feminine,47,1,2.13,2.86
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,feminine,gender_unspecified,47,1,2.13,2.86
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,gender_unspecified,feminine,47,1,2.13,1.02
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,gender_unspecified,gender_unspecified,47,4,8.51,10.10
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,gender_unspecified,not_visible,47,1,2.13,1.53
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,masculine,masculine,47,4,8.51,6.42
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,not_visible,feminine,47,1,2.13,2.86
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,not_visible,gender_unspecified,47,2,4.26,5.71
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,not_visible,not_visible,47,32,68.09,66.66
+All-three common eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,feminine,feminine,47,2,4.26,3.87
+All-three common eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,feminine,gender_unspecified,47,1,2.13,2.86
+All-three common eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,gender_unspecified,gender_unspecified,47,2,4.26,4.38
+All-three common eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,gender_unspecified,not_visible,47,1,2.13,2.86
+All-three common eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,masculine,masculine,47,4,8.51,6.42
+All-three common eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,not_visible,feminine,47,1,2.13,2.86
+All-three common eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,not_visible,gender_unspecified,47,4,8.51,11.42
+All-three common eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,not_visible,not_visible,47,32,68.09,65.33

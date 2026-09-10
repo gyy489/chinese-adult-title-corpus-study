@@ -1,0 +1,9 @@
+[project]
+name = "chinese-adult-title-metadata-study"
+version = "1.0.0"
+description = "Public aggregate results and deterministic reproduction code for a title-metadata study"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"

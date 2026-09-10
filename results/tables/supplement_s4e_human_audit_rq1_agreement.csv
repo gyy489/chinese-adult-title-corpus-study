@@ -1,0 +1,28 @@
+scope,measure,comparison,records,exact_agreement_n,exact_agreement_percent,cohen_kappa,kappa_status,design_weighted_exact_agreement_percent,design_weighted_ci95_low_percent,design_weighted_ci95_high_percent
+Full 400-record sample,RQ1 eligibility (binary),Frozen AI vs human coder 1,400,387,96.75,0.873418,defined,97.57,96.14,98.99
+Full 400-record sample,RQ1 eligibility (binary),Frozen AI vs human coder 2,400,371,92.75,0.725118,defined,93.62,91.21,96.02
+Full 400-record sample,RQ1 eligibility (binary),Human coder 1 vs human coder 2,400,378,94.50,0.792795,defined,95.06,92.91,97.21
+AI-reference eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 1,60,53,88.33,0.313725,defined,91.07,83.98,98.16
+AI-reference eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 2,60,46,76.67,0.047619,defined,75.28,63.38,87.18
+AI-reference eligibility,Distribution-target visibility (binary),Human coder 1 vs human coder 2,60,49,81.67,0.372624,defined,81.00,70.17,91.82
+AI-reference eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 1,60,55,91.67,0.747475,defined,91.22,83.45,99.00
+AI-reference eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 2,60,55,91.67,0.761146,defined,89.77,81.18,98.36
+AI-reference eligibility,Distribution-actor visibility (binary),Human coder 1 vs human coder 2,60,52,86.67,0.607843,defined,83.41,72.80,94.02
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,60,45,75.00,0.552461,defined,77.38,66.21,88.55
+AI-reference eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,60,34,56.67,0.306358,defined,59.02,45.69,72.36
+AI-reference eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,60,37,61.67,0.395267,defined,60.38,47.00,73.77
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,60,49,81.67,0.567780,defined,83.09,73.13,93.06
+AI-reference eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,60,44,73.33,0.478544,defined,73.27,61.21,85.33
+AI-reference eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,60,48,80.00,0.630010,defined,75.84,63.77,87.90
+All-three common eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 1,47,46,97.87,0.789238,defined,98.98,97.01,100.00
+All-three common eligibility,Distribution-target visibility (binary),Frozen AI vs human coder 2,47,45,95.74,0.483516,defined,94.29,86.66,100.00
+All-three common eligibility,Distribution-target visibility (binary),Human coder 1 vs human coder 2,47,44,93.62,-0.029197,defined,93.27,85.42,100.00
+All-three common eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 1,47,43,91.49,0.763224,defined,89.90,80.35,99.45
+All-three common eligibility,Distribution-actor visibility (binary),Frozen AI vs human coder 2,47,43,91.49,0.787810,defined,89.90,80.35,99.45
+All-three common eligibility,Distribution-actor visibility (binary),Human coder 1 vs human coder 2,47,41,87.23,0.667453,defined,82.86,70.63,95.10
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 1,47,38,80.85,0.640917,defined,81.65,69.82,93.49
+All-three common eligibility,Distribution-target position (exact category),Frozen AI vs human coder 2,47,34,72.34,0.500817,defined,74.72,61.64,87.81
+All-three common eligibility,Distribution-target position (exact category),Human coder 1 vs human coder 2,47,32,68.09,0.386423,defined,67.17,52.69,81.66
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 1,47,42,89.36,0.731121,defined,88.89,79.17,98.60
+All-three common eligibility,Distribution-actor position (exact category),Frozen AI vs human coder 2,47,41,87.23,0.715152,defined,86.03,75.19,96.87
+All-three common eligibility,Distribution-actor position (exact category),Human coder 1 vs human coder 2,47,40,85.11,0.650743,defined,80.01,67.07,92.95

@@ -1,0 +1,136 @@
+{
+  "files": [
+    {
+      "bytes": 8784,
+      "path": "config/annotation_codebook_v0_3.json",
+      "sha256": "27eaaca0a45f453ea7eab793faa52e53c3b5b81d09c4bfe17a25cde933b16360"
+    },
+    {
+      "bytes": 7154,
+      "path": "config/annotation_output_schema_v0_3.json",
+      "sha256": "9ead99dd3e002fc9bbbd10c25b65156f546a3bbba85625579bba001378cc55b2"
+    },
+    {
+      "bytes": 4923,
+      "path": "prompts/annotation_prompt_v0_3.md",
+      "sha256": "139f07b1ec7659c8b0218163fe067dc8bb4ce132fe50a8b7813499feffda73ea"
+    },
+    {
+      "bytes": 1319,
+      "path": "results/tables/README.md",
+      "sha256": "8b61f5ef09e7e53d9d63c59b1125df0313741a75a73a0b6433e4b410b56315e5"
+    },
+    {
+      "bytes": 560,
+      "path": "results/tables/corpus_pipeline_counts.csv",
+      "sha256": "75105853f32c30b56e9e93f443fdd2b83b6d86c0dc86a647afb4dfb1ff10b002"
+    },
+    {
+      "bytes": 8124,
+      "path": "results/tables/supplement_s1a_heuristic_proportions.csv",
+      "sha256": "e86c6caca86b454c36143660ab6a2ed36bd508ed9146ccf4fb18c2c919f453d7"
+    },
+    {
+      "bytes": 942,
+      "path": "results/tables/supplement_s1b_paired_heuristics.csv",
+      "sha256": "b301199d16c2040b6973fa8a41959fa8bb852ffd6418562d0d1439b513f7151a"
+    },
+    {
+      "bytes": 15373,
+      "path": "results/tables/supplement_s2a_sampling_composition.csv",
+      "sha256": "e91c8d349b12e30853990483ef06244ee11661ea2d9dab6d6ce2e8232d10d5b1"
+    },
+    {
+      "bytes": 12370,
+      "path": "results/tables/supplement_s2b_quality_scopes.csv",
+      "sha256": "ca1e822cd2825c5ee6df462460f1bee35661c6ec7ec52d712ecbbce65d55ab0b"
+    },
+    {
+      "bytes": 10176,
+      "path": "results/tables/supplement_s2c_sensitivity_ranges.csv",
+      "sha256": "ab5d9ab8701d86df0972380aa5c2e0816c74c56e9cc0e44bf9aa29c9d528f7a2"
+    },
+    {
+      "bytes": 3077,
+      "path": "results/tables/supplement_s2d_authorization_composition.csv",
+      "sha256": "623403cf88053cb8ae1eb749d0958043461592b4ca8ed8634e6051c0fbebb73a"
+    },
+    {
+      "bytes": 3001,
+      "path": "results/tables/supplement_s3_cross_model_field_agreement.csv",
+      "sha256": "d5e3b11ba4a329abfe83e3cc26f0e364d67a455fd5f0f29f9d9dffd0c3b8659a"
+    },
+    {
+      "bytes": 13838,
+      "path": "results/tables/supplement_s4_human_audit_field_agreement.csv",
+      "sha256": "15b2b030c9fb981e20a8a5196af84c81bd439fd0e76afba23c5277dab1f3e463"
+    },
+    {
+      "bytes": 623,
+      "path": "results/tables/supplement_s4_human_audit_pair_summary.csv",
+      "sha256": "43248d26679472ff673eb54266608f17972c16629f1c417fcdeb8ac5a64f9e4f"
+    },
+    {
+      "bytes": 1768,
+      "path": "results/tables/supplement_s4c_human_audit_rq1_estimates.csv",
+      "sha256": "936e3b185c0960cdf7949c1abcb09104aa4eb588343f2e5f8463a1cf18c03f18"
+    },
+    {
+      "bytes": 3383,
+      "path": "results/tables/supplement_s4d_human_audit_rq1_paired_cells.csv",
+      "sha256": "8fb03c4f2f9b6117efb730cddb87da0d0734e49ee54569a823df33d366597a37"
+    },
+    {
+      "bytes": 4063,
+      "path": "results/tables/supplement_s4e_human_audit_rq1_agreement.csv",
+      "sha256": "27e7bdff13b09c9cb91417297524626dee999bc2524dbca5d9bdeca1e20bb42b"
+    },
+    {
+      "bytes": 26149,
+      "path": "results/tables/supplement_s4f_human_audit_rq1_confusion.csv",
+      "sha256": "92a2f35e2c6974f9c8ae47ad1fa5e85d9197d654efdd013a879953506997b7a1"
+    },
+    {
+      "bytes": 568,
+      "path": "results/tables/table_1_corpus_formation.csv",
+      "sha256": "4f540c1c2f5b93d843cb12008c95a3a96ce1a7c165ffb899fb72ff0ad74f52c7"
+    },
+    {
+      "bytes": 557,
+      "path": "results/tables/table_2_target_actor_visibility.csv",
+      "sha256": "66b3c7fe8253071d683313797cb8fef574952fbac7739483c84d7389fc915829"
+    },
+    {
+      "bytes": 354,
+      "path": "results/tables/table_3_cross_stage_consistency.csv",
+      "sha256": "252adb7737c4b19e0c5cb0b1727d5b18735dd10f278cab3dbf47129973e23042"
+    },
+    {
+      "bytes": 2120,
+      "path": "results/tables/table_4_supporting_and_sensitivity.csv",
+      "sha256": "d15213a74574e617f937bf168f0a2a8890507bea5f0a7be455aeb9cedd6f6b35"
+    },
+    {
+      "bytes": 2376,
+      "path": "results/figures/corpus_flow.svg",
+      "sha256": "89aeda18665ffc26a13a8cbbe7b65e3352c8833fece2b6c5d1c8709c0bc46809"
+    },
+    {
+      "bytes": 1327,
+      "path": "results/figures/target_actor_visibility.svg",
+      "sha256": "96dbdf207151eb910067857368f8d1726c607b9dcc9600f2921b3941858a4616"
+    },
+    {
+      "bytes": 1321,
+      "path": "results/reproduced/headline_metrics.json",
+      "sha256": "35b3dc4b31915aa706895cf64afb7cdb0b1aba3cf1454a56f1409885b6da3cfe"
+    },
+    {
+      "bytes": 633,
+      "path": "results/reproduced/summary.md",
+      "sha256": "3ce482e478537a5ed294409dc3c87bae6a6061d683d2ba31bad60143d6b03788"
+    }
+  ],
+  "release_id": "public-results-v1.0.0",
+  "scope": "Aggregate results and public annotation contracts only; no title-level data."
+}

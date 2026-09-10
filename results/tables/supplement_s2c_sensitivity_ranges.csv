@@ -1,0 +1,53 @@
+sensitivity_family,source_sensitivity_family_id,analysis,source_analysis_id,source_metric_id,measure,variant_count,minimum_eligible_n,maximum_eligible_n,minimum_percent,maximum_percent,direction_evaluated_variants,direction_failure_count
+Sampling-composition scopes,sampling_composition_scope,RQ1,B1,distribution_actor_position_visible,Distribution actor position visible,5,281,4186,19.67,26.66,0,not_applicable
+Sampling-composition scopes,sampling_composition_scope,RQ1,B1,distribution_target_position_visible,Distribution target position visible,5,281,4186,94.10,97.63,0,not_applicable
+Sampling-composition scopes,sampling_composition_scope,RQ1,B1,target_minus_actor_visibility_paired_difference,Target-position minus actor-position visibility,5,281,4186,67.44,77.96,5,0
+Sampling-composition scopes,sampling_composition_scope,RQ3,C1,feminine_or_mixed_distribution_target,Feminine or mixed-multiple distribution target,5,281,4186,76.54,83.54,0,not_applicable
+Sampling-composition scopes,sampling_composition_scope,RQ3,C1,strict_feminine_distribution_target,Strictly feminine distribution target,5,281,4186,63.68,68.76,5,0
+Sampling-composition scopes,sampling_composition_scope,RQ2,C2,creation_to_distribution_target_position_consistency,Creation-to-distribution target-label consistency,5,129,1773,96.90,98.13,5,0
+Sampling-composition scopes,sampling_composition_scope,RQ2,C2,distribution_to_exposure_target_position_consistency,Distribution-to-exposure target-label consistency,5,253,3743,99.56,100.00,5,0
+Sampling-composition scopes,sampling_composition_scope,RQ2,C2,three_stage_target_position_consistency,Three-stage target-label consistency,5,125,1697,97.60,97.95,5,0
+Sampling-composition scopes,sampling_composition_scope,MQ1,C4,no_visible_authorization_language_frozen_v03,No visible authorization language under frozen v0.3 labels,5,281,4186,75.80,82.97,0,not_applicable
+Sampling-composition scopes,sampling_composition_scope,RQ4,C5,any_feminine_person_position,Feminine coding in any of four person-position fields,5,179,2702,15.01,20.67,0,not_applicable
+Sampling-composition scopes,sampling_composition_scope,RQ4,C5,feminine_objectification,Feminine objectification visible,5,179,2702,47.49,58.23,0,not_applicable
+Sampling-composition scopes,sampling_composition_scope,RQ4,C5,objectification_and_all_four_person_positions_absent,Feminine objectification with no feminine coding in four person-position fields,5,179,2702,37.43,47.34,0,not_applicable
+Sampling-composition scopes,sampling_composition_scope,RQ4,C5,objectification_minus_any_person_position_paired_difference,Feminine objectification minus feminine coding in any of four person-position fields,5,179,2702,26.82,39.61,5,0
+Quality-restricted scopes,quality_scope,RQ1,B1,distribution_actor_position_visible,Distribution actor position visible,4,1629,4186,24.62,27.37,0,not_applicable
+Quality-restricted scopes,quality_scope,RQ1,B1,distribution_target_position_visible,Distribution target position visible,4,1629,4186,93.74,94.89,0,not_applicable
+Quality-restricted scopes,quality_scope,RQ1,B1,target_minus_actor_visibility_paired_difference,Target-position minus actor-position visibility,4,1629,4186,66.99,69.69,4,0
+Quality-restricted scopes,quality_scope,RQ3,C1,feminine_or_mixed_distribution_target,Feminine or mixed-multiple distribution target,4,1629,4186,76.37,77.98,0,not_applicable
+Quality-restricted scopes,quality_scope,RQ3,C1,strict_feminine_distribution_target,Strictly feminine distribution target,4,1629,4186,63.04,64.55,4,0
+Quality-restricted scopes,quality_scope,RQ2,C2,creation_to_distribution_target_position_consistency,Creation-to-distribution target-label consistency,4,620,1773,97.94,98.55,4,0
+Quality-restricted scopes,quality_scope,RQ2,C2,distribution_to_exposure_target_position_consistency,Distribution-to-exposure target-label consistency,4,1429,3743,99.58,99.73,4,0
+Quality-restricted scopes,quality_scope,RQ2,C2,three_stage_target_position_consistency,Three-stage target-label consistency,4,585,1697,97.84,98.46,4,0
+Quality-restricted scopes,quality_scope,MQ1,C4,no_visible_authorization_language_frozen_v03,No visible authorization language under frozen v0.3 labels,4,1629,4186,81.57,82.81,0,not_applicable
+Quality-restricted scopes,quality_scope,RQ4,C5,any_feminine_person_position,Feminine coding in any of four person-position fields,4,1027,2702,17.02,18.70,0,not_applicable
+Quality-restricted scopes,quality_scope,RQ4,C5,feminine_objectification,Feminine objectification visible,4,1027,2702,53.26,56.70,0,not_applicable
+Quality-restricted scopes,quality_scope,RQ4,C5,objectification_and_all_four_person_positions_absent,Feminine objectification with no feminine coding in four person-position fields,4,1027,2702,43.33,46.11,0,not_applicable
+Quality-restricted scopes,quality_scope,RQ4,C5,objectification_minus_any_person_position_paired_difference,Feminine objectification minus feminine coding in any of four person-position fields,4,1027,2702,34.57,38.64,4,0
+Leave-one hashed source-group-out variants,leave_one_source_site_out,RQ1,B1,distribution_actor_position_visible,Distribution actor position visible,10,1751,4186,23.21,28.84,0,not_applicable
+Leave-one hashed source-group-out variants,leave_one_source_site_out,RQ1,B1,distribution_target_position_visible,Distribution target position visible,10,1751,4186,94.00,94.96,0,not_applicable
+Leave-one hashed source-group-out variants,leave_one_source_site_out,RQ1,B1,target_minus_actor_visibility_paired_difference,Target-position minus actor-position visibility,10,1751,4186,65.16,71.62,10,0
+Leave-one hashed source-group-out variants,leave_one_source_site_out,RQ3,C1,feminine_or_mixed_distribution_target,Feminine or mixed-multiple distribution target,10,1751,4186,76.58,78.32,0,not_applicable
+Leave-one hashed source-group-out variants,leave_one_source_site_out,RQ3,C1,strict_feminine_distribution_target,Strictly feminine distribution target,10,1751,4186,63.50,65.85,10,0
+Leave-one hashed source-group-out variants,leave_one_source_site_out,RQ2,C2,creation_to_distribution_target_position_consistency,Creation-to-distribution target-label consistency,10,882,1773,97.60,98.34,10,0
+Leave-one hashed source-group-out variants,leave_one_source_site_out,RQ2,C2,distribution_to_exposure_target_position_consistency,Distribution-to-exposure target-label consistency,10,1527,3743,99.48,99.82,10,0
+Leave-one hashed source-group-out variants,leave_one_source_site_out,RQ2,C2,three_stage_target_position_consistency,Three-stage target-label consistency,10,843,1697,97.50,98.26,10,0
+Leave-one hashed source-group-out variants,leave_one_source_site_out,MQ1,C4,no_visible_authorization_language_frozen_v03,No visible authorization language under frozen v0.3 labels,10,1751,4186,80.44,86.86,0,not_applicable
+Leave-one hashed source-group-out variants,leave_one_source_site_out,RQ4,C5,any_feminine_person_position,Feminine coding in any of four person-position fields,10,1153,2702,17.66,18.73,0,not_applicable
+Leave-one hashed source-group-out variants,leave_one_source_site_out,RQ4,C5,feminine_objectification,Feminine objectification visible,10,1153,2702,56.37,58.28,0,not_applicable
+Leave-one hashed source-group-out variants,leave_one_source_site_out,RQ4,C5,objectification_and_all_four_person_positions_absent,Feminine objectification with no feminine coding in four person-position fields,10,1153,2702,45.73,47.44,0,not_applicable
+Leave-one hashed source-group-out variants,leave_one_source_site_out,RQ4,C5,objectification_minus_any_person_position_paired_difference,Feminine objectification minus feminine coding in any of four person-position fields,10,1153,2702,38.14,39.55,10,0
+Leave-one length-band-out variants,leave_one_length_band_out,RQ1,B1,distribution_actor_position_visible,Distribution actor position visible,4,1750,4176,24.91,25.41,0,not_applicable
+Leave-one length-band-out variants,leave_one_length_band_out,RQ1,B1,distribution_target_position_visible,Distribution target position visible,4,1750,4176,94.03,95.17,0,not_applicable
+Leave-one length-band-out variants,leave_one_length_band_out,RQ1,B1,target_minus_actor_visibility_paired_difference,Target-position minus actor-position visibility,4,1750,4176,69.11,70.11,4,0
+Leave-one length-band-out variants,leave_one_length_band_out,RQ3,C1,feminine_or_mixed_distribution_target,Feminine or mixed-multiple distribution target,4,1750,4176,74.04,80.40,0,not_applicable
+Leave-one length-band-out variants,leave_one_length_band_out,RQ3,C1,strict_feminine_distribution_target,Strictly feminine distribution target,4,1750,4176,61.08,67.94,4,0
+Leave-one length-band-out variants,leave_one_length_band_out,RQ2,C2,creation_to_distribution_target_position_consistency,Creation-to-distribution target-label consistency,4,783,1772,97.59,98.47,4,0
+Leave-one length-band-out variants,leave_one_length_band_out,RQ2,C2,distribution_to_exposure_target_position_consistency,Distribution-to-exposure target-label consistency,4,1574,3735,99.71,99.76,4,0
+Leave-one length-band-out variants,leave_one_length_band_out,RQ2,C2,three_stage_target_position_consistency,Three-stage target-label consistency,4,752,1696,97.47,98.40,4,0
+Leave-one length-band-out variants,leave_one_length_band_out,MQ1,C4,no_visible_authorization_language_frozen_v03,No visible authorization language under frozen v0.3 labels,4,1750,4176,81.01,82.29,0,not_applicable
+Leave-one length-band-out variants,leave_one_length_band_out,RQ4,C5,any_feminine_person_position,Feminine coding in any of four person-position fields,4,1189,2698,12.47,24.14,0,not_applicable
+Leave-one length-band-out variants,leave_one_length_band_out,RQ4,C5,feminine_objectification,Feminine objectification visible,4,1189,2698,50.06,63.58,0,not_applicable
+Leave-one length-band-out variants,leave_one_length_band_out,RQ4,C5,objectification_and_all_four_person_positions_absent,Feminine objectification with no feminine coding in four person-position fields,4,1189,2698,44.51,47.18,0,not_applicable
+Leave-one length-band-out variants,leave_one_length_band_out,RQ4,C5,objectification_minus_any_person_position_paired_difference,Feminine objectification minus feminine coding in any of four person-position fields,4,1189,2698,37.59,39.44,4,0

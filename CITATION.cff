@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use the released code or aggregate results, please cite this repository."
+title: "Chinese-Language Adult-Video Title Metadata Study: Public Results and Reproduction Code"
+type: software
+authors:
+  - family-names: Gu
+    given-names: Ziyang
+    orcid: "https://orcid.org/0009-0002-9998-1568"
+repository-code: "https://github.com/gyy489/chinese-adult-title-metadata-study"
+url: "https://github.com/gyy489/chinese-adult-title-metadata-study"
+version: 1.0.0
+date-released: 2026-09-10

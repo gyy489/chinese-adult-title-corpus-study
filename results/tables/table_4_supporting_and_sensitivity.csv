@@ -1,0 +1,20 @@
+analysis,measure_or_boundary,selected_n,comparison_n,eligible_n,percent,manuscript_role
+RQ3,Distribution target: feminine,2702,,4186,64.55,Complete mutually exclusive target composition
+RQ3,Distribution target: gender unspecified,666,,4186,15.91,Complete mutually exclusive target composition
+RQ3,Distribution target: mixed multiple,557,,4186,13.31,Complete mutually exclusive target composition
+RQ3,Distribution target: not visible,217,,4186,5.18,Complete mutually exclusive target composition
+RQ3,Distribution target: masculine,32,,4186,0.76,Complete mutually exclusive target composition
+RQ3,Distribution target: gender diverse,8,,4186,0.19,Complete mutually exclusive target composition
+RQ3,Distribution target: mutual or reciprocal,2,,4186,0.05,Complete mutually exclusive target composition
+RQ3,Distribution target: unclear,2,,4186,0.05,Complete mutually exclusive target composition
+RQ3,Feminine or mixed-multiple distribution target,3259,,4186,77.85,Supporting descriptive result
+RQ4,Feminine objectification visible,1532,,2702,56.70,Exploratory instrument-dependent result
+RQ4,Feminine coding in any of four person-position fields,489,,2702,18.10,Exploratory instrument-dependent result
+RQ4,Feminine objectification; no feminine coding in any of four person-position fields,1246,,2702,46.11,Exploratory instrument-dependent result
+RQ4,Feminine desire-holder position visible,254,,2702,9.40,Exploratory non-exhaustive person-position cue
+RQ4,Feminine pleasure-holder position visible,222,,2702,8.22,Exploratory non-exhaustive person-position cue
+RQ4,Feminine refusal/resistance position visible,22,,2702,0.81,Exploratory non-exhaustive person-position cue
+RQ4,Feminine attributed-speech position visible,81,,2702,3.00,Exploratory non-exhaustive person-position cue
+MQ1,No visible authorization language: Frozen v0.3 labels,3417,,4186,81.63,Definition sensitivity only
+MQ1,No visible authorization language: Narrow explicit-victim-or-stealth boundary,2961,,4186,70.74,Definition sensitivity only
+MQ1,No visible authorization language: Broad leakage-semantics boundary,2364,,4186,56.47,Definition sensitivity only

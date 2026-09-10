@@ -1,0 +1,37 @@
+scope,source,paired_cell,eligible_n,cell_n,unweighted_cell_percent,design_weighted_cell_percent
+Source-specific eligibility,Frozen AI v0.3,Target visible; actor outside visible set,60,44,73.33,72.86
+Source-specific eligibility,Frozen AI v0.3,Target outside visible set; actor visible,60,0,0.00,0.00
+Source-specific eligibility,Frozen AI v0.3,Both positions visible,60,13,21.67,21.82
+Source-specific eligibility,Frozen AI v0.3,Neither position visible,60,3,5.00,5.31
+Source-specific eligibility,Human coder 1,Target visible; actor outside visible set,61,43,70.49,71.61
+Source-specific eligibility,Human coder 1,Target outside visible set; actor visible,61,0,0.00,0.00
+Source-specific eligibility,Human coder 1,Both positions visible,61,16,26.23,24.00
+Source-specific eligibility,Human coder 1,Neither position visible,61,2,3.28,4.39
+Source-specific eligibility,Human coder 2,Target visible; actor outside visible set,65,41,63.08,59.95
+Source-specific eligibility,Human coder 2,Target outside visible set; actor visible,65,1,1.54,2.07
+Source-specific eligibility,Human coder 2,Both positions visible,65,22,33.85,37.25
+Source-specific eligibility,Human coder 2,Neither position visible,65,1,1.54,0.74
+AI-reference eligibility,Frozen AI v0.3,Target visible; actor outside visible set,60,44,73.33,72.86
+AI-reference eligibility,Frozen AI v0.3,Target outside visible set; actor visible,60,0,0.00,0.00
+AI-reference eligibility,Frozen AI v0.3,Both positions visible,60,13,21.67,21.82
+AI-reference eligibility,Frozen AI v0.3,Neither position visible,60,3,5.00,5.31
+AI-reference eligibility,Human coder 1,Target visible; actor outside visible set,60,40,66.67,68.20
+AI-reference eligibility,Human coder 1,Target outside visible set; actor visible,60,0,0.00,0.00
+AI-reference eligibility,Human coder 1,Both positions visible,60,12,20.00,19.16
+AI-reference eligibility,Human coder 1,Neither position visible,60,8,13.33,12.64
+AI-reference eligibility,Human coder 2,Target visible; actor outside visible set,60,33,55.00,53.86
+AI-reference eligibility,Human coder 2,Target outside visible set; actor visible,60,0,0.00,0.00
+AI-reference eligibility,Human coder 2,Both positions visible,60,14,23.33,25.13
+AI-reference eligibility,Human coder 2,Neither position visible,60,13,21.67,21.01
+All-three common eligibility,Frozen AI v0.3,Target visible; actor outside visible set,47,32,68.09,68.50
+All-three common eligibility,Frozen AI v0.3,Target outside visible set; actor visible,47,0,0.00,0.00
+All-three common eligibility,Frozen AI v0.3,Both positions visible,47,12,25.53,24.77
+All-three common eligibility,Frozen AI v0.3,Neither position visible,47,3,6.38,6.73
+All-three common eligibility,Human coder 1,Target visible; actor outside visible set,47,35,74.47,73.90
+All-three common eligibility,Human coder 1,Target outside visible set; actor visible,47,0,0.00,0.00
+All-three common eligibility,Human coder 1,Both positions visible,47,10,21.28,20.39
+All-three common eligibility,Human coder 1,Neither position visible,47,2,4.26,5.71
+All-three common eligibility,Human coder 2,Target visible; actor outside visible set,47,32,68.09,67.17
+All-three common eligibility,Human coder 2,Target outside visible set; actor visible,47,0,0.00,0.00
+All-three common eligibility,Human coder 2,Both positions visible,47,14,29.79,31.81
+All-three common eligibility,Human coder 2,Neither position visible,47,1,2.13,1.02

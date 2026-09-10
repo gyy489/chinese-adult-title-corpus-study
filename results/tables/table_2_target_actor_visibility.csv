@@ -1,0 +1,8 @@
+measure,selected_n,denominator_n,percent,paired_cell_or_note
+Distribution target position visible,3967,4186,94.77,
+Distribution actor position visible,1053,4186,25.16,
+Target visible; actor outside contract-defined visible set,2975,4186,71.07,Discordant cell
+Actor visible; target outside contract-defined visible set,61,4186,1.46,Discordant cell
+Both positions visible,992,4186,23.70,Concordant cell
+Neither position in contract-defined visible set,158,4186,3.77,Concordant cell
+Target minus actor visibility,,4186,69.61,Percentage-point paired difference

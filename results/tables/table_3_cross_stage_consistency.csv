@@ -1,0 +1,4 @@
+visible_stage_comparison,exactly_consistent_n,eligible_n,percent,definition
+Creation to distribution,1737,1773,97.97,Exact equality of coded target-position labels
+Distribution to exposure,3733,3743,99.73,Exact equality of coded target-position labels
+"Creation, distribution, and exposure",1661,1697,97.88,Exact equality of coded target-position labels
