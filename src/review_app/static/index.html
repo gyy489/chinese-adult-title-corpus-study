@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>论文人工盲审台</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/guidance.css">
+</head>
+<body>
+  <header>
+    <div><strong id="appTitle">论文人工盲审台</strong><small id="identity">载入中</small></div>
+    <nav><button data-tab="review" class="active">审核</button><button data-tab="summary">进度</button><button data-tab="search">查找修改</button><button id="theme" type="button" aria-pressed="false">☾ 暗色</button></nav>
+    <button id="export">完成后导出</button>
+  </header>
+  <main id="review">
+    <section class="title">
+      <div><span class="badge">盲审：不显示自动编码、抽样层或来源</span> <span id="position">—</span> <span id="status">—</span></div>
+      <div class="progress" aria-label="当前记录位置"><span id="positionProgress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></span></div>
+      <h1 id="title">正在载入……</h1>
+    </section>
+    <div class="layout">
+      <form id="form"></form>
+      <aside>
+        <h2>编码说明</h2>
+        <div id="detail">点击任一选项查看精确定义。所有判断仅限标题可见语言。</div>
+        <details open><summary>审核规则</summary><ol id="instructions"></ol></details>
+      </aside>
+    </div>
+    <footer>
+      <button id="prev" aria-label="上一条">← 上一条</button>
+      <button id="clearCurrent" class="danger" type="button">清空本条全部选择</button>
+      <span id="saveState">草稿自动保存；本条填完后自动进入下一条</span>
+    </footer>
+  </main>
+  <main id="summary" hidden>
+    <h1>当前审核员的进度</h1><p id="summaryText"></p><div class="cards" id="cards"></div>
+    <p>这里只显示个人完成进度，不显示自动编码、抽样层、来源、其他编码员答案或类别分布。完成全部记录后才可导出。</p>
+  </main>
+  <main id="search" hidden>
+    <h1>按标注条件查找并修改</h1>
+    <p>全部审核完成后，可按“标注字段＋已选选项”找到记录。点击列表中的标题即可回到审核表单修改。</p>
+    <section class="search-controls">
+      <label>标注字段<select id="searchField"></select></label>
+      <label>已选选项<select id="searchOption"></select></label>
+      <label>标题包含（可选）<input id="searchTitle" type="search" placeholder="例如：私密"></label>
+      <button id="runSearch" class="primary" type="button">查找</button>
+    </section>
+    <p id="searchState">完成全部审核后可使用。</p>
+    <div id="searchResults" class="search-results"></div>
+  </main>
+  <div id="toast" role="status"></div><script src="/app.js"></script>
+</body>
+</html>

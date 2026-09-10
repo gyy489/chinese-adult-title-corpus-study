@@ -13,6 +13,7 @@
     "unique_texts_excluded": 377
   },
   "public_entry_points": [
+    "src/analysis/build_gendered_argument_visibility_full_v03_90727_v1.py",
     "src/preprocessing/pipeline.py"
   ],
   "validation": [

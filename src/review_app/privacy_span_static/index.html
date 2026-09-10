@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>隐私边界项精确复核台</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <div><strong>隐私边界项精确复核台</strong><small>9条 · 其余102条已依据第一轮备注生成待冻结决定 · v3保持不变</small></div>
+    <nav><button id="reviewTab" class="active" type="button">审核</button><button id="summaryTab" type="button">进度</button><button id="theme" type="button">☾ 暗色</button><button id="export" type="button">导出</button></nav>
+  </header>
+  <main id="reviewView">
+    <section class="progress"><span id="progressBar"></span></section>
+    <section class="card">
+      <div class="meta"><span id="position">—</span><span id="status">—</span></div>
+      <h1 id="selectableTitle" title="可用鼠标框选需要脱敏的文字">载入中……</h1>
+      <p class="tip">这里只显示第一轮备注仍不足以唯一确定的9条；候选不预选，请按本条复核问题判断。</p>
+
+      <section class="selected-panel">
+        <h2>本条为什么需要复核</h2>
+        <p id="exceptionReason"></p>
+      </section>
+
+      <section id="candidatePanel">
+        <div class="section-head"><h2>机器候选</h2><button id="toggleAll" type="button">全选／清空候选（A）</button></div>
+        <div id="candidateList" class="candidate-list"></div>
+      </section>
+
+      <section class="manual">
+        <h2>手工框选</h2>
+        <div><select id="manualReplacement"></select><button id="addSelection" type="button">添加标题中的当前选区</button></div>
+      </section>
+
+      <section class="selected-panel">
+        <h2>将要脱敏的片段</h2>
+        <div id="selectedList"></div>
+        <h3>替换预览</h3>
+        <p id="preview" class="preview"></p>
+      </section>
+
+      <details><summary>上一轮确认理由</summary><p id="priorNote"></p></details>
+      <label for="note">本轮备注</label>
+      <textarea id="note" maxlength="2000" placeholder="精确脱敏可不填；“保留不改”或“整条排除”必须说明理由。"></textarea>
+
+      <div class="actions">
+        <button id="prev" type="button">← 上一条</button>
+        <button id="apply" class="primary" type="button"><kbd>1</kbd> 应用所选片段并到下一条</button>
+        <button id="retain" type="button"><kbd>2</kbd> 保留不改</button>
+        <button id="exclude" class="danger" type="button"><kbd>3</kbd> 整条排除</button>
+        <label class="jump">跳到 <input id="jumpPosition" type="number" min="1" max="9"><button id="jump" type="button">前往</button></label>
+      </div>
+      <p id="saveState">修改会自动保存为草稿。</p>
+    </section>
+    <aside>
+      <h2>替换原则</h2>
+      <ul><li>姓名、艺名、个人代号 → 某人</li><li>账号 → 某账号</li><li>机构 → 某机构</li><li>地点 → 某地</li><li>URL等纯定位值 → 直接删除</li></ul>
+      <p>只选择身份／定位片段，不删除研究所需的角色、行为和叙事框架。</p>
+    </aside>
+  </main>
+  <main id="summaryView" hidden><section class="summary-card"><h1>9条边界项复核进度</h1><div id="summaryCards"></div><button id="continueReview" class="primary" type="button">继续审核</button></section></main>
+  <div id="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Complete Python package layer for inspecting/running the released production programs.
+# The real corpus, restricted literal dictionaries, review queues, and provider credentials
+# remain separate and are not supplied by this file.
+beautifulsoup4==4.15.0
+jieba==0.42.1
+numpy==2.4.6
+pillow==12.3.0
+playwright==1.62.0
+PyMySQL==1.2.0
+requests==2.34.2
+scipy==1.17.1
+spacy==3.8.14
+thulac==0.2.2

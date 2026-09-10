@@ -14,6 +14,9 @@
   "public_entry_points": [
     "src/collection/crawler.py",
     "src/collection/mysql_store.py",
+    "src/collection/crawl_status.py",
+    "src/collection/export_mysql_dataset.py",
+    "src/collection/build_export_manifest.py",
     "scripts/demo_collection.py"
   ],
   "validation": [

@@ -11,6 +11,11 @@
     "public_output": "aggregate agreement, confusion, and paired summaries"
   },
   "public_entry_points": [
+    "src/analysis/build_gendered_visibility_human_review_400_v1.py",
+    "src/review_app/server.py",
+    "src/review_app/comparison_viewer.py",
+    "src/analysis/summarize_gendered_visibility_human_audit_400_v2.py",
+    "src/analysis/summarize_gendered_visibility_human_audit_rq1_v2.py",
     "src/human_review/agreement.py",
     "scripts/demo_human_review.py",
     "results/tables/supplement_s4_human_audit_field_agreement.csv"

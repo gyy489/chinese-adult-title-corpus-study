@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "correction_date": "2026-08-20",
+  "status": "researcher_attested_identity_correction",
+  "applies_to": "gendered_visibility_human_review_400_v1",
+  "correction_reason": "The technical coder_id reviewer_1 was incorrectly treated as one physical person across a deleted researcher pilot and the later formal audit.",
+  "excluded_researcher_pilot": {
+    "performed_by": "researcher",
+    "purpose": "interface_and_guidance_pilot",
+    "formal_human_coder": false,
+    "row_level_result_status": "permanently_deleted_before_formal_audit_analysis",
+    "records_in_current_audit_outputs": 0
+  },
+  "formal_coders": {
+    "reviewer_1": {
+      "person_identity": "nonresearcher_formal_coder_1",
+      "distinct_from_researcher_pilot": true,
+      "first_exposure_to_fixed_400_record_sample": true,
+      "ai_labels_visible_during_coding": false,
+      "completed_records": 400,
+      "database": "data/interim/72_gendered_visibility_human_review_400_v1/coders/review_reviewer_1.sqlite3"
+    },
+    "reviewer_2": {
+      "person_identity": "nonresearcher_formal_coder_2",
+      "distinct_from_researcher_pilot": true,
+      "distinct_from_formal_coder_1": true,
+      "first_exposure_to_fixed_400_record_sample": true,
+      "ai_labels_visible_during_coding": false,
+      "completed_records": 400,
+      "database": "data/interim/72_gendered_visibility_human_review_400_v1/coders/review_reviewer_2.sqlite3"
+    }
+  },
+  "shared_formal_audit_conditions": {
+    "same_fixed_record_set": true,
+    "same_record_count": 400,
+    "coder_specific_randomized_display_order": true,
+    "same_review_application_and_workflow": true,
+    "same_semantic_fields_option_codes_and_server_contract": true,
+    "formal_coders_independent": true,
+    "formal_coders_ai_blind": true
+  },
+  "recorded_guidance_payloads": {
+    "reviewer_1": "v2_expanded_explanatory_layer_over_v1_semantic_instrument",
+    "reviewer_2": "v1_base_explanatory_layer",
+    "substantive_contract_changed": false
+  },
+  "manuscript_role": "validation_of_ai_coding_accuracy_against_independent_human_reference_judgments",
+  "adjudicated_consensus_reference": false,
+  "privacy": {
+    "publish_personal_relationships": false,
+    "publish_coder_names": false
+  }
+}

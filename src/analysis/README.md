@@ -1,7 +1,14 @@
 # Analysis and result publication
 
+This directory contains the versioned production programs for fixed-design
+sample construction, both annotation phases, runtime contracts, final-text
+deduplication, privacy remediation, v4 corpus activation, human-review
+summaries, full analysis, and table/figure generation. Their restricted default
+paths describe the real data contract but no matching title-level files are
+distributed.
+
 [`metrics.py`](metrics.py) exposes dependency-free proportion, Wilson interval,
-and paired binary summaries. The full released aggregate analysis is in
+and paired binary summaries. The separately released aggregate analysis is in
 [`scripts/reproduce_results.py`](../../scripts/reproduce_results.py): it checks
 corpus accounting, track totals, paired-cell identities, denominators,
 percentages, target composition, and cross-stage consistency before generating

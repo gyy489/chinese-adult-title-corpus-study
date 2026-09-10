@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0-public-example",
+  "status": "public_release_disabled",
+  "provider_calls_authorized": false,
+  "approved_by": null,
+  "approved_at": null,
+  "operations": {},
+  "instructions": "The public repository never authorizes provider calls. Copy this file to an untracked private location and add an explicit, bounded authorization only inside a controlled rerun environment."
+}

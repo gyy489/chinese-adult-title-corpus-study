@@ -1,0 +1,87 @@
+{
+  "version": "1.0.0",
+  "status": "frozen_for_sample_build",
+  "seed_cluster_representative": 2026081601,
+  "seed_probability_track": 2026081602,
+  "seed_mechanism_track": 2026081603,
+  "seed_wave_assignment": 2026081604,
+  "model": "deepseek-v4-flash",
+  "batch_size": 10,
+  "workers": 50,
+  "max_attempts_per_item": 3,
+  "probability_track_by_split": {
+    "codebook_development": 600,
+    "model_training": 1650,
+    "stability_validation": 450,
+    "final_blind_test": 300
+  },
+  "mechanism_track_by_split_and_stratum": {
+    "codebook_development": {
+      "privacy_only": 160,
+      "privacy_and_force": 16,
+      "privacy_and_direct": 24,
+      "force_only": 104,
+      "direct_only": 96
+    },
+    "model_training": {
+      "privacy_only": 440,
+      "privacy_and_force": 44,
+      "privacy_and_direct": 66,
+      "force_only": 286,
+      "direct_only": 264
+    },
+    "stability_validation": {
+      "privacy_only": 120,
+      "privacy_and_force": 12,
+      "privacy_and_direct": 18,
+      "force_only": 78,
+      "direct_only": 72
+    },
+    "final_blind_test": {
+      "privacy_only": 80,
+      "privacy_and_force": 8,
+      "privacy_and_direct": 12,
+      "force_only": 52,
+      "direct_only": 48
+    }
+  },
+  "incremental_waves": {
+    "gate_0500": {"probability": 300, "mechanism": 200},
+    "discovery_1500": {"probability": 900, "mechanism": 600},
+    "validation_3000": {"probability": 1800, "mechanism": 1200}
+  },
+  "mechanism_wave_strata": {
+    "gate_0500": {
+      "privacy_only": 80,
+      "privacy_and_force": 8,
+      "privacy_and_direct": 12,
+      "force_only": 52,
+      "direct_only": 48
+    },
+    "discovery_1500": {
+      "privacy_only": 240,
+      "privacy_and_force": 24,
+      "privacy_and_direct": 36,
+      "force_only": 156,
+      "direct_only": 144
+    },
+    "validation_3000": {
+      "privacy_only": 480,
+      "privacy_and_force": 48,
+      "privacy_and_direct": 72,
+      "force_only": 312,
+      "direct_only": 288
+    }
+  },
+  "stratification": ["frozen_split", "source_site", "length_band"],
+  "probability_allocation": "hierarchical Hamilton by source then length band, with one cluster from every nonempty source-length cell",
+  "mechanism_allocation": "Hamilton across source-length cells within each frozen split and mechanism stratum",
+  "one_record_per_expression_cluster": true,
+  "representative_selection": "uniform deterministic rank within cluster using an independent seed",
+  "probability_track_prior_exposure_policy": "do not exclude prior pilots",
+  "mechanism_track_excluded_prior_runs": [45, 47, 48],
+  "mechanism_privacy_definition": "v1 privacy_surveillance_exposure OR acquisition_distribution_candidate=yes",
+  "mechanism_force_definition": "v1 force_nonconsent",
+  "mechanism_direct_definition": "not force AND any of physical_aggression_pain, restraint_confinement, threat_economic_authority, domination_discipline",
+  "payload_fields": ["item_index", "deidentified_title"]
+}

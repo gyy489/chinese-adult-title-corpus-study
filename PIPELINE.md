@@ -4,6 +4,10 @@ This repository shows the final research system at every consequential node.
 It intentionally omits the history of intermediate reports, abandoned drafts,
 retry narratives, and internal handoffs.
 
+For the exact program-to-stage mapping and the distinction between production,
+pseudonymized, and restricted-literal interfaces, see
+[`PROGRAM_INVENTORY.md`](PROGRAM_INVENTORY.md).
+
 ```mermaid
 flowchart TD
   A["Collection\n103,743 source records"] --> B["Preparation + de-identification\n91,172 rows / 89,538 unique texts"]
@@ -22,14 +26,14 @@ flowchart TD
 
 | Stage | Public implementation | Public status evidence | Restricted material |
 | --- | --- | --- | --- |
-| Collection | Configurable crawler, parser, pagination, resumption, MySQL store and export | [`01_collection.json`](artifacts/stages/01_collection.json) | Real sources, selectors, URLs, credentials, snapshots |
-| Preparation | Ordered rule engine, audit hashes, semantic-length rule and exact deduplication | [`02_preparation.json`](artifacts/stages/02_preparation.json), [`03_semantic_length_gate.json`](artifacts/stages/03_semantic_length_gate.json) | Real titles, production literal dictionaries, row logs |
-| Sampling | Stable SHA-256 ranking, Hamilton allocation, probability/enriched track separation | [`04_sampling_and_annotation.json`](artifacts/stages/04_sampling_and_annotation.json) | Frame membership, source-cell counts, per-title hashes |
-| Annotation | Full prompt, codebook, 42-field Schema and layered runtime validators | [`04_sampling_and_annotation.json`](artifacts/stages/04_sampling_and_annotation.json) | Provider responses, per-title evidence, credentials |
-| Final deduplication | Exact-final-text grouping and deterministic retention | [`05_final_text_deduplication.json`](artifacts/stages/05_final_text_deduplication.json) | Member tables and representative crosswalks |
-| Privacy | Exact-span application, re-deduplication, direct-locator gate | [`06_privacy_remediation.json`](artifacts/stages/06_privacy_remediation.json) | Literal evidence, review decisions, private lexicons |
-| Human review | Agreement, kappa, confusion and AI-comparison aggregation | [`07_human_review.json`](artifacts/stages/07_human_review.json) | Review assignments, titles, item-level labels |
-| Analysis | Paired estimators, accounting checks, table-to-figure reproduction | [`08_analysis.json`](artifacts/stages/08_analysis.json) | Title-by-label matrix |
+| Collection | Two-round crawler, parser, pagination, resumption, MySQL store, export and pseudonymized manifest builder | [`01_collection.json`](artifacts/stages/01_collection.json) | Real sources, selectors, URLs, credentials, snapshots |
+| Preparation | Stage-specific production rules, combined orchestration, audit hashes, semantic-length rule and exact deduplication | [`02_preparation.json`](artifacts/stages/02_preparation.json), [`03_semantic_length_gate.json`](artifacts/stages/03_semantic_length_gate.json) | Real titles, production literal dictionaries, row logs |
+| Sampling | Production 5,000-item builder plus fixed-seed nested phase-two frame construction | [`04_sampling_and_annotation.json`](artifacts/stages/04_sampling_and_annotation.json) | Frame membership, source-cell counts, per-title hashes |
+| Annotation | Production batch runners/recovery, full prompt, codebooks, 42-field Schema and layered runtime validators | [`04_sampling_and_annotation.json`](artifacts/stages/04_sampling_and_annotation.json) | Provider responses, per-title evidence, credentials |
+| Final deduplication | Production exact-final-text grouping, deterministic retention and representative audit | [`05_final_text_deduplication.json`](artifacts/stages/05_final_text_deduplication.json) | Member tables and representative crosswalks |
+| Privacy | Production residual audits, exact-span v2 remediation, re-deduplication, label-invariance audit and v4 activation | [`06_privacy_remediation.json`](artifacts/stages/06_privacy_remediation.json) | Literal evidence, review decisions, private lexicons |
+| Human review | Sample builder, local blind-review apps, agreement, kappa, confusion and AI-comparison aggregation | [`07_human_review.json`](artifacts/stages/07_human_review.json) | Review assignments, titles, item-level labels |
+| Analysis | Full title-level analysis code, table/figure builders, aggregate paired estimators and accounting checks | [`08_analysis.json`](artifacts/stages/08_analysis.json) | Title-by-label matrix |
 | Publication | Fail-closed boundary checks, deterministic builds, SHA-256 manifest and CI | [`09_publication_gate.json`](artifacts/stages/09_publication_gate.json) | Manuscript, submission files and internal logs |
 
 ## Reproducibility levels

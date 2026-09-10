@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "status": "frozen_for_human_blind_review",
+  "title": "DeepSeek 全量编码人工盲审 v1",
+  "instructions": [
+    "只根据当前标题可见文字编码，不推断视频内容、现实身份、真实年龄、真实同意或真实伤害。",
+    "关系、伤害和年龄相互独立；关系称谓本身不自动推出禁忌、强迫或未成年。",
+    "语义相关但无法稳定归类时选择轴级不明；信息不足不是阴性。",
+    "两名编码员独立工作，不交流答案，不查看机器预测、抽样层或另一人的结果。",
+    "选择其他、不明或需裁决时，在备注中简述理由和标题中的依据。"
+  ],
+  "fields": [
+    {"id":"record_validity","label":"记录有效性","type":"single","options":[{"id":"valid","label":"有效标题"},{"id":"technical_noise","label":"技术噪声"},{"id":"unknown","label":"无法判断"}]},
+    {"id":"social_script_codes","label":"身份／关系脚本","type":"multi","exclusive_options":["none","unknown"],"options":[{"id":"none","label":"无可见线索"},{"id":"unknown","label":"相关但不明"},{"id":"father_daughter","label":"父女角色"},{"id":"mother_son","label":"母子角色"},{"id":"dating_partner","label":"恋爱伴侣"},{"id":"family_marriage","label":"家庭／婚姻"},{"id":"intimate_peer_community","label":"亲密同伴／社区"},{"id":"education","label":"教育关系"},{"id":"workplace_organization","label":"职场／组织"},{"id":"medical_care","label":"医疗／照护"},{"id":"service_economic","label":"服务／经济"},{"id":"media_platform_performance","label":"媒体／平台／表演"},{"id":"public_institution","label":"公共机构"},{"id":"gender_age_class_status","label":"性别／年龄／阶层身份"},{"id":"domination_submission_role","label":"支配／服从身份"}]},
+    {"id":"harm_script_codes","label":"伤害／边界脚本","type":"multi","exclusive_options":["none","unknown"],"options":[{"id":"none","label":"无可见线索"},{"id":"unknown","label":"相关但不明"},{"id":"force_nonconsent","label":"强迫／非同意"},{"id":"incapacity_deception","label":"失能／欺骗"},{"id":"physical_aggression_pain","label":"身体攻击／疼痛"},{"id":"restraint_confinement","label":"束缚／限制"},{"id":"threat_economic_authority","label":"威胁／经济／权威施压"},{"id":"privacy_surveillance_exposure","label":"隐私／监视／暴露"},{"id":"domination_discipline","label":"支配／规训"},{"id":"humiliation_objectification","label":"羞辱／物化"},{"id":"aggressive_sexual_use","label":"攻击性性使用"},{"id":"relational_betrayal_taboo","label":"关系背叛／禁忌"}]},
+    {"id":"minor_age_reference_status","label":"未成年／年轻化指涉","type":"single","options":[{"id":"explicit","label":"明确未成年指涉"},{"id":"suggestive","label":"年轻化暗示"},{"id":"absent","label":"无可见线索"},{"id":"unknown","label":"相关但不明"},{"id":"not_applicable","label":"不适用"}]},
+    {"id":"minor_age_cue_types","label":"年龄线索类型","type":"multi","exclusive_options":["none","unknown"],"options":[{"id":"none","label":"无"},{"id":"unknown","label":"不明"},{"id":"numeric_under_18","label":"18岁以下数字年龄"},{"id":"explicit_minor_term","label":"明确未成年人称谓"},{"id":"child_youth_role_term","label":"儿童／年轻角色词"},{"id":"school_stage_student","label":"学生／学校阶段"},{"id":"roleplay_costume","label":"角色扮演／服装"},{"id":"youthful_marketing","label":"年轻化营销"},{"id":"other","label":"其他年龄线索"},{"id":"compulsory_education_stage","label":"义务教育阶段"}]},
+    {"id":"needs_adjudication","label":"是否需要裁决","type":"single","options":[{"id":"no","label":"不需要"},{"id":"yes","label":"需要裁决"}]},
+    {"id":"evidence_notes","label":"证据与备注","type":"text","max_length":2000}
+  ]
+}

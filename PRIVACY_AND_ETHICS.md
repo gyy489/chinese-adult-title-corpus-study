@@ -23,6 +23,11 @@ aggregate stage/results artifacts, while excluding:
 - model responses, private remediation evidence, and row-level human coding;
 - submission correspondence, manuscript files, and internal research logs.
 
+The release additionally pseudonymizes source-specific code branches and omits
+populated person, organization, brand, and source-derived literal dictionaries.
+This changes only the public packaging boundary; the corresponding production
+versions remain immutable private provenance.
+
 Two independent human coders reviewed the same 400-title sample only to assess
 AI coding accuracy. Their coding is not treated as a gold standard and does not
 replace the full-corpus AI labels.

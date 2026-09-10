@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI—人工差异查看台</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <div><strong id="appTitle">AI—人工差异与校正台</strong><small>原始盲审只读 · 作者校正独立留痕</small></div>
+    <div class="header-actions"><button id="summaryToggle" type="button">字段总览</button><button id="theme" type="button" aria-pressed="false">☾ 暗色</button></div>
+  </header>
+  <section class="summary" id="summary" hidden>
+    <div class="summary-head"><div><strong>字段原始一致率总览</strong><span id="overall">—</span></div><button id="summaryClose" type="button">关闭</button></div>
+    <div id="summaryGrid" class="summary-grid"></div>
+  </section>
+  <section class="record-head">
+    <div class="warning" id="warning">正在载入……</div>
+    <div class="toolbar">
+      <label class="switch"><input id="differentOnly" type="checkbox">只看有差异的记录</label>
+      <label class="switch"><input id="hideSameFields" type="checkbox">隐藏AI与原始人工相同字段</label>
+      <span id="recordStats">—</span>
+    </div>
+    <div class="record-nav">
+      <button class="prev" aria-label="上一条">← 上一条</button>
+      <strong id="position">—</strong>
+      <button class="next" aria-label="下一条">下一条 →</button>
+    </div>
+    <h1 id="title">正在载入……</h1>
+  </section>
+  <main>
+    <div class="legend"><span class="dot same"></span>AI与原始人工相同 <span class="dot different"></span>不同 <span class="dot corrected"></span>已校正 <span class="hint">AI · 原始人工1 · 作者校正</span></div>
+    <div id="fields" class="fields"></div>
+    <section id="notes" class="notes" hidden><strong>人工证据与理由</strong><p></p></section>
+    <section class="correction-panel">
+      <div class="correction-head"><div><strong>作者校正</strong><span id="correctionState">本条未校正</span></div><div class="bulk-actions"><button id="useAiAll" type="button">整条采用AI</button><button id="restoreHumanAll" type="button">整条恢复原始人工</button></div></div>
+      <label for="correctionReason">校正理由（必填）</label>
+      <textarea id="correctionReason" maxlength="2000" placeholder="说明人工标准漂移或具体判断依据。这个理由会和修订历史一起保存。"></textarea>
+      <div class="save-row"><small id="saveHint">修改任一字段后可保存。</small><button id="resetCorrection" class="danger" type="button">撤销本条校正</button><button id="saveCorrection" class="primary" type="button">保存作者校正</button></div>
+    </section>
+  </main>
+  <footer>
+    <button class="prev" aria-label="上一条">← 上一条</button>
+    <span>键盘 ← → 切换；D 切换只看差异；未保存时会提醒</span>
+    <button class="next" aria-label="下一条">下一条 →</button>
+  </footer>
+  <div id="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

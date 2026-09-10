@@ -1,0 +1,67 @@
+{
+  "version": "0.1.0",
+  "status": "frozen_for_development_pilot",
+  "research_object": "Visible gendered argument structure and discursive framing in deidentified adult-film title language.",
+  "inference_boundary": "Codes describe title language only, never film content, real identity, consent, harm, experience, empowerment, victimhood, or causality.",
+  "common_positions": ["feminine", "masculine", "gender_diverse", "mixed_multiple", "mutual_or_reciprocal", "gender_unspecified", "not_visible", "unclear", "not_applicable"],
+  "actor_realizations": ["explicit_gendered_person_or_role", "explicit_ungendered_person_or_role", "deidentified_placeholder", "zero_anaphora_coreferential", "passive_agent_omitted", "generic_or_collective_actor", "event_visible_actor_not_visible", "unclear", "not_applicable"],
+  "target_realizations": ["explicit_person_or_role", "pronoun_or_deictic", "body_part_fragment", "zero_anaphora_coreferential", "object_omitted", "unclear", "not_applicable"],
+  "fields": [
+    {"id":"record_validity","type":"single","options":["valid","technical_noise","unknown"]},
+    {"id":"person_reference_status","type":"single","options":["visible","absent","unclear","not_applicable"]},
+    {"id":"participant_configuration","type":"single","options":["none","single","dyad","group","unclear","not_applicable"]},
+    {"id":"visible_gender_positions","type":"multi","options":["feminine","masculine","gender_diverse","gender_unspecified"]},
+    {"id":"person_focus_position","type":"single","options":["feminine","masculine","gender_diverse","mixed_multiple","gender_unspecified","not_visible","unclear","not_applicable","no_person_focus"]},
+
+    {"id":"sexual_action_visibility","type":"single","options":["explicit","implied","absent","unclear","not_applicable"]},
+    {"id":"sexual_action_actor_position","type":"position"},
+    {"id":"sexual_action_target_position","type":"position"},
+    {"id":"sexual_action_actor_realization","type":"actor_realization"},
+    {"id":"sexual_action_target_realization","type":"target_realization"},
+
+    {"id":"control_visibility","type":"single","options":["explicit","implied","absent","unclear","not_applicable"]},
+    {"id":"control_form","type":"multi","options":["overt_force","restraint_or_confinement","command_or_discipline","threat","deception_or_incapacity","authority_or_economic_leverage","role_label_only","none_visible","unclear","not_applicable"]},
+    {"id":"control_actor_position","type":"position"},
+    {"id":"control_target_position","type":"position"},
+    {"id":"control_actor_realization","type":"actor_realization"},
+    {"id":"control_target_realization","type":"target_realization"},
+
+    {"id":"desire_holder_position","type":"position"},
+    {"id":"pleasure_holder_position","type":"position"},
+    {"id":"refusal_resistance_position","type":"position"},
+    {"id":"consent_visibility","type":"single","options":["affirmative_explicit","refusal_or_nonconsent_explicit","negotiated_or_mixed","no_visible_consent_language","unclear","not_applicable"]},
+    {"id":"attributed_speech_position","type":"position"},
+    {"id":"attributed_speech_act","type":"multi","options":["direct_quote","request_or_invitation","command","refusal_or_protest","reported_desire_or_feeling","evaluation","no_visible_attributed_speech","unclear","not_applicable"]},
+    {"id":"objectification_target_position","type":"position"},
+    {"id":"editorial_framing_cues","type":"multi","options":["erotic_promotional_approval","novelty_or_sensationalization","authenticity_or_voyeurism","mockery_or_humiliation","moral_condemnation","neutral_catalogue","no_visible_editorial_frame","unclear","not_applicable"]},
+    {"id":"context_frame_codes","type":"multi","options":["explicit_roleplay_or_bdsm","relationship_entitlement_explicit","institutional_hierarchy_explicit","economic_transaction_explicit","incapacity_or_deception_explicit","force_or_threat_explicit","aftermath_consequence_or_help_seeking","none_visible","unclear","not_applicable"]},
+
+    {"id":"privacy_chain_relevance","type":"single","options":["relevant","not_relevant","unclear","not_applicable"]},
+    {"id":"material_creation_visibility","type":"stage_visibility","options":["visible","absent","unclear","not_applicable"]},
+    {"id":"material_creation_actor_position","type":"position"},
+    {"id":"material_creation_target_position","type":"position"},
+    {"id":"acquisition_visibility","type":"stage_visibility","options":["visible","absent","unclear","not_applicable"]},
+    {"id":"acquisition_actor_position","type":"position"},
+    {"id":"acquisition_target_position","type":"position"},
+    {"id":"distribution_visibility","type":"stage_visibility","options":["visible","absent","unclear","not_applicable"]},
+    {"id":"distribution_actor_position","type":"position"},
+    {"id":"distribution_target_position","type":"position"},
+    {"id":"exposure_visibility","type":"stage_visibility","options":["visible","absent","unclear","not_applicable"]},
+    {"id":"exposure_target_position","type":"position"},
+    {"id":"distribution_authorization_visibility","type":"single","options":["authorized_explicit","unauthorized_explicit","mixed_or_stage_conflict","no_visible_authorization_language","unclear","not_applicable"]},
+
+    {"id":"needs_adjudication","type":"boolean"},
+    {"id":"adjudication_reasons","type":"string_array"},
+    {"id":"evidence","type":"evidence_array"}
+  ],
+  "exclusive_multi_values": {
+    "control_form": ["none_visible", "unclear", "not_applicable"],
+    "attributed_speech_act": ["no_visible_attributed_speech", "unclear", "not_applicable"],
+    "editorial_framing_cues": ["neutral_catalogue", "no_visible_editorial_frame", "unclear", "not_applicable"],
+    "context_frame_codes": ["none_visible", "unclear", "not_applicable"]
+  },
+  "evidence_policy": {
+    "format": [{"span":"exact title substring","supports":[{"field":"field id","code":"selected code"}]}],
+    "values_not_requiring_evidence": ["absent","none","not_visible","not_applicable","none_visible","no_person_focus","no_visible_consent_language","no_visible_attributed_speech","no_visible_editorial_frame","not_relevant"]
+  }
+}

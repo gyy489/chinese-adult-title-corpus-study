@@ -16,6 +16,13 @@
     "postbuild_direct_locator_findings": 0
   },
   "public_entry_points": [
+    "src/analysis/audit_residual_privacy_paper_corpus_v1.py",
+    "src/analysis/audit_residual_privacy_paper_corpus_v3.py",
+    "src/analysis/build_gendered_visibility_privacy_remediation_v2.py",
+    "src/analysis/audit_gendered_visibility_privacy_label_dependency_v2.py",
+    "src/analysis/audit_gendered_visibility_privacy_label_invariance_v1.py",
+    "src/analysis/activate_gendered_visibility_paper_corpus_v4.py",
+    "src/review_app/privacy_span_server.py",
     "src/privacy/remediation.py",
     "src/privacy/direct_locator_gate.py",
     "scripts/demo_privacy_gate.py"
@@ -26,6 +33,6 @@
     "post-remediation final-text deduplication",
     "direct-locator gate"
   ],
-  "privacy_boundary": "Literal pre-remediation evidence and all item-level review decisions are immutable private provenance and are not released.",
+  "privacy_boundary": "Literal pre-remediation evidence, populated identity dictionaries, and all item-level review decisions are immutable private provenance and are not released.",
   "limitation": "The review was conducted by the researcher and must not be described as complete anonymity or independent anonymity certification."
 }

@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "status": "frozen_for_sample_build",
+  "seed": 2026081402,
+  "model": "deepseek-v4-flash",
+  "development_records_per_stratum": 20,
+  "locked_records_per_stratum": 80,
+  "batch_size": 10,
+  "smoke_records_per_stratum": 2,
+  "smoke_workers": 6,
+  "development_workers": 12,
+  "max_attempts_smoke": 1,
+  "max_attempts_development": 1,
+  "stratum_priority": [
+    "explicit_force_nonconsent",
+    "direct_control_without_explicit_nonconsent",
+    "privacy_circulation",
+    "hierarchy_role_only",
+    "objectification_aggressive_framing",
+    "low_script_matched_baseline"
+  ],
+  "development_split": "codebook_development",
+  "locked_split": "model_training",
+  "excluded_splits": ["stability_validation", "final_blind_test"],
+  "balance_dimensions": ["source_site", "data_round", "length_band"],
+  "one_record_per_expression_cluster": true,
+  "exclude_prior_pilot_47_clusters": true,
+  "exclude_human_blind_review_45_clusters": true,
+  "baseline_person_rule": "valid title with no strata 1-5 signal and at least one high-precision visible person/gender cue matched by baseline_person_cue_regex; matched deterministically to the pooled source_site x data_round x length_band distribution of strata 1-5",
+  "baseline_person_cue_regex": "女|男|她|他|妻|夫|母|父|妈|爸|姐|妹|哥|弟|少女|少男|女孩|男孩|女人|男人|学生|老师|护士|医生|主播|模特|同事|邻居|情侣|夫妻|主人|女仆"
+}

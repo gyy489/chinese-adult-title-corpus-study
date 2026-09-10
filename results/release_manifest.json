@@ -16,69 +16,74 @@
       "sha256": "bc22210377fc7359f38be601311edbf350d770ee9c966f104bcb3888b7c70ef0"
     },
     {
-      "bytes": 1170,
+      "bytes": 1638,
       "path": "DATA_AVAILABILITY.md",
-      "sha256": "add0c4b307c4a878f273de82fec81afdc15a7ec73c2998072134af180d07efc6"
+      "sha256": "f6faac8c89c29d7c76d358de791ec66c972e1c9bc50f8da035ac9afc8b5d5d1c"
     },
     {
-      "bytes": 3767,
+      "bytes": 4213,
       "path": "PIPELINE.md",
-      "sha256": "93126aa48990bd62d85b81fa7befd2bdef4281b7ea5c138f77bcbdf0a8cbc25c"
+      "sha256": "8ca93d0633272ebca9d1af84a59c48c182ff03ca6c4de7fdb4c9ae47071f8b9c"
     },
     {
-      "bytes": 1541,
+      "bytes": 1825,
       "path": "PRIVACY_AND_ETHICS.md",
-      "sha256": "84008f6b80b7f5399d156281793c18cf6e6f9c66387c4426ad3caad97ff6a24a"
+      "sha256": "a3f41eb06faabcf5f9a3953901d0b24968970f3c36f998078f302d6392476c0e"
     },
     {
-      "bytes": 7292,
+      "bytes": 7578,
+      "path": "PROGRAM_INVENTORY.md",
+      "sha256": "23a2a60d557455abdaf16fdec2c487dc995b36cb55bbbd6c3861050a7cc2162b"
+    },
+    {
+      "bytes": 8245,
       "path": "README.en.md",
-      "sha256": "84a9b2a099dfbb6aacc39192b332d97248ca3bf02b5035dbc37fd64764db07c4"
+      "sha256": "d634c0a26f306e69fb06dc489ce2b199fdabf5f0bc2b551774435420145e684d"
     },
     {
-      "bytes": 5638,
+      "bytes": 6866,
       "path": "README.md",
-      "sha256": "bcb7cedda993ae6a74cbb398d40d6a83d0228a881f55e39a6aa05b5c8f5f02f8"
+      "sha256": "664fc07ddec499588b1737e66d604477049e72d1540bfd067607f08f63da7e37"
     },
     {
-      "bytes": 746,
+      "bytes": 877,
       "path": "artifacts/stages/01_collection.json",
-      "sha256": "991eeaf521821f50e3c001885c32a84a63fa26ed2cf70d996fdbaae2f521a49c"
+      "sha256": "322a38f3fdf4ad9abf092cfcf73b40e92d348be431f257514e1eae8b81cfcf7a"
     },
     {
-      "bytes": 728,
+      "bytes": 1146,
       "path": "artifacts/stages/02_preparation.json",
-      "sha256": "96c3754cc55122ee8a28c7e275fea4d6dd8379c2b24f1beb60b119d814d6d59a"
+      "sha256": "c80581cd5c2b99cfe3202399fa7c6eae914554177be4bb04b9440f54313d2b93"
     },
     {
-      "bytes": 690,
+      "bytes": 766,
       "path": "artifacts/stages/03_semantic_length_gate.json",
-      "sha256": "8ff2bc6a547c7baf7629ec46f788793dc4416abce61511efa11e1eda5dd3d0c8"
+      "sha256": "ddcee1c14f3342457671ba8ce35ebb0d14e87b4f9beb8ca529700ede3d44e558"
     },
     {
-      "bytes": 994,
+      "bytes": 1606,
       "path": "artifacts/stages/04_sampling_and_annotation.json",
-      "sha256": "944dab9cf8e77c07bb6c9bce43f6febacc482ab9657fc096e19bd091f1fd72d7"
+      "sha256": "cb6d6de56a609b0e96a06a7701f14a66afa8b3bd6e0e25466c600abd21242a12"
     },
     {
-      "bytes": 694,
+      "bytes": 849,
       "path": "artifacts/stages/05_final_text_deduplication.json",
-      "sha256": "ec2a318a76b4cdd3171e40b5541d436c89e436af3716441eba83326c692a1b67"
+      "sha256": "ce424214a4778b0a715351b1c2377829508794c117cf8a9e4bced90e69c43376"
     },
     {
-      "bytes": 1170,
+      "bytes": 1667,
       "path": "artifacts/stages/06_privacy_remediation.json",
-      "sha256": "68932c1ae0f739c6843cfd6ea753ce1f5a4e7ccbbce33fbc729a6bd779529c2f"
+      "sha256": "df2fd8fbb483fd6c8642e41a6358aa4095d474870258749f931b95fa0b1d781c"
     },
     {
-      "bytes": 899,
+      "bytes": 1187,
       "path": "artifacts/stages/07_human_review.json",
-      "sha256": "4379612b5b57c6037cad68e5ca916b8e3304324f2746850c283018e8761622ec"
+      "sha256": "d12b1ef40fd9c3a80d63d16c45ebe0c89f361c4b1356b3e2a1a71ae21e035058"
     },
     {
-      "bytes": 993,
+      "bytes": 1276,
       "path": "artifacts/stages/08_analysis.json",
-      "sha256": "4bb9d58d170cf651b659a274c4d4ad490d29ccf19236a7bf4200a0ab5b49c3e0"
+      "sha256": "8abebec91e58de0ad733a70a7a4705303bc3408cdb91e6062ddd5b562bc6a866"
     },
     {
       "bytes": 844,
@@ -89,6 +94,11 @@
       "bytes": 459,
       "path": "artifacts/stages/README.md",
       "sha256": "f8be9144449b7e6acdac22c6ad1f3b52e3fe8927b57478b6673d8855ea5c2b98"
+    },
+    {
+      "bytes": 17030,
+      "path": "config/ai_coding_codebook_v1_candidate.json",
+      "sha256": "064543033861f875030170b7eb3cdf631ac4726eaafbbcc06868fa2257cc6b88"
     },
     {
       "bytes": 8784,
@@ -106,14 +116,164 @@
       "sha256": "32bc3a3d36b74683ce10ff7134c235d52893c2a066343b71ec64f16043c734c6"
     },
     {
+      "bytes": 1741,
+      "path": "config/codex_authorization_boundary_sensitivity_v1.json",
+      "sha256": "a40dd039eb2202d82442a44820769ee92a54e96d6a6fc377dcb4ca27d2b7b151"
+    },
+    {
       "bytes": 671,
       "path": "config/collection_rounds_public.json",
       "sha256": "9794d05b2c050947ebaf131d083cc9e58ea67a21d457eebac24201abdb10d855"
     },
     {
+      "bytes": 4619,
+      "path": "config/gendered_argument_visibility_benchmark_codebook_v1.json",
+      "sha256": "6614ad54b44036967dc2e7f800124f14990aabf299be2f9e4c0b8197669a5ef6"
+    },
+    {
+      "bytes": 2251,
+      "path": "config/gendered_argument_visibility_benchmark_output_schema_v1.json",
+      "sha256": "a9baee122456915d95718ed9b803de3667c6039cac39a90e83e702acaab2c5d5"
+    },
+    {
+      "bytes": 9786,
+      "path": "config/gendered_argument_visibility_budget_adaptive_20000_v1.json",
+      "sha256": "bf0a54a0d5f8918f44c8e3f08e0f2e88d6a3818590646742005c177f73021854"
+    },
+    {
+      "bytes": 6157,
+      "path": "config/gendered_argument_visibility_codebook_v0_1.json",
+      "sha256": "770b9f89f8b024ab18b7b0a81f818e38dd45789bda76b7aa1eed118ba2471f84"
+    },
+    {
+      "bytes": 7771,
+      "path": "config/gendered_argument_visibility_codebook_v0_2.json",
+      "sha256": "888bd7f34afc3bc3a3a2670a47c0f9d8ded9e38f5dc9f19912b1695e59f8bce5"
+    },
+    {
+      "bytes": 8784,
+      "path": "config/gendered_argument_visibility_codebook_v0_3.json",
+      "sha256": "27eaaca0a45f453ea7eab793faa52e53c3b5b81d09c4bfe17a25cde933b16360"
+    },
+    {
+      "bytes": 4752,
+      "path": "config/gendered_argument_visibility_full_v03_90727_v1.json",
+      "sha256": "8727e480348add66452932e13f4a187300ac88f2a6a24eeb3b349cb4cb146772"
+    },
+    {
+      "bytes": 4988,
+      "path": "config/gendered_argument_visibility_longfield_deep_codebook_v1.json",
+      "sha256": "43925fd9913c3638eb49dc5e0f7971f6cf3aec94c6acb3c917905d8ad4a8f3c3"
+    },
+    {
+      "bytes": 3627,
+      "path": "config/gendered_argument_visibility_longfield_deep_output_schema_v1.json",
+      "sha256": "d94c03d73ce7e1a802cabc0cad977a559301e7896e9bed950dc6c51d56b435aa"
+    },
+    {
+      "bytes": 3376,
+      "path": "config/gendered_argument_visibility_model_benchmark_v1.json",
+      "sha256": "09d63d31a26eb8a4156d6c3896baf04a7d525346c99ba8c6a927a56c0c6eb987"
+    },
+    {
+      "bytes": 912,
+      "path": "config/gendered_argument_visibility_normalization_v0_1_4.json",
+      "sha256": "cd987df70593601bc1cc14c0cb3b0258db321bcf80f09726477f283349d26998"
+    },
+    {
+      "bytes": 1140,
+      "path": "config/gendered_argument_visibility_normalization_v0_2_2.json",
+      "sha256": "c046893db33f377e3c71b8d530224560383ed3293c3b65c2445ea3db23a178dd"
+    },
+    {
+      "bytes": 884,
+      "path": "config/gendered_argument_visibility_normalization_v0_3_0.json",
+      "sha256": "03faf098b799ee290e1da1ded9b63d575ff50e0961ddea5fc94cdc4d8f372d8b"
+    },
+    {
+      "bytes": 6746,
+      "path": "config/gendered_argument_visibility_output_schema_v0_1.json",
+      "sha256": "1a1702da30ecfdcb6ee3a27183009264f044308a7e6a823d606635031e315f89"
+    },
+    {
+      "bytes": 7154,
+      "path": "config/gendered_argument_visibility_output_schema_v0_3.json",
+      "sha256": "9ead99dd3e002fc9bbbd10c25b65156f546a3bbba85625579bba001378cc55b2"
+    },
+    {
+      "bytes": 1445,
+      "path": "config/gendered_argument_visibility_pilot_v1.json",
+      "sha256": "fbc7f634b93a03da244808c977427645b61af0b17228cfd0e8c91b6a8081ae67"
+    },
+    {
+      "bytes": 2949,
+      "path": "config/gendered_argument_visibility_scaleup_5000_v1.json",
+      "sha256": "ee2d36534d222e3932354c56b4e9b759ee8d0789967a363d96d3fae34f8d7636"
+    },
+    {
+      "bytes": 4535,
+      "path": "config/gendered_argument_visibility_v03_low_effort_gate_v1.json",
+      "sha256": "b967dbb2aa8eeb2cc0b5a8a78e1b699ad3597d04869590faac6e793f499fd899"
+    },
+    {
+      "bytes": 3135,
+      "path": "config/gendered_argument_visibility_v03_nonthinking_equivalence_v1.json",
+      "sha256": "e162655d9e27f612b928a5ca8bbfabca8fac353c855d97f776b597a2ce7c07b9"
+    },
+    {
+      "bytes": 7218,
+      "path": "config/gendered_asymmetric_visibility_full_annotation_90727_v2.json",
+      "sha256": "5d67447e14294ecdad5b11d321619783385dae09eb2071b4351abeafbabb6c62"
+    },
+    {
+      "bytes": 5964,
+      "path": "config/gendered_asymmetric_visibility_full_annotation_v1.json",
+      "sha256": "7d2414e705c21e093f7e59f2c22ca7979d058121a14dcdfd43e63dbaf3a57c26"
+    },
+    {
+      "bytes": 2574,
+      "path": "config/gendered_privacy_router_codebook_v1.json",
+      "sha256": "3c4856867408d7a3ff3a307348325ca75ee0587015590c101b416600bd92744e"
+    },
+    {
+      "bytes": 996,
+      "path": "config/gendered_privacy_router_output_schema_v1.json",
+      "sha256": "a5ce7b93ca63a94aaf9e643d99f7d8c61edbf4eeb83839e60c4114cbd8edfbf9"
+    },
+    {
+      "bytes": 2245,
+      "path": "config/gendered_visibility_human_audit_identity_correction_v1.json",
+      "sha256": "8a94d11e2db698ac7715cfb9559d7a91cdd5e575b00853d7df4aaa326b7ecdef"
+    },
+    {
+      "bytes": 13113,
+      "path": "config/gendered_visibility_human_review_400_recheck_v2.json",
+      "sha256": "cb41d443593df2e3ede8f84b2cef993ceeb95fb71fa0906821b3d1cc31b92125"
+    },
+    {
+      "bytes": 11353,
+      "path": "config/gendered_visibility_human_review_400_v1.json",
+      "sha256": "a7069ebcfb2dbe720fd977033ddf8d673685f2feb8026bfa5e33fbeeb9b5855e"
+    },
+    {
+      "bytes": 2995,
+      "path": "config/gendered_visibility_paper_corpus_authorization_boundary_sensitivity_v1.json",
+      "sha256": "5e3c3522151b490890edd505296430bcd42d8cfc1018b29191da3915d16a24b3"
+    },
+    {
+      "bytes": 3935,
+      "path": "config/human_blind_review_codebook_v1.json",
+      "sha256": "32d3ff3ec91f71be8de6bad302d6049924228e1c0fa6c07fd2d78b6e8521ffef"
+    },
+    {
       "bytes": 2791,
       "path": "config/preprocessing_stage_contract.json",
       "sha256": "3a61680724be759ba4aa315345e75adf600aefa3d7ae89fae69bffaf1a060c74"
+    },
+    {
+      "bytes": 394,
+      "path": "config/provider_call_authorization_v1.public.example.json",
+      "sha256": "2e9013dfe36e743b747aefae6a801dfc2a090be3617ffeabe0d9bcaaeb91b116"
     },
     {
       "bytes": 694,
@@ -146,6 +306,36 @@
       "sha256": "139f07b1ec7659c8b0218163fe067dc8bb4ce132fe50a8b7813499feffda73ea"
     },
     {
+      "bytes": 3400,
+      "path": "prompts/gendered_argument_visibility_annotation_v0_1.md",
+      "sha256": "f4c72fd276c1cee0b0ff0bfa2f1ad4cac94f3ab90796e1bd26ebb18d8e4ea5d0"
+    },
+    {
+      "bytes": 4206,
+      "path": "prompts/gendered_argument_visibility_annotation_v0_2.md",
+      "sha256": "edd1d60e148466437fe5cd12b2f77087aee9bf1a36da805c8def6117b1f5b559"
+    },
+    {
+      "bytes": 4923,
+      "path": "prompts/gendered_argument_visibility_annotation_v0_3.md",
+      "sha256": "139f07b1ec7659c8b0218163fe067dc8bb4ce132fe50a8b7813499feffda73ea"
+    },
+    {
+      "bytes": 4558,
+      "path": "prompts/gendered_argument_visibility_longfield_deep_validation_v1.md",
+      "sha256": "49865743f2b1fdf78e9e066101a1dd2a3761eb3c0e96a4b1a78fbfac909a3d2c"
+    },
+    {
+      "bytes": 2378,
+      "path": "prompts/gendered_argument_visibility_model_benchmark_v1.md",
+      "sha256": "2d15b9ecd1832cd8c701960a1c33fba37877968b5a1c357fb72f9854fffde7c1"
+    },
+    {
+      "bytes": 1973,
+      "path": "prompts/gendered_privacy_router_model_benchmark_v1.md",
+      "sha256": "3e3793009d8ba4a1d4a0d506100e90941925958ee8f4aa7e2131581da9c62dd8"
+    },
+    {
       "bytes": 258,
       "path": "pyproject.toml",
       "sha256": "efb2fbf90a8a1cd39a7fc2fb95d5450b4abebe6a33a0f7c000aced8f1fa465fd"
@@ -154,6 +344,11 @@
       "bytes": 55,
       "path": "requirements-public.txt",
       "sha256": "2ecc7dfd44fc7b3e7ca25f8b14875769c8d51003ff94c2e70aff909f4f6bbefb"
+    },
+    {
+      "bytes": 392,
+      "path": "requirements-research-code.txt",
+      "sha256": "fb52d1a531e0fb8797bca5a7d3c69875bcc4ef7e0c545772921eb81b09926e38"
     },
     {
       "bytes": 2376,
@@ -316,9 +511,9 @@
       "sha256": "08ed72e752b99d90e840933321f3e91689e0fc27bc599ed54e009132227acd3b"
     },
     {
-      "bytes": 4732,
+      "bytes": 5144,
       "path": "scripts/verify_release.py",
-      "sha256": "cbed8a8d4bda57e19a66a8aaf56b012a3a566270a67eb5b47316b899542b3af3"
+      "sha256": "75089ee7867f7b30e1d3197b4c7e705608ef4cbfa5edeec26b4d42ef6bb61ce5"
     },
     {
       "bytes": 47,
@@ -326,9 +521,9 @@
       "sha256": "a5576c2c893220fa853fdf1f6a2ad6da391c032e388dcb1a123e5bcb924ef012"
     },
     {
-      "bytes": 810,
+      "bytes": 1207,
       "path": "src/analysis/README.md",
-      "sha256": "73d8152494a8b81ed5abd4f39df37f2ac00359a784c47c3b348b46921d359854"
+      "sha256": "e1bb8bc64eadb6c7cb6b099fb6f8e31442e6fdc39157a4ecf6ac8da2c58d2268"
     },
     {
       "bytes": 67,
@@ -336,9 +531,229 @@
       "sha256": "dbeb7998f6199d3635487f915c7ae9c2e52b30e4aa4375f69c70ec5e2ce1bc5d"
     },
     {
+      "bytes": 6210,
+      "path": "src/analysis/activate_gendered_visibility_paper_corpus_v4.py",
+      "sha256": "d2d2fff957c7d4b9c48767cee9616163a46daffb9afdb36f489d93f5a37ad175"
+    },
+    {
+      "bytes": 60082,
+      "path": "src/analysis/analyze_gendered_argument_visibility_deep_mining_v1.py",
+      "sha256": "0ae7af5ad1a0fa5ea6205794a47c4c391b4a90ba2d8f58af3368e3e16db994ae"
+    },
+    {
+      "bytes": 59319,
+      "path": "src/analysis/analyze_gendered_visibility_paper_corpus_v1.py",
+      "sha256": "77ac1e7418cdfe7f29eee2e3303e1e5cb4f77413a9916d4e05bfdf9c7d3b274a"
+    },
+    {
+      "bytes": 8532,
+      "path": "src/analysis/audit_gendered_argument_visibility_budget_adaptive_20000_v1.py",
+      "sha256": "ab4e6dfd97cbdf0b9a2bac9d891e8356e3915889d5e4e5da9673d62537b6303f"
+    },
+    {
+      "bytes": 67103,
+      "path": "src/analysis/audit_gendered_argument_visibility_scaleup_5000_v1.py",
+      "sha256": "92cb2e4667ce6b99ad79a27322a369c655028f4aba7cbb4282aad8f3d3b32fc2"
+    },
+    {
+      "bytes": 7741,
+      "path": "src/analysis/audit_gendered_visibility_duplicate_representatives_v1.py",
+      "sha256": "b1662df28f3a74e784128e7e8e9d128bc5a69d2e0cb50a0f698fbe93b5e96503"
+    },
+    {
+      "bytes": 11611,
+      "path": "src/analysis/audit_gendered_visibility_privacy_label_dependency_v2.py",
+      "sha256": "14f146c411e583e1143020a24e9b8d3396af13169b67677fad9545af504ba7ae"
+    },
+    {
+      "bytes": 9904,
+      "path": "src/analysis/audit_gendered_visibility_privacy_label_invariance_v1.py",
+      "sha256": "ea496fbb4295bd07b91d4b70cbdf8251986a3f39aabbed9031326571d553af17"
+    },
+    {
+      "bytes": 39086,
+      "path": "src/analysis/audit_residual_privacy_paper_corpus_v1.py",
+      "sha256": "6aa25f165eef343016ab4ac2c6acb2aa3a66e4673fbbd31dfc052b6eef945e54"
+    },
+    {
+      "bytes": 5743,
+      "path": "src/analysis/audit_residual_privacy_paper_corpus_v3.py",
+      "sha256": "7106088d2dd1fb34aa8163e96c6ce9291d03903fbfd065d52959880d526b0292"
+    },
+    {
+      "bytes": 13274,
+      "path": "src/analysis/build_gendered_argument_visibility_budget_adaptive_20000_v1.py",
+      "sha256": "9e7fb6d21e9fc5d219b94339a6b5bfa05033f0eaf6b8f51deed330fce37b0d6b"
+    },
+    {
+      "bytes": 7901,
+      "path": "src/analysis/build_gendered_argument_visibility_full_v03_90727_v1.py",
+      "sha256": "1f7a138ac020b3ffd05d73ef118db87eed2b3dd385bb2df13aec8aba9be7f8ee"
+    },
+    {
+      "bytes": 17228,
+      "path": "src/analysis/build_gendered_argument_visibility_model_benchmark_v1.py",
+      "sha256": "31c9b016f43587ea55da9f32905367f996d42b00415d41c3d62ff1433611b8a9"
+    },
+    {
+      "bytes": 26553,
+      "path": "src/analysis/build_gendered_argument_visibility_scaleup_5000_v1.py",
+      "sha256": "c3b7404c6d3055d0b1540c130ca68653724c384a62f8e2b36152f38a07c83e81"
+    },
+    {
+      "bytes": 7679,
+      "path": "src/analysis/build_gendered_argument_visibility_v03_nonthinking_equivalence_v1.py",
+      "sha256": "49940d05472d9631a4ba38c908e7aba74e26dd193e5982f49d915267585224d0"
+    },
+    {
+      "bytes": 9861,
+      "path": "src/analysis/build_gendered_asymmetric_visibility_full_annotation_v1.py",
+      "sha256": "d031ecb4b49bc770467eba520845780cec3b92f0802658670c420ade125689f5"
+    },
+    {
+      "bytes": 8507,
+      "path": "src/analysis/build_gendered_visibility_human_review_400_v1.py",
+      "sha256": "d7e53db1e58cb95cf6a8b3c7fc04f2737b6b783df73fbdf530fb37bfff2cf959"
+    },
+    {
+      "bytes": 32945,
+      "path": "src/analysis/build_gendered_visibility_manuscript_figures_v1.py",
+      "sha256": "2667ad2ab0ddb686c57c8aa95d1c37793f9edc8459d0f4cf5395e0d42de8c6dc"
+    },
+    {
+      "bytes": 57971,
+      "path": "src/analysis/build_gendered_visibility_manuscript_tables_v1.py",
+      "sha256": "083dd1a06ff3071265acd3c2a052c0ad1d182b92e6c60a53ed827da75afb2528"
+    },
+    {
+      "bytes": 18091,
+      "path": "src/analysis/build_gendered_visibility_privacy_remediation_v1.py",
+      "sha256": "5a0e9ad6f81d4f29ca8d9c069d4f5e35887e1cb9fa779bae053ad6b76ca4a9a1"
+    },
+    {
+      "bytes": 20494,
+      "path": "src/analysis/build_gendered_visibility_privacy_remediation_v2.py",
+      "sha256": "133a0a860a0a4d0db7e4507acf54fca8d50cfde687230a2dc2fe89a03251c295"
+    },
+    {
+      "bytes": 16303,
+      "path": "src/analysis/build_gendered_visibility_text_deduplicated_corpus_v2.py",
+      "sha256": "dbd3ed74ddcf0a3e22b5d5b3c4de70efc90b7b8e52823d2dd04c72f1c16df88c"
+    },
+    {
+      "bytes": 14998,
+      "path": "src/analysis/gendered_argument_visibility_benchmark_contract_v1.py",
+      "sha256": "1c3b5e19fc634c958b687b75098675d5ce3314e66b92b3315f0e3c1be1cfb57e"
+    },
+    {
+      "bytes": 17706,
+      "path": "src/analysis/gendered_argument_visibility_contract_v0_1.py",
+      "sha256": "dbd180fda7f05b77fc72f80be35df7786648ae54b79774b8d543339326988a55"
+    },
+    {
+      "bytes": 5449,
+      "path": "src/analysis/gendered_argument_visibility_contract_v0_2.py",
+      "sha256": "8b2e42d9a38e2711af6f0f6606da6f9b8ef1b85d1057140c09fccdb76694a032"
+    },
+    {
+      "bytes": 4330,
+      "path": "src/analysis/gendered_argument_visibility_contract_v0_3.py",
+      "sha256": "768f6be69c2122e11e5370e6cc582e17d1c4bd8784aec69e47419c3a7bea42a4"
+    },
+    {
+      "bytes": 13101,
+      "path": "src/analysis/gendered_argument_visibility_longfield_deep_contract_v1.py",
+      "sha256": "de2029138906b25bd6d26a6ddefcab57b2d348cea3960c02aad644fd2fd5f31a"
+    },
+    {
+      "bytes": 5607,
+      "path": "src/analysis/gendered_privacy_router_contract_v1.py",
+      "sha256": "df4c791384de6353bcf7479b5f5dced91064f6ec0b53ddc4b0270d20bdf3422f"
+    },
+    {
+      "bytes": 5236,
+      "path": "src/analysis/integrate_gendered_argument_visibility_full_v03_90727_v1.py",
+      "sha256": "ca6385238a13e40b5090db6959083d4bbbef88c556f0b8cda012b61717ed8a80"
+    },
+    {
       "bytes": 1891,
       "path": "src/analysis/metrics.py",
       "sha256": "fccee70b71cabbcc0b857fdc3660e8ad62c5954af53bfd465fdea9a96c7c7df9"
+    },
+    {
+      "bytes": 2038,
+      "path": "src/analysis/provider_call_authorization_v1.py",
+      "sha256": "d4ff007be9f1dadce0e1962e0af63c17156a7b647e36b9d7b299328d37a877e9"
+    },
+    {
+      "bytes": 28729,
+      "path": "src/analysis/run_gendered_argument_visibility_budget_adaptive_20000_v1.py",
+      "sha256": "2700fefccc69211b95463be6bb9f9348979c908c26b307751c14e04c24453b15"
+    },
+    {
+      "bytes": 18138,
+      "path": "src/analysis/run_gendered_argument_visibility_full_v03_90727_v1.py",
+      "sha256": "47828b49d82ce8c83050d626600cd6a25166ca41045ad3ee8caba190ae39f676"
+    },
+    {
+      "bytes": 11351,
+      "path": "src/analysis/run_gendered_argument_visibility_locked_v0_2.py",
+      "sha256": "3681903b3da4b0138ec15c8e91e47b3f346c891cf93e8562d8cfa4e8a8b04ea3"
+    },
+    {
+      "bytes": 34424,
+      "path": "src/analysis/run_gendered_argument_visibility_model_benchmark_v1.py",
+      "sha256": "f0d1e3d39a785bf2dd36309824fd8cdb6ba2df3d1bdb1515b3e0b07888b40486"
+    },
+    {
+      "bytes": 35893,
+      "path": "src/analysis/run_gendered_argument_visibility_pilot_v1.py",
+      "sha256": "c83b95b09458a26b794c8439f0c39a382022ccab96507e76492c44564f176bae"
+    },
+    {
+      "bytes": 9688,
+      "path": "src/analysis/run_gendered_argument_visibility_scaleup_5000_v1.py",
+      "sha256": "d157226da716dbe8f7f010b24df221327821d48f3ff968747ad89dc6850a17a3"
+    },
+    {
+      "bytes": 24109,
+      "path": "src/analysis/run_gendered_argument_visibility_v03_low_effort_gate_v1.py",
+      "sha256": "4f7376a6c58769f622a6dfc22632f618e8443d75e4f413f820cb918c688698fb"
+    },
+    {
+      "bytes": 26443,
+      "path": "src/analysis/run_gendered_argument_visibility_v03_nonthinking_equivalence_v1.py",
+      "sha256": "6372be1564eba1d3ee8c98a749c4cd6d043ca1a64fe695bc8faba2c4b339eba7"
+    },
+    {
+      "bytes": 41567,
+      "path": "src/analysis/run_gendered_asymmetric_visibility_full_annotation_v1.py",
+      "sha256": "10c26a1c1c23d4d694d98427fddcaea883cf6c092f41a5af3ceb997cf074870d"
+    },
+    {
+      "bytes": 27877,
+      "path": "src/analysis/summarize_gendered_argument_visibility_scaleup_5000_v1.py",
+      "sha256": "baa51d0e3301f86a64d477f21ec205bc6c315ad2efa3246224bc1c4d9d9a9d44"
+    },
+    {
+      "bytes": 23633,
+      "path": "src/analysis/summarize_gendered_visibility_human_audit_400_v1.py",
+      "sha256": "7b8914c22667c92dfea7e312e49d187182b35b70a7799bce6361271330715e5c"
+    },
+    {
+      "bytes": 9758,
+      "path": "src/analysis/summarize_gendered_visibility_human_audit_400_v2.py",
+      "sha256": "7abc74019fc70fa9cddbe31256a69b3affdbb1ceb87f2fc70e735e29d965835e"
+    },
+    {
+      "bytes": 37358,
+      "path": "src/analysis/summarize_gendered_visibility_human_audit_rq1_v1.py",
+      "sha256": "54b8991014fef1ecb42dd2745701e8e96f2b436e0f5ee581ae758ef2a3f5a6cc"
+    },
+    {
+      "bytes": 10031,
+      "path": "src/analysis/summarize_gendered_visibility_human_audit_rq1_v2.py",
+      "sha256": "f7de3b8af4a32e1590637b49fe3906fbda0a9f176bb9907bb98c69014b4554ac"
     },
     {
       "bytes": 748,
@@ -374,6 +789,11 @@
       "bytes": 74,
       "path": "src/collection/__init__.py",
       "sha256": "80053c998441bf9a36302cfcc7bcc1807e1baaed5ab9af9f472ac9973191fc5c"
+    },
+    {
+      "bytes": 6091,
+      "path": "src/collection/build_export_manifest.py",
+      "sha256": "1ed5f2791a6c049cdedd73d0fdddb23867657f6b7cf9d88c9fe5b7f62e3a6a39"
     },
     {
       "bytes": 3267,
@@ -426,9 +846,9 @@
       "sha256": "b127a42e9c61667af0fd0e2473c6a7c11f851a69f6f29f26cd11656da33aea6d"
     },
     {
-      "bytes": 975,
+      "bytes": 1439,
       "path": "src/preprocessing/README.md",
-      "sha256": "ddd8eb3c93fc8a2c0a18ddeea75a1e24e44453a90892c13780213dde72fc3eda"
+      "sha256": "561f152eddbea818132d61919f818a4eef3660d008da6060b0fda1a08608530e"
     },
     {
       "bytes": 62,
@@ -436,9 +856,209 @@
       "sha256": "637222946d5160dbdd06f0aec4dedb65ebb970d207458aa654e09f1beea371cc"
     },
     {
+      "bytes": 4495,
+      "path": "src/preprocessing/apply_brand_code_rule.py",
+      "sha256": "a5b9013825fe18425bae397d4692c3b88599eebed3caa5db28a876521e03e81e"
+    },
+    {
+      "bytes": 4148,
+      "path": "src/preprocessing/apply_date_stamp_cleanup.py",
+      "sha256": "2a9c00b73707b3b4dc856c210a87e516417fb5e253de1899cbbba29bdb026a96"
+    },
+    {
+      "bytes": 12016,
+      "path": "src/preprocessing/apply_deidentification.py",
+      "sha256": "cebce809ab0270bcadc39664dec140bb22a8015be4b27a04c7589e20da30c2d7"
+    },
+    {
+      "bytes": 8674,
+      "path": "src/preprocessing/apply_freetext_marketing_cleanup.py",
+      "sha256": "2c9952f7501befefb6887bd1958ac139e04eb1774f3e61f850dbd85aaea40419"
+    },
+    {
+      "bytes": 20084,
+      "path": "src/preprocessing/apply_full_cleanup_pipeline_combined.py",
+      "sha256": "b2b2394d1299b764cade136542805a5c38be1c3b317b0688d10c1096cb810849"
+    },
+    {
+      "bytes": 2970,
+      "path": "src/preprocessing/apply_length_forum_exclusion.py",
+      "sha256": "3c341a7468443a4f1842217592315206838c6b143d18825bef1c505c0397e24c"
+    },
+    {
+      "bytes": 5576,
+      "path": "src/preprocessing/apply_length_forum_exclusion_combined.py",
+      "sha256": "2811116d2d1c1a0b3bb6e5a60e6ce51699d9735b6e7d7eb3ed840aae4a44b407"
+    },
+    {
+      "bytes": 2213,
+      "path": "src/preprocessing/apply_non_cjk_exclusion.py",
+      "sha256": "49952ee4e4bfd4cc28a84a86f0e8909a436cfabc4d6ce3bd72e0804dcddb6d19"
+    },
+    {
+      "bytes": 5139,
+      "path": "src/preprocessing/apply_non_cjk_exclusion_combined.py",
+      "sha256": "dace319998e86105543d0e6505a96495c355bf2ead1b9f67c2a102954594b870"
+    },
+    {
+      "bytes": 11241,
+      "path": "src/preprocessing/apply_source_08_ai_residue_cleanup.py",
+      "sha256": "21b1eaa8c989ddbd41ab1d8be15c293f722995f64ebf499fb2584b0705c04fc9"
+    },
+    {
+      "bytes": 4001,
+      "path": "src/preprocessing/apply_text_cleanup_rules.py",
+      "sha256": "6f104d586443d1335287e4d014ebf3e40f19d366eb33d2f0d3a1255a11370654"
+    },
+    {
+      "bytes": 4457,
+      "path": "src/preprocessing/apply_truncation_marker_cleanup.py",
+      "sha256": "3e8f148acbea52c17696a1602a852ae27cdcbd945f76596ccb23eb89784aaf6b"
+    },
+    {
+      "bytes": 4172,
+      "path": "src/preprocessing/brand_and_code_rule.py",
+      "sha256": "94d70b3d8eb342950f109c09f4cf2d44279aa3f1b8a65882af1aab146e49e7a4"
+    },
+    {
+      "bytes": 6862,
+      "path": "src/preprocessing/build_combined_deduplicated_manifest.py",
+      "sha256": "c32d12d492a63d3ceb26e3b2ea0989e3138403537a72e3d669c7430a6b97b121"
+    },
+    {
+      "bytes": 3257,
+      "path": "src/preprocessing/build_deduplicated_manifest.py",
+      "sha256": "ed2fc730a08d030fad3a44f5ea70af38bda90d5c4edb14e9190d5f18d655b537"
+    },
+    {
+      "bytes": 3090,
+      "path": "src/preprocessing/build_filtered_manifest.py",
+      "sha256": "7300aad0e6639a10272f566d8bbb996f1b583572fcd1919c28d5f59a83c34d7f"
+    },
+    {
+      "bytes": 3072,
+      "path": "src/preprocessing/build_normalized_manifest.py",
+      "sha256": "ce80d2284df006157206b6e81fdea280241ff87241cba6e69e79d7b9331ccd7f"
+    },
+    {
+      "bytes": 3880,
+      "path": "src/preprocessing/build_profile_manifest.py",
+      "sha256": "5f987e00543386d5c67b0ca3a487aebb216b42b8c65aec88776579bfee6731d6"
+    },
+    {
+      "bytes": 3925,
+      "path": "src/preprocessing/build_tokenized_manifest.py",
+      "sha256": "66ec257f8a5298d5c9945692a5b12f15fe5bdef2d26cb19159104a45525ba4bf"
+    },
+    {
+      "bytes": 7350,
+      "path": "src/preprocessing/clean_titles_bracket_content.py",
+      "sha256": "b3ed2b330b282f1929b04e72c053830219f2229d7a766d0eb94d7bdd535f18ce"
+    },
+    {
+      "bytes": 6245,
+      "path": "src/preprocessing/compare_tokenizers.py",
+      "sha256": "5b01e75bfad49caf63f61617eaa16aca8aadb83bb1b76c2c21dca16405ddd96b"
+    },
+    {
+      "bytes": 14453,
+      "path": "src/preprocessing/create_deidentification_pilot.py",
+      "sha256": "2577201e1afd78c850c04903e3c8a5548fd2c2619fdc645af9ce109d297c1e4e"
+    },
+    {
+      "bytes": 6276,
+      "path": "src/preprocessing/detect_deidentification_candidates.py",
+      "sha256": "f0746c8bbff649a15060ad9156c4075dff4bad4f5f28a37ceec3e1e42ba6203e"
+    },
+    {
+      "bytes": 14692,
+      "path": "src/preprocessing/draft_bracket_coding.py",
+      "sha256": "cb43ab8817e243561bde61b97e01b8110e58cb07c9ce36f52bedac60f53c22eb"
+    },
+    {
+      "bytes": 6870,
+      "path": "src/preprocessing/empty_title_fallback.py",
+      "sha256": "bc306a5513f8838cd5dca60f63a568db4c652ca8f581fca7b234b4988466a463"
+    },
+    {
+      "bytes": 11763,
+      "path": "src/preprocessing/export_combined_review_and_analysis_views.py",
+      "sha256": "83f23bb7912ec7218acc5ab45ee6295955c840f8994a1aa2cea033bd4db63b51"
+    },
+    {
+      "bytes": 6937,
+      "path": "src/preprocessing/export_review_and_analysis_views.py",
+      "sha256": "0062c191f099a80a5357107d1f5cfc501e8367849b29d977e9238c23c2b77d10"
+    },
+    {
+      "bytes": 3428,
+      "path": "src/preprocessing/export_review_csvs.py",
+      "sha256": "e40e5320e51b1f326519ad247d5bdb07b85b289fcefdc8ecd17e44e916cc15ba"
+    },
+    {
+      "bytes": 2505,
+      "path": "src/preprocessing/export_review_tables.py",
+      "sha256": "2d671341532e6e319faaa6c3a5946ea9f7164cdc800e75e1c73521ce670eaf52"
+    },
+    {
+      "bytes": 4605,
+      "path": "src/preprocessing/export_venue_name_review_queue.py",
+      "sha256": "4249559b1d543ac349d4bb4c355a445f9ecf5940dd936885429f533ca9594874"
+    },
+    {
+      "bytes": 7031,
+      "path": "src/preprocessing/extract_bracket_content.py",
+      "sha256": "a82a12550bc1f0a094cea562a72963ea38193e3433a8c56f25270b06eace9c67"
+    },
+    {
+      "bytes": 6114,
+      "path": "src/preprocessing/filter_serial_story_posts.py",
+      "sha256": "214d34241700ab741a886b1b1b2299e43640356d5679edd36944f0cc594ac431"
+    },
+    {
+      "bytes": 4234,
+      "path": "src/preprocessing/flag_exact_duplicates.py",
+      "sha256": "746c4cbacd31b96111a4bf5abdd91a5944d9fd701425fa6c1fc9b628c9e293c5"
+    },
+    {
+      "bytes": 7029,
+      "path": "src/preprocessing/flag_exact_duplicates_combined.py",
+      "sha256": "8748158e04d6089cf4b327062597eb83fe6f5777c91c484014512ebc9bab8cf0"
+    },
+    {
+      "bytes": 6263,
+      "path": "src/preprocessing/normalize_cjk_radical_variants.py",
+      "sha256": "a507919d74712440e65c7852b79296e9a5ee810d67e6ff44ef282686feedda0a"
+    },
+    {
       "bytes": 6371,
       "path": "src/preprocessing/pipeline.py",
       "sha256": "96f5d8e55cfc266398ee961196eb4d0c44c3048ce019282167dcb1161fb2ff0a"
+    },
+    {
+      "bytes": 13782,
+      "path": "src/preprocessing/profile_raw.py",
+      "sha256": "92dd92153780a35ded3eb05dad5d8639fac6f48d3f47d55ddcdbe60ba615a046"
+    },
+    {
+      "bytes": 11855,
+      "path": "src/preprocessing/remove_organizer_prefix_noise.py",
+      "sha256": "f880a95560d37c033c0aebe5944e0641efee915baff94e7ee7604bd87c59a2fb"
+    },
+    {
+      "bytes": 2761,
+      "path": "src/preprocessing/scan_deidentification_residuals.py",
+      "sha256": "c73a62d1b89dd2de3d9039bd0d79d4cb90c646d23bc338b506d578066921852b"
+    },
+    {
+      "bytes": 9406,
+      "path": "src/preprocessing/tokenize_deidentified_corpus.py",
+      "sha256": "0f8bb8c8910565acf8d603b39c94722c5fc7c93fe46e6c7a5c6b512bf5430fde"
+    },
+    {
+      "bytes": 6503,
+      "path": "src/preprocessing/tokenize_full_corpus.py",
+      "sha256": "97761effc3d8634e5b7799ecde04418ec60c779231cff287cc778d950efb080c"
     },
     {
       "bytes": 956,
@@ -461,6 +1081,141 @@
       "sha256": "2b2eeb82babe7a54268cc4e2abd9bf478325b24a8111988fb03dd79b28ab89c9"
     },
     {
+      "bytes": 530,
+      "path": "src/review_app/README.md",
+      "sha256": "2f7e1574e7e1f8508be55af45351603cfcc9a0f78ea0cb324cdc2a331ca3c206"
+    },
+    {
+      "bytes": 44,
+      "path": "src/review_app/__init__.py",
+      "sha256": "8acbe0c340c76d3317aa437afe54adb89fe927f1cb3dce1a425f5b673b90e315"
+    },
+    {
+      "bytes": 14877,
+      "path": "src/review_app/comparison_static/app.js",
+      "sha256": "6b6363736b249383676c4c17fbfece12d1d074f52ab6dd36c2281019d5d45b21"
+    },
+    {
+      "bytes": 3139,
+      "path": "src/review_app/comparison_static/index.html",
+      "sha256": "0ba1d90d35e1cb1e7972ba3f4d90b621eeec1c67dece56267c5423378985171e"
+    },
+    {
+      "bytes": 6887,
+      "path": "src/review_app/comparison_static/styles.css",
+      "sha256": "e6c4a7754738daeea5692ff7131669273efce93582f0156bff2449dacf12b519"
+    },
+    {
+      "bytes": 24269,
+      "path": "src/review_app/comparison_viewer.py",
+      "sha256": "3d00de8064974bd7fbf91f31a56035e86a0c384d8c6c5f600553042756aada7c"
+    },
+    {
+      "bytes": 6259,
+      "path": "src/review_app/privacy_server.py",
+      "sha256": "c3dc607a6960ba0160be848c653cff34357de75c3e3448d173107cc12fe35f5c"
+    },
+    {
+      "bytes": 6231,
+      "path": "src/review_app/privacy_span_server.py",
+      "sha256": "ee6767173cac17f4db2c11c07ba6e2c2bb8b8a0bdf7a4efde58baec135e128bf"
+    },
+    {
+      "bytes": 14170,
+      "path": "src/review_app/privacy_span_static/app.js",
+      "sha256": "38706b8fbaf55137f6e0ff8da576662228e316357bd70d18edfc571771ff9fea"
+    },
+    {
+      "bytes": 3509,
+      "path": "src/review_app/privacy_span_static/index.html",
+      "sha256": "a59d415c6a0a34c90606c46d62806a7e4c88927b1c60013087a685a6e70bb8c3"
+    },
+    {
+      "bytes": 4517,
+      "path": "src/review_app/privacy_span_static/styles.css",
+      "sha256": "762eff5df7a6a72144e0f358d359148e942b804510eafbcbfe6bfc361e556ce5"
+    },
+    {
+      "bytes": 17793,
+      "path": "src/review_app/privacy_span_store.py",
+      "sha256": "aca2db32900212a1469a4acd8664d6cee023145e4e0e735df2085379e30da376"
+    },
+    {
+      "bytes": 9270,
+      "path": "src/review_app/privacy_static/app.js",
+      "sha256": "7fc5e6e6e892975c1ee69d207651ad59fc4e87eca915623939c97093eba27226"
+    },
+    {
+      "bytes": 3559,
+      "path": "src/review_app/privacy_static/index.html",
+      "sha256": "2027d3bb767d5a85db69d8856164a053f3db93a03705491fe83f655e79396c86"
+    },
+    {
+      "bytes": 5308,
+      "path": "src/review_app/privacy_static/styles.css",
+      "sha256": "53ca3e6af8cb1e9bd5cd7883f7b3f3b96d1900f187214181db0854ac93737ed1"
+    },
+    {
+      "bytes": 19789,
+      "path": "src/review_app/privacy_store.py",
+      "sha256": "458d4f4ff85a2a44d20c7c1bffa21898442eb0981bc8b594ceb6ec751153e966"
+    },
+    {
+      "bytes": 6980,
+      "path": "src/review_app/reference_static/app.js",
+      "sha256": "fccdf94ea810d8d4911fe435cde66914efc3818ebd2f0ef9eee80882fd6375c1"
+    },
+    {
+      "bytes": 3018,
+      "path": "src/review_app/reference_static/index.html",
+      "sha256": "9e2f0848ade7d8717a973f4eb5bbfc5bf7d1297aaac02cfdffef0098c42d219f"
+    },
+    {
+      "bytes": 1841,
+      "path": "src/review_app/reference_static/search.css",
+      "sha256": "440ace8dae95c5ff33225d76d11d4ce7d48e0cb1d72e75b868c5024ac182bbe8"
+    },
+    {
+      "bytes": 2867,
+      "path": "src/review_app/reference_static/styles.css",
+      "sha256": "9dc3cf357c03285fc8e9d5f5bd61b1df77911e3cff7dca5a697288f8c3289aac"
+    },
+    {
+      "bytes": 10609,
+      "path": "src/review_app/reference_viewer.py",
+      "sha256": "003bebe83a3f7387ed5ae3e4bd1ee0307c0a7bf2b0858057f99b2d8a82e509e8"
+    },
+    {
+      "bytes": 5912,
+      "path": "src/review_app/server.py",
+      "sha256": "deccfd76b5389523da6826bfc9df016ef31730080784651a43c1cf23331dc4c1"
+    },
+    {
+      "bytes": 20084,
+      "path": "src/review_app/static/app.js",
+      "sha256": "4ed7781431680d6a283ffa272d45a5b21ae085f72278540aa49eec995b0c5c10"
+    },
+    {
+      "bytes": 2055,
+      "path": "src/review_app/static/guidance.css",
+      "sha256": "32bc4c4f3c5b8d18a53927de5a0b88b4365588e16108e6fc202ffee636104b6c"
+    },
+    {
+      "bytes": 2859,
+      "path": "src/review_app/static/index.html",
+      "sha256": "33839c6e8faa7bf0ad885e9d8975bc57fdcaaedd61dd2eb5fec6aea1b8054949"
+    },
+    {
+      "bytes": 4963,
+      "path": "src/review_app/static/styles.css",
+      "sha256": "e5d082d34638ef1580849688b35adf11b42d9601243a814bc397224c232331ae"
+    },
+    {
+      "bytes": 27864,
+      "path": "src/review_app/store.py",
+      "sha256": "b60837277d51d8a85fb6df15d3d50a4cede1233955b1ed3cf57d00b96e7fa49f"
+    },
+    {
       "bytes": 626,
       "path": "src/sampling/README.md",
       "sha256": "663e044f70bfa7b0ee0f8e273f09a1e4ccf710befc95c205ad6b23afaa5b539c"
@@ -479,6 +1234,11 @@
       "bytes": 5541,
       "path": "tests/test_pipeline_components.py",
       "sha256": "0ad51fa735c05f11dea7cd784a4775bcb4166fb3e6c67d8068378c3a0da27ad9"
+    },
+    {
+      "bytes": 3426,
+      "path": "tests/test_production_interfaces.py",
+      "sha256": "0c4aaaf22579b33e20af89e4d9e46929aebd2571573e18364195eec904d3e1ea"
     },
     {
       "bytes": 1895,

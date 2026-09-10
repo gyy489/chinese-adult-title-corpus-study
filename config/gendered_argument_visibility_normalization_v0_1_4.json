@@ -1,0 +1,21 @@
+{
+  "version": "0.1.4",
+  "status": "frozen_for_development_pilot",
+  "extends": "config/gendered_argument_visibility_normalization_v0_1_3.json",
+  "extends_sha256": "5dd08386fc08ede58f74a4df0f1327b9b08bd60013af3d0f96f0030540548b70",
+  "additional_rules": [
+    {
+      "id": "normalize_evidence_enum_alias",
+      "operation": "apply the context enum alias to evidence supports as well as selected output codes"
+    },
+    {
+      "id": "drop_absence_sentinel_evidence",
+      "operation": "remove no_visible_authorization_language evidence supports because absence sentinels do not have independent lexical spans"
+    },
+    {
+      "id": "inherit_unexpressed_actor_evidence",
+      "operation": "attach event_visible_actor_not_visible to the existing event-visibility evidence row"
+    }
+  ],
+  "unresolved_policy": "The four semantic/evidence contradictions identified under v0.1.3 remain non-repairable."
+}

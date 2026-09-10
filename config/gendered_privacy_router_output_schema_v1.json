@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Gendered privacy-chain low-cost router response v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["items"],
+  "properties": {
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/item"}
+    }
+  },
+  "$defs": {
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["i", "rv", "privacy", "creation", "distribution", "exposure"],
+      "properties": {
+        "i": {"type": "integer", "minimum": 1},
+        "rv": {"enum": ["valid", "technical_noise", "unknown"]},
+        "privacy": {"enum": ["relevant", "not_relevant", "unclear", "not_applicable"]},
+        "creation": {"enum": ["visible", "absent", "unclear", "not_applicable"]},
+        "distribution": {"enum": ["visible", "absent", "unclear", "not_applicable"]},
+        "exposure": {"enum": ["visible", "absent", "unclear", "not_applicable"]}
+      }
+    }
+  }
+}

@@ -14,6 +14,10 @@
     "target_minus_actor_percentage_points": 69.61
   },
   "public_entry_points": [
+    "src/analysis/analyze_gendered_visibility_paper_corpus_v1.py",
+    "src/analysis/analyze_gendered_argument_visibility_deep_mining_v1.py",
+    "src/analysis/build_gendered_visibility_manuscript_tables_v1.py",
+    "src/analysis/build_gendered_visibility_manuscript_figures_v1.py",
     "src/analysis/metrics.py",
     "scripts/reproduce_results.py",
     "results/tables"

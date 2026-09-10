@@ -11,6 +11,12 @@
     "excluded_records": 12571
   },
   "public_entry_points": [
+    "src/preprocessing/build_combined_deduplicated_manifest.py",
+    "src/preprocessing/apply_full_cleanup_pipeline_combined.py",
+    "src/preprocessing/apply_length_forum_exclusion_combined.py",
+    "src/preprocessing/apply_non_cjk_exclusion_combined.py",
+    "src/preprocessing/apply_deidentification.py",
+    "src/preprocessing/export_combined_review_and_analysis_views.py",
     "src/preprocessing/pipeline.py",
     "config/cleaning_rules_public.json",
     "scripts/demo_preprocessing.py"
@@ -21,5 +27,5 @@
     "per-rule before/after checksums",
     "explicit exclusion accounting"
   ],
-  "privacy_boundary": "Production literal dictionaries, source adapters, and title-level transformation logs are restricted."
+  "privacy_boundary": "Production literal dictionaries and title-level transformation logs are restricted; source-specific branches use source_01-source_10 aliases."
 }

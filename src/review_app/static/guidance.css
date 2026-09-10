@@ -1,0 +1,82 @@
+.decision-rule {
+  background: #fff7d8;
+  border-radius: 4px;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.45;
+  margin: 0 0 6px;
+  padding: 6px 8px;
+}
+
+.field-examples {
+  background: var(--example);
+  border-left: 3px solid var(--green);
+  border-radius: 3px;
+  color: var(--detail);
+  font-size: 11px;
+  line-height: 1.4;
+  margin: 0 0 7px;
+  padding: 6px 8px;
+}
+
+.field-examples > b {
+  color: var(--green-ink);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.example-row {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: minmax(180px, 1.25fr) minmax(120px, .7fr) minmax(180px, 1fr);
+  padding: 4px 0;
+}
+
+.example-row + .example-row {
+  border-top: 1px dashed var(--line);
+}
+
+.example-row q { color: var(--ink); }
+.example-row span { color: var(--green-ink); font-weight: 800; }
+.example-row small { color: var(--muted); }
+:root[data-theme="dark"] .decision-rule { background: #3a3219; }
+
+button.danger { border-color: var(--danger-line); background: var(--danger-bg); }
+#search { max-width: 1050px; margin: 28px auto; padding: 20px; }
+.search-controls {
+  align-items: end;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  padding: 14px;
+}
+.search-controls label { color: var(--muted); display: grid; gap: 5px; font-size: 12px; }
+.search-controls select, .search-controls input {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  min-height: 36px;
+  padding: 6px 8px;
+}
+.search-result {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  display: block;
+  margin-top: 7px;
+  padding: 10px 12px;
+  text-align: left;
+  width: 100%;
+}
+.search-result small { color: var(--muted); display: block; margin-bottom: 4px; }
+.search-result:hover { border-color: var(--green); }
+
+@media (max-width: 900px) {
+  .example-row { grid-template-columns: 1fr; }
+  .example-row span { margin-top: 2px; }
+  .search-controls { grid-template-columns: 1fr; }
+}

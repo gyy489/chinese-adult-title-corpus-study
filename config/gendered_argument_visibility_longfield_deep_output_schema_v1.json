@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Long-field reduced deep annotation response v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["items"],
+  "properties": {
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/item"}
+    }
+  },
+  "$defs": {
+    "recordValidity": {"enum": ["valid", "technical_noise", "unknown"]},
+    "stage": {"enum": ["visible", "absent", "unclear", "not_applicable"]},
+    "position": {"enum": ["feminine", "masculine", "gender_diverse", "mixed_multiple", "mutual_or_reciprocal", "gender_unspecified", "not_visible", "unclear", "not_applicable"]},
+    "actorRealization": {"enum": ["explicit_gendered_person_or_role", "explicit_ungendered_person_or_role", "generic_or_collective_actor", "zero_anaphora_coreferential", "passive_agent_omitted", "nominalized_event_without_agent", "no_actor_expression", "unclear", "not_applicable"]},
+    "authorization": {"enum": ["authorized_explicit", "unauthorized_explicit", "mixed_or_stage_conflict", "no_visible_authorization_language", "unclear", "not_applicable"]},
+    "support": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["field", "code"],
+      "properties": {"field": {"type": "string"}, "code": {"type": "string"}}
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["span", "supports"],
+      "properties": {
+        "span": {"type": "string", "minLength": 1, "maxLength": 160},
+        "supports": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/support"}}
+      }
+    },
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "i", "record_validity", "material_creation_visibility", "material_creation_target_position",
+        "distribution_visibility", "distribution_actor_position", "distribution_actor_realization",
+        "distribution_target_position", "distribution_authorization_visibility", "exposure_visibility",
+        "exposure_target_position", "objectification_target_position", "desire_holder_position",
+        "pleasure_holder_position", "refusal_resistance_position", "attributed_speech_position",
+        "adjudication_reasons", "evidence"
+      ],
+      "properties": {
+        "i": {"type": "integer", "minimum": 1},
+        "record_validity": {"$ref": "#/$defs/recordValidity"},
+        "material_creation_visibility": {"$ref": "#/$defs/stage"},
+        "material_creation_target_position": {"$ref": "#/$defs/position"},
+        "distribution_visibility": {"$ref": "#/$defs/stage"},
+        "distribution_actor_position": {"$ref": "#/$defs/position"},
+        "distribution_actor_realization": {"$ref": "#/$defs/actorRealization"},
+        "distribution_target_position": {"$ref": "#/$defs/position"},
+        "distribution_authorization_visibility": {"$ref": "#/$defs/authorization"},
+        "exposure_visibility": {"$ref": "#/$defs/stage"},
+        "exposure_target_position": {"$ref": "#/$defs/position"},
+        "objectification_target_position": {"$ref": "#/$defs/position"},
+        "desire_holder_position": {"$ref": "#/$defs/position"},
+        "pleasure_holder_position": {"$ref": "#/$defs/position"},
+        "refusal_resistance_position": {"$ref": "#/$defs/position"},
+        "attributed_speech_position": {"$ref": "#/$defs/position"},
+        "adjudication_reasons": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 240}},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}}
+      }
+    }
+  }
+}

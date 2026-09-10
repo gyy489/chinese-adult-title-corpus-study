@@ -1,0 +1,181 @@
+{
+  "version": "3.0.0",
+  "status": "researcher_commanded_uninterrupted_budget_exhaustion_extension",
+  "experiment_id": "70_gendered_argument_visibility_budget_adaptive_20000_v1",
+  "research_role": "probability_extension_of_the_remaining_85727_records; combine_with_the_5000_frozen_known_records_for_the_90727_population",
+  "population": {
+    "full_records": 90727,
+    "frozen_v03_known_records": 5000,
+    "remaining_sampling_frame_records": 85727,
+    "maximum_new_annotations": 85727,
+    "maximum_combined_detailed_records": 90727,
+    "unit_of_analysis": "one canonical deidentified adult-film title"
+  },
+  "inputs": {
+    "remaining_frame": "data/interim/56_gendered_asymmetric_visibility_full_annotation_90727_v2/private/remaining_frame.jsonl",
+    "full_population_manifest": "data/interim/56_gendered_asymmetric_visibility_full_annotation_90727_v2/private/full_manifest_90727.csv",
+    "frozen_v03_sample": "data/interim/51_gendered_argument_visibility_scaleup_5000_v1/private/sample_manifest.csv",
+    "frozen_v03_results": "data/interim/51_gendered_argument_visibility_scaleup_5000_v1/private/validation_5000_final_records.jsonl"
+  },
+  "sampling": {
+    "seed": 20260815070,
+    "strata": ["frozen_split", "source_site", "length_band"],
+    "selection": "sequential_stratified_without_replacement_using_hamilton_allocation_and_seeded_stable_hash_order",
+    "waves": [
+      {"id": "probability_gate_04000", "cumulative_records": 4000},
+      {"id": "probability_precision_08000", "cumulative_records": 8000},
+      {"id": "probability_cap_20000", "cumulative_records": 20000},
+      {"id": "probability_budget_30000", "cumulative_records": 30000},
+      {"id": "probability_budget_40000", "cumulative_records": 40000},
+      {"id": "probability_budget_50000", "cumulative_records": 50000},
+      {"id": "probability_budget_60000", "cumulative_records": 60000},
+      {"id": "probability_budget_70000", "cumulative_records": 70000},
+      {"id": "probability_budget_80000", "cumulative_records": 80000},
+      {"id": "probability_census_85727", "cumulative_records": 85727}
+    ],
+    "inference": "At each cumulative wave use that wave's stratum-specific inclusion probabilities and weights. The frozen 5,000 records contribute known totals; weighted estimates apply only to the remaining 85,727-record frame.",
+    "zero_cell_policy": "Every active stratum receives at least one draw in every incremental wave when feasible; any zero sample cell must be reported and blocks population inference for affected outcomes."
+  },
+  "measurement_policy": {
+    "contract": "exact_gendered_argument_visibility_v0.3",
+    "selected_model_configuration": {
+      "model": "deepseek-v4-flash",
+      "thinking": "enabled",
+      "reasoning_effort": "high",
+      "decision": "run69 low effort failed the 20-record catastrophic gate"
+    },
+    "selection_gate": "run69 failed at 20 records: 12/20 contract valid and 79.17% low-vs-Codex agreement on valid records versus 84.90% for high on the same records; low is rejected",
+    "source_outputs_immutable": true,
+    "failed_items_only_retry": true,
+    "maximum_attempts_per_item": 3,
+    "maximum_provider_calls_per_item": 5
+  },
+  "runner": {
+    "endpoint": "https://api.deepseek.com/chat/completions",
+    "batch_size": 4,
+    "retry_batch_sizes": [2, 1],
+    "workers_by_wave": {
+      "probability_gate_04000": 24,
+      "probability_precision_08000": 96,
+      "probability_cap_20000": 96,
+      "probability_budget_30000": 96,
+      "probability_budget_40000": 96,
+      "probability_budget_50000": 96,
+      "probability_budget_60000": 96,
+      "probability_budget_70000": 96,
+      "probability_budget_80000": 96,
+      "probability_census_85727": 96
+    },
+    "max_output_tokens": 64000,
+    "request_timeout_seconds": 600,
+    "hard_stop_http_statuses": [402],
+    "credential_env": "DEEPSEEK_API_KEY",
+    "sealed_provider_outputs": true,
+    "state_backend": "versioned_json",
+    "authorization_operation_prefix": "run70"
+  },
+  "stopping_policy": {
+    "approval_required_before_each_wave": false,
+    "researcher_authorized_automatic_continuation_after_20000_check": true,
+    "continuation_protocol_version": "v3_researcher_budget_exhaustion_override_2026-08-16",
+    "researcher_budget_exhaustion_override": true,
+    "post_20000_gate_role": "diagnostic_only_nonblocking; preserve every failed gate and qualify affected manuscript claims",
+    "historical_20000_result": "failed automatic continuation because one length-band deletion put C1 feminine-or-mixed at 0.745730 below the frozen 0.75 threshold; never relabel this historical result",
+    "allow_all_pricing_profiles_until_budget_exhaustion": true,
+    "required_candidates": ["B1", "C1", "C2", "C5"],
+    "C4_role": "definition_sensitive_sensitivity_analysis_not_a_stop_gate",
+    "minimum_contract_valid_rate": 0.99,
+    "maximum_unresolved_rate": 0.01,
+    "minimum_evidence_complete_rate": 0.70,
+    "maximum_needs_adjudication_rate": 0.05,
+    "maximum_http_429_call_rate": 0.01,
+    "maximum_batch_failure_rate_legacy_nonblocking": 0.005,
+    "batch_failure_policy": "record_all_transient_batch_failures_as_warnings; block only terminal unresolved or failed quality gates",
+    "maximum_http_402_calls": 0,
+    "minimum_effective_sample_fraction": 0.70,
+    "maximum_whole_population_worst_case_95pct_margin": {
+      "probability_gate_04000": 0.016,
+      "probability_precision_08000": 0.011,
+      "probability_cap_20000": 0.006,
+      "probability_budget_30000": 0.0045,
+      "probability_budget_40000": 0.0035,
+      "probability_budget_50000": 0.003,
+      "probability_budget_60000": 0.0025,
+      "probability_budget_70000": 0.002,
+      "probability_budget_80000": 0.0015,
+      "probability_census_85727": 0.0
+    },
+    "stop_when": "Provider balance returns HTTP 402, the cumulative CNY fuse cannot safely authorize another request, or the remaining 85,727-record frame is complete. Engineering and information gates remain mandatory diagnostics but are nonblocking under the researcher's v3 command.",
+    "never_use": "An arbitrary first 70,000-record corpus or unweighted raw percentages from a partial wave."
+  },
+  "information_analysis": {
+    "minimum_stop_wave": "probability_precision_08000",
+    "confidence_level": 0.95,
+    "variance_estimator": "stratified_srswor_linearized_ratio_with_frozen_5000_as_known_totals",
+    "missingness_sensitivity": "worst_case_weighted_bounds_for_all_unresolved_records",
+    "deletion_dimensions": ["source_site", "length_band"],
+    "maximum_95pct_half_width": {
+      "probability_gate_04000": 0.04,
+      "probability_precision_08000": 0.03,
+      "probability_cap_20000": 0.02,
+      "probability_budget_30000": 0.02,
+      "probability_budget_40000": 0.02,
+      "probability_budget_50000": 0.02,
+      "probability_budget_60000": 0.02,
+      "probability_budget_70000": 0.02,
+      "probability_budget_80000": 0.02,
+      "probability_census_85727": 0.02
+    },
+    "minimum_unweighted_remaining_opportunities": {
+      "probability_gate_04000": 50,
+      "probability_precision_08000": 100,
+      "probability_cap_20000": 200,
+      "probability_budget_30000": 200,
+      "probability_budget_40000": 200,
+      "probability_budget_50000": 200,
+      "probability_budget_60000": 200,
+      "probability_budget_70000": 200,
+      "probability_budget_80000": 200,
+      "probability_census_85727": 200
+    },
+    "metrics": [
+      {"candidate": "C1", "metric": "strict_feminine_distribution_target", "comparison": "min", "threshold": 0.50},
+      {"candidate": "C1", "metric": "feminine_or_mixed_distribution_target", "comparison": "min", "threshold": 0.75},
+      {"candidate": "B1", "metric": "target_minus_actor_paired_rate", "comparison": "min", "threshold": 0.00},
+      {"candidate": "C2", "metric": "creation_to_distribution", "comparison": "min", "threshold": 0.90},
+      {"candidate": "C2", "metric": "distribution_to_exposure", "comparison": "min", "threshold": 0.90},
+      {"candidate": "C2", "metric": "three_stage", "comparison": "min", "threshold": 0.85},
+      {"candidate": "C5", "metric": "feminine_objectification", "comparison": "min", "threshold": 0.40},
+      {"candidate": "C5", "metric": "any_feminine_person_position", "comparison": "max", "threshold": 0.30},
+      {"candidate": "C5", "metric": "objectification_and_all_four_absent", "comparison": "min", "threshold": 0.30}
+    ]
+  },
+  "pricing": {
+    "unit": "CNY_per_million_tokens",
+    "official_checked_on": "2026-08-16",
+    "transition_utc": "2026-08-16T16:00:00Z",
+    "new_peak_windows_utc": [["01:00", "04:00"], ["06:00", "10:00"]],
+    "profiles": {
+      "current": {"cache_hit_input": 0.02, "cache_miss_input": 1.0, "output": 2.0},
+      "new_offpeak": {"cache_hit_input": 0.05, "cache_miss_input": 1.5, "output": 4.5},
+      "new_peak": {"cache_hit_input": 0.10, "cache_miss_input": 3.0, "output": 9.0}
+    },
+    "empirical_high_effort_usage_per_5000": {
+      "cache_hit_input_tokens": 2125184,
+      "cache_miss_input_tokens": 367799,
+      "output_tokens": 28710900,
+      "reasoning_tokens": 24604480
+    },
+    "reserve_fraction": 0.15,
+    "researcher_reported_available_cny": 528.71,
+    "balance_reported_at": "2026-08-16",
+    "overnight_safety_reserve_cny": 1.0,
+    "run70_existing_cost_cny": 39.874841,
+    "run70_cumulative_hard_limit_cny": 567.584841,
+    "balance_is_user_report_not_api_verified": true
+  },
+  "authorization": {
+    "provider_calls_authorized": false,
+    "scope": "The researcher explicitly commanded uninterrupted nested-frame annotation through balance exhaustion or the 85,727-record census ceiling. Central authorization remains the live switch and retains the cumulative CNY fuse; this descriptive field does not itself authorize calls."
+  }
+}

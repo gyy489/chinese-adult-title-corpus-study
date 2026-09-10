@@ -13,11 +13,19 @@
     "annotation_fields": 42
   },
   "public_entry_points": [
+    "src/analysis/build_gendered_argument_visibility_scaleup_5000_v1.py",
+    "src/analysis/run_gendered_argument_visibility_scaleup_5000_v1.py",
+    "src/analysis/audit_gendered_argument_visibility_scaleup_5000_v1.py",
+    "src/analysis/build_gendered_argument_visibility_budget_adaptive_20000_v1.py",
+    "src/analysis/run_gendered_argument_visibility_budget_adaptive_20000_v1.py",
+    "src/analysis/audit_gendered_argument_visibility_budget_adaptive_20000_v1.py",
+    "src/analysis/integrate_gendered_argument_visibility_full_v03_90727_v1.py",
     "src/sampling/fixed_seed.py",
     "src/annotation/contract_v0_3.py",
     "config/annotation_codebook_v0_3.json",
     "config/annotation_output_schema_v0_3.json",
-    "prompts/annotation_prompt_v0_3.md"
+    "prompts/annotation_prompt_v0_3.md",
+    "config/provider_call_authorization_v1.public.example.json"
   ],
   "validation": [
     "fixed-seed stratified sampling",

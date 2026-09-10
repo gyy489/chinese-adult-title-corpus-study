@@ -58,12 +58,15 @@ titles.
 
 - The final configurable collection engine: selectors, pagination, domain
   guards, HTTP/Playwright modes, resumption, MySQL storage, and export.
-- An auditable preprocessing engine, semantic-length gate, exact-final-text
-  deduplication, and public-safe synthetic rule configuration.
+- The stage-specific cleaning programs, combined orchestration, semantic-length
+  gate, exact-final-text deduplication, and public-safe synthetic configuration.
 - Fixed-seed stratified sampling and a separately labelled
   mechanism-enriched component.
 - The complete frozen v0.3 prompt, codebook, 42-field JSON Schema, and layered
   semantic/evidence validators.
+- The actual two-phase annotation builders, batch runners, recovery logic,
+  contract audits, and output integration programs, with provider calls denied
+  by default in the public authorization template.
 - Exact-span privacy remediation, mandatory post-remediation deduplication, and
   a direct-locator release gate.
 - Human-review agreement code, aggregate statistical checks, 18 released CSV
@@ -71,7 +74,8 @@ titles.
 - Final aggregate manifests for every consequential stage—not old drafts,
   retries, handoffs, or run diaries.
 
-Start with the **[pipeline map](PIPELINE.md)**, then inspect the
+Start with the **[pipeline map](PIPELINE.md)** and
+[authoritative program inventory](PROGRAM_INVENTORY.md), then inspect the
 [stage manifests](artifacts/stages/README.md) or run the synthetic demos. The
 manuscript, real titles, raw data, and title-level outputs are not distributed.
 
@@ -85,7 +89,8 @@ manuscript, real titles, raw data, and title-level outputs are not distributed.
 | [`src/annotation/`](src/annotation/) | Frozen 42-field contract and runtime validation |
 | [`src/privacy/`](src/privacy/) | Exact-span remediation and direct-locator gates |
 | [`src/human_review/`](src/human_review/) | Two-coder and human-versus-AI agreement aggregation |
-| [`src/analysis/`](src/analysis/) | Public estimators and table consistency checks |
+| [`src/review_app/`](src/review_app/) | Local blind-review, comparison, and privacy-span interfaces |
+| [`src/analysis/`](src/analysis/) | Two-phase annotation, corpus activation, full analysis, tables, and figures |
 | [`artifacts/stages/`](artifacts/stages/) | Final aggregate state of each private-data pipeline node |
 | [`examples/synthetic/`](examples/synthetic/) | Harmless inputs for exercising restricted-input stages |
 | [`results/`](results/) | Released aggregate tables, figures, summaries, and checksums |
@@ -126,6 +131,12 @@ python -m scripts.demo_privacy_gate
 python -m scripts.demo_human_review
 ```
 
+`requirements-public.txt` is the minimal CI/synthetic-demo environment.
+`requirements-research-code.txt` records the complete Python package layer for
+the released production programs; it does not supply the restricted corpus,
+literal dictionaries, browser binaries, NER models, review queues, or API
+credentials.
+
 ## Released results
 
 - [Aggregate tables](results/tables/README.md)
@@ -145,7 +156,10 @@ review records. See [Data availability](DATA_AVAILABILITY.md) and
 
 ## Research status and author
 
-The associated manuscript is under journal review. Repository materials are a
-public research companion rather than the manuscript or a public dataset.
+The manuscript is being prepared with *Sexuality & Culture* as the planned
+first-submission journal. The abstract above reports the current analysis; the
+research question, theoretical framing, and interpretive method remain subject
+to the researcher's explicit freeze. Repository materials are a public research
+companion rather than the manuscript or a public dataset.
 
 **Ziyang Gu** · [ORCID 0009-0002-9998-1568](https://orcid.org/0009-0002-9998-1568)

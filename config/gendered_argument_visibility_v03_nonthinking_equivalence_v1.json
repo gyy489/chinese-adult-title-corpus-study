@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "status": "development_gate_not_production",
+  "experiment_id": "58_gendered_argument_visibility_v03_nonthinking_equivalence_v1",
+  "reference_role": "frozen_v0.3_machine_reference_not_human_gold",
+  "single_variable": "disable_provider_thinking_while_preserving_the_exact_v0.3_contract",
+  "records": 100,
+  "smoke_records": 40,
+  "source": {
+    "benchmark_run": "52_gendered_argument_visibility_model_benchmark_v1",
+    "exclude_frozen_splits": ["final_blind_test"]
+  },
+  "model": {
+    "id": "flash_nonthinking",
+    "model": "deepseek-v4-flash",
+    "thinking": "disabled",
+    "batch_size": 5,
+    "workers": 8,
+    "max_output_tokens": 12000
+  },
+  "runner": {
+    "endpoint": "https://api.deepseek.com/chat/completions",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "stream": false,
+    "max_attempts_per_item": 1,
+    "request_timeout_seconds": 600,
+    "hard_stop_http_statuses": [402]
+  },
+  "pricing": {
+    "pricing_version": "deepseek_official_2026-08-15_with_announced_2026-08-16_schedule",
+    "unit": "USD_per_million_tokens",
+    "transition_utc": "2026-08-16T16:00:00Z",
+    "new_peak_windows_utc": [["01:00", "04:00"], ["06:00", "10:00"]],
+    "profiles": {
+      "current": {
+        "effective": "before_2026-08-16T16:00:00Z",
+        "deepseek-v4-flash": {"cache_hit_input": 0.0028, "cache_miss_input": 0.14, "output": 0.28}
+      },
+      "new_offpeak": {
+        "effective": "from_2026-08-16T16:00:00Z outside UTC peak windows",
+        "deepseek-v4-flash": {"cache_hit_input": 0.007, "cache_miss_input": 0.22, "output": 0.66}
+      },
+      "new_peak": {
+        "effective": "from_2026-08-16T16:00:00Z at UTC 01:00-04:00 or 06:00-10:00",
+        "deepseek-v4-flash": {"cache_hit_input": 0.014, "cache_miss_input": 0.44, "output": 1.32}
+      }
+    }
+  },
+  "scoring": {
+    "primary_fields": [
+      "record_validity",
+      "privacy_chain_relevance",
+      "material_creation_visibility",
+      "material_creation_target_position",
+      "distribution_visibility",
+      "distribution_actor_position",
+      "distribution_actor_realization",
+      "distribution_target_position",
+      "distribution_authorization_visibility",
+      "exposure_visibility",
+      "exposure_target_position",
+      "objectification_target_position",
+      "desire_holder_position",
+      "pleasure_holder_position",
+      "refusal_resistance_position",
+      "attributed_speech_position"
+    ],
+    "gates": {
+      "required_records": 40,
+      "minimum_contract_valid_rate": 0.98,
+      "minimum_primary_micro_agreement": 0.95,
+      "minimum_privacy_relevant_recall": 0.98,
+      "minimum_privacy_specificity": 0.95,
+      "minimum_distribution_visible_recall": 0.95,
+      "minimum_creation_visible_recall": 0.95,
+      "minimum_exposure_visible_recall": 0.95,
+      "minimum_evidence_pair_precision": 0.99,
+      "minimum_evidence_pair_recall": 0.90,
+      "maximum_total_cost_usd": 0.10,
+      "maximum_p95_call_latency_seconds": 120.0
+    }
+  },
+  "next_gate": {
+    "records": 100,
+    "condition": "Only after every 40-record smoke gate passes; requires a new exact authorization."
+  }
+}

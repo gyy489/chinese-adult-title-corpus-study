@@ -21,3 +21,10 @@ The public package therefore supports three reproducibility claims:
 It does not support independent re-execution of title-level annotation or
 full-corpus analysis without the restricted research corpus. No access to the
 restricted corpus is promised by publication of this repository.
+
+Production programs that do not embed sensitive literals are released for
+inspection. Source-specific branches use stable pseudonyms (`source_01` through
+`source_10`). Components whose populated person, organization, brand, or source
+dictionaries would disclose restricted provenance expose the same structural
+API or a private-file injection point with an empty public default. The exact
+classification is recorded in [`PROGRAM_INVENTORY.md`](PROGRAM_INVENTORY.md).

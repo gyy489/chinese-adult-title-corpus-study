@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "status": "router_benchmark_machine_bridge_not_human_gold",
+  "research_object": "deidentified Chinese adult-film title wording only",
+  "inference_boundary": "Encode visible title wording only. Do not infer video content, real events, identity, consent, authorization, harm, intention, agency, experience, audience effects, or causality.",
+  "fields": {
+    "rv": {
+      "long": "record_validity",
+      "values": ["valid", "technical_noise", "unknown"]
+    },
+    "privacy": {
+      "long": "privacy_chain_relevance",
+      "values": ["relevant", "not_relevant", "unclear", "not_applicable"]
+    },
+    "creation": {
+      "long": "material_creation_visibility",
+      "values": ["visible", "absent", "unclear", "not_applicable"]
+    },
+    "distribution": {
+      "long": "distribution_visibility",
+      "values": ["visible", "absent", "unclear", "not_applicable"]
+    },
+    "exposure": {
+      "long": "exposure_visibility",
+      "values": ["visible", "absent", "unclear", "not_applicable"]
+    }
+  },
+  "definitions": {
+    "privacy_chain_relevant": "The title visibly refers to making/capturing intimate material, obtaining/possessing such material, distributing/uploading/sharing/leaking/selling/publishing it, or its exposure/being seen/discovered.",
+    "creation_visible": "The title visibly presents filming, photographing, recording, capturing, or self-producing the material.",
+    "distribution_visible": "The title visibly presents uploading, sending, sharing, leaking, publishing, releasing, selling, or otherwise transmitting the material. Mere receipt or possession is not distribution.",
+    "exposure_visible": "The title visibly presents the material/person being exposed, publicly available, seen, discovered, or watched as a privacy-chain consequence. Do not treat ordinary sexual visibility as privacy exposure.",
+    "not_relevant": "No visible creation/acquisition/distribution/privacy-exposure wording. Sexual content alone is not a privacy chain."
+  },
+  "dependencies": [
+    "If rv is technical_noise or unknown, all four remaining fields are not_applicable.",
+    "If privacy is not_relevant, creation/distribution/exposure are all not_applicable.",
+    "If privacy is relevant, each stage is independently visible, absent, or unclear; none is not_applicable.",
+    "If privacy is unclear, all three stages are unclear.",
+    "A selfie creator is not automatically a distributor; a recipient or possessor is not automatically a distributor.",
+    "No evidence array is requested in this routing benchmark."
+  ]
+}

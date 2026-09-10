@@ -1,0 +1,98 @@
+{
+  "version": "1.0.0",
+  "status": "prepared_not_run",
+  "seed": 2026081501,
+  "records": 100,
+  "reference_role": "frozen_v0.3_machine_bridge_not_human_gold",
+  "sample": {
+    "clean_bridge_records": 80,
+    "diagnostic_challenge_records": 20,
+    "exclude_frozen_splits": ["final_blind_test"],
+    "clean_strata_order": [
+      "b1_actor_visible",
+      "c4_authorization_marked",
+      "c2_three_stage_visible",
+      "c2_creation_distribution_visible",
+      "c5_feminine_objectification_or_subjectivity",
+      "c2_distribution_exposure_visible",
+      "b1_actor_omitted",
+      "c1_feminine_distribution_target"
+    ],
+    "clean_per_stratum": 10,
+    "challenge_strata_order": [
+      "diagnostic_adjudication",
+      "diagnostic_evidence_incomplete_without_normalization",
+      "diagnostic_normalized_evidence_complete",
+      "diagnostic_normalized_and_evidence_incomplete"
+    ],
+    "challenge_per_stratum": 5
+  },
+  "model_configs": [
+    {
+      "id": "flash_nonthinking",
+      "model": "deepseek-v4-flash",
+      "thinking": "disabled",
+      "batch_size": 10,
+      "workers_default": 12,
+      "max_output_tokens": 6000
+    },
+    {
+      "id": "flash_thinking",
+      "model": "deepseek-v4-flash",
+      "thinking": "enabled",
+      "batch_size": 10,
+      "workers_default": 12,
+      "max_output_tokens": 12000
+    },
+    {
+      "id": "pro_nonthinking",
+      "model": "deepseek-v4-pro",
+      "thinking": "disabled",
+      "batch_size": 10,
+      "workers_default": 12,
+      "max_output_tokens": 6000
+    }
+  ],
+  "runner": {
+    "endpoint": "https://api.deepseek.com/chat/completions",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "stream": false,
+    "max_workers": 50,
+    "max_attempts_per_item": 3,
+    "request_timeout_seconds": 600,
+    "http_429_backoff_seconds": [2, 5, 15, 30, 60],
+    "hard_stop_http_statuses": [402]
+  },
+  "pricing": {
+    "pricing_version": "deepseek_official_2026-08-15_with_announced_2026-08-16_schedule",
+    "unit": "USD_per_million_tokens",
+    "transition_utc": "2026-08-16T16:00:00+00:00",
+    "new_peak_windows_utc": [["01:00", "04:00"], ["06:00", "10:00"]],
+    "profiles": {
+      "current": {
+        "effective": "before_2026-08-16T16:00:00Z",
+        "deepseek-v4-flash": {"cache_hit_input": 0.0028, "cache_miss_input": 0.14, "output": 0.28},
+        "deepseek-v4-pro": {"cache_hit_input": 0.003625, "cache_miss_input": 0.435, "output": 0.87}
+      },
+      "new_offpeak": {
+        "effective": "from_2026-08-16T16:00:00Z outside UTC peak windows",
+        "deepseek-v4-flash": {"cache_hit_input": 0.007, "cache_miss_input": 0.22, "output": 0.66},
+        "deepseek-v4-pro": {"cache_hit_input": 0.022, "cache_miss_input": 0.66, "output": 1.98}
+      },
+      "new_peak": {
+        "effective": "from_2026-08-16T16:00:00Z at UTC 01:00-04:00 or 06:00-10:00",
+        "deepseek-v4-flash": {"cache_hit_input": 0.014, "cache_miss_input": 0.44, "output": 1.32},
+        "deepseek-v4-pro": {"cache_hit_input": 0.044, "cache_miss_input": 1.32, "output": 3.96}
+      }
+    }
+  },
+  "scoring": {
+    "primary_partition": "clean_bridge",
+    "label_fields": ["rv", "cv", "ct", "dv", "da", "dr", "dt", "au", "ev", "et", "ob", "de", "pl", "rr", "sp"],
+    "bridge_noninferiority_margin": 0.02,
+    "minimum_contract_valid_rate": 0.98,
+    "projection_records": 61016,
+    "projection_concurrency": [12, 25, 50]
+  }
+}

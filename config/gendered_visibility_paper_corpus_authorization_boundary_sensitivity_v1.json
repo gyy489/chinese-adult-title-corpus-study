@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "status": "researcher_approved_for_paper_corpus_scope_2026_08_17",
+  "researcher_approval": {
+    "date": "2026-08-17",
+    "record": "paper/manuscript_decisions_freeze_2026-08-17.md",
+    "scope": "Approve the three preserved lexical boundaries and corrected paper-corpus/opportunity metadata; do not reinterpret them as actual authorization or consent."
+  },
+  "purpose": "Paper-corpus-scoped C4 lexical-boundary sensitivity without overwriting any frozen v0.3 output.",
+  "derived_from": {
+    "path": "config/codex_authorization_boundary_sensitivity_v1.json",
+    "sha256": "a40dd039eb2202d82442a44820769ee92a54e96d6a6fc377dcb4ca27d2b7b151",
+    "change": "Correct scope and opportunity metadata only; preserve the three boundary identifiers and regular expressions exactly."
+  },
+  "corpus_scope": {
+    "freeze_id": "gendered_visibility_paper_corpus_v1",
+    "records": 38623,
+    "unit": "record-key-unique title record",
+    "opportunity": "record_validity=valid and privacy_chain_relevance=relevant and distribution_visibility=visible",
+    "expected_opportunity_records": 4224,
+    "track_composition": {
+      "probability": 36628,
+      "mechanism_enriched": 1995
+    }
+  },
+  "boundaries": [
+    {
+      "id": "frozen_v03",
+      "description": "No reclassification; preserve frozen DeepSeek v0.3 authorization labels.",
+      "regex": null
+    },
+    {
+      "id": "narrow_explicit_victim_or_stealth",
+      "description": "Reclassify only explicit stealth capture or affected-party/passive disclosure wording.",
+      "regex": "偷拍|偷录|被.{0,8}(?:曝光|泄露|泄密|外泄|外流|流出|出卖)|惨遭.{0,6}(?:泄密|泄露|曝光|外流|流出)|遭.{0,6}(?:曝光|泄露|外泄)|手机丢失|出卖|背刺|分手.{0,4}(?:曝光|泄密|泄露)"
+    },
+    {
+      "id": "codex_broad_leakage_semantics",
+      "description": "Use the frozen Codex pass boundary: leakage lexemes themselves visibly mark unauthorized disclosure, while plain 流出 or 曝光 alone do not.",
+      "regex": "泄密|泄露|外泄|外流|偷拍|偷录|被.{0,8}(?:曝光|泄露|泄密|外泄|外流|流出|出卖)|惨遭.{0,6}(?:泄密|泄露|曝光|外流|流出)|遭.{0,6}(?:曝光|泄露|外泄)|手机丢失|出卖|背刺|分手.{0,4}(?:曝光|泄密|泄露)"
+    }
+  ],
+  "historical_gate": {
+    "no_visible_authorization_language_min": 0.6,
+    "current_use": "Retained as provenance only; not a theoretical threshold or manuscript pass/fail rule."
+  },
+  "analysis_relationship": {
+    "existing_v1": "The existing 38,623-record aggregate rows were generated with the legacy config and remain immutable.",
+    "future_use": "Researcher-approved on 2026-08-17. Cite this config through a versioned manifest amendment or new analysis version; do not rewrite analysis v1 in place."
+  },
+  "warning": "This is a deterministic title-level lexical sensitivity, not human annotation and not evidence of actual authorization, consent, legality, harm, or causality."
+}

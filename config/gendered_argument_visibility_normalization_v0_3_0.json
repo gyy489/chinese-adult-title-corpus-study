@@ -1,0 +1,18 @@
+{
+  "version": "0.3.0",
+  "status": "frozen_before_first_5000_call",
+  "extends": "config/gendered_argument_visibility_normalization_v0_2_2.json",
+  "scope": "Deterministic representation repair only; no title interpretation and no substantive code invention.",
+  "new_field_policy": "distribution_actor_realization is not inferred, inherited across stages, or semantically repaired by the normalizer.",
+  "allowed_repairs": [
+    "v0.2.2 deterministic representation repairs for unchanged fields",
+    "scalar-to-array conversion for fields whose schema type is an array",
+    "removal of explicitly documented extra diagnostic fields"
+  ],
+  "prohibitions": [
+    "No change between substantive semantic codes.",
+    "No inference from title text inside the normalizer.",
+    "No inheritance of creator or acquirer as distributor.",
+    "No overwrite of raw provider output."
+  ]
+}

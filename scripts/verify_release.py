@@ -59,6 +59,21 @@ SECRET_PATTERNS = {
     "local absolute path": re.compile(r"/(?:Users|home)/[^/\s]+/"),
     "submission identifier": re.compile(r"\bSECU-D-\d{2}-\d+\b"),
 }
+TEXT_SUFFIXES = {
+    ".cff",
+    ".css",
+    ".csv",
+    ".html",
+    ".js",
+    ".json",
+    ".md",
+    ".py",
+    ".svg",
+    ".toml",
+    ".txt",
+    ".yml",
+    ".yaml",
+}
 
 
 def sha256(path: Path) -> str:
@@ -70,7 +85,17 @@ def sha256(path: Path) -> str:
 
 
 def repository_files() -> list[Path]:
-    return [path for path in ROOT.rglob("*") if path.is_file() and ".git" not in path.parts]
+    files = []
+    for path in ROOT.rglob("*"):
+        if not path.is_file():
+            continue
+        relative = path.relative_to(ROOT)
+        if ".git" in relative.parts or "__pycache__" in relative.parts:
+            continue
+        if path.suffix.lower() in {".pyc", ".pyo"} or path.name == ".DS_Store":
+            continue
+        files.append(path)
+    return files
 
 
 def verify_paths(files: list[Path]) -> list[str]:
@@ -104,7 +129,7 @@ def verify_csv_headers(files: list[Path]) -> list[str]:
 def verify_text(files: list[Path]) -> list[str]:
     errors = []
     for path in files:
-        if path.suffix.lower() not in {".cff", ".csv", ".json", ".md", ".py", ".toml", ".yml", ".yaml"}:
+        if path.suffix.lower() not in TEXT_SUFFIXES:
             continue
         text = path.read_text(encoding="utf-8")
         for label, pattern in SECRET_PATTERNS.items():

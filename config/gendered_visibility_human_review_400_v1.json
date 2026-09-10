@@ -1,0 +1,92 @@
+{
+  "version": "1.0.0",
+  "review_id": "gendered_visibility_human_review_400_v1",
+  "status": "frozen_two_reviewers_not_started",
+  "title": "论文核心构念人工盲审（第一位审核员，400条）",
+  "expected_records": 400,
+  "review_contract": "gendered_visibility_paper_core_v1",
+  "require_unique_clusters": false,
+  "require_complete_export": true,
+  "source_codebook": "config/gendered_argument_visibility_codebook_v0_3.json",
+  "instructions": [
+    "只根据当前标题中直接可见的语言编码；不搜索、不补情节、不凭常识推断。",
+    "页面不会显示自动编码、抽样层、来源站点或其他审核员答案。",
+    "人物性别不明确但人物可见时选“人物可见但性别未指明”，不要选“不可见”。",
+    "“不明”仅用于标题确实无法在两个或多个代码之间判定；选择后必须标记需要裁决并写明理由。",
+    "标题可能重复，因为审核单位是标题记录；把每条当作独立记录审核。",
+    "完成全部400条后才能导出正式结果；草稿始终自动保存在本机独立数据库中。"
+  ],
+  "option_sets": {
+    "record_validity": [
+      {"id": "valid", "label": "有效标题记录", "definition": "标题文字可读，能够按本代码本继续判断。"},
+      {"id": "technical_noise", "label": "技术噪声", "definition": "页面、文件、乱码或抓取噪声，不是可编码标题。", "requires_note": true},
+      {"id": "unknown", "label": "有效性不明", "definition": "无法确定它是否为可编码标题。", "requires_note": true}
+    ],
+    "privacy_relevance": [
+      {"id": "relevant", "label": "相关", "definition": "标题直接提到亲密材料的制作、保存、观看、传播、泄露、展示或暴露链条。"},
+      {"id": "not_relevant", "label": "不相关", "definition": "标题没有直接可见的亲密材料隐私链语言；一般性性行为或人物描写本身不算。"},
+      {"id": "unclear", "label": "不明", "definition": "可见措辞可能涉及隐私链，但无法可靠判断。", "requires_note": true},
+      {"id": "not_applicable", "label": "不适用", "definition": "仅在记录本身无效时使用。"}
+    ],
+    "stage_visibility": [
+      {"id": "visible", "label": "可见", "definition": "标题直接写出该阶段。"},
+      {"id": "absent", "label": "缺席", "definition": "隐私链相关，但标题没有写出该阶段。"},
+      {"id": "unclear", "label": "不明", "definition": "无法判断该阶段是否被写出。", "requires_note": true},
+      {"id": "not_applicable", "label": "不适用", "definition": "隐私链不相关或记录无效。"}
+    ],
+    "position": [
+      {"id": "feminine", "label": "女性位置", "definition": "人物通过直接词语、姓名、代词或明确角色被标为女性。"},
+      {"id": "masculine", "label": "男性位置", "definition": "人物通过直接词语、姓名、代词或明确角色被标为男性。"},
+      {"id": "gender_diverse", "label": "多元性别位置", "definition": "标题明确写出跨性别、非二元或其他多元性别身份。"},
+      {"id": "mixed_multiple", "label": "多个不同性别", "definition": "同一位置明确包含多个且性别不同的人物。"},
+      {"id": "mutual_or_reciprocal", "label": "相互／互为位置", "definition": "措辞明确表示参与者彼此共同承担该位置，不能拆成单一人物。"},
+      {"id": "gender_unspecified", "label": "人物可见但性别未指明", "definition": "该位置有人物或角色，但标题没有足够性别线索。"},
+      {"id": "not_visible", "label": "不可见", "definition": "标题没有把任何人物放在该位置。"},
+      {"id": "unclear", "label": "不明", "definition": "位置或人物指向无法可靠判定。", "requires_note": true},
+      {"id": "not_applicable", "label": "不适用", "definition": "按上游规则无需编码该位置。"}
+    ],
+    "actor_realization": [
+      {"id": "explicit_gendered_person_or_role", "label": "显式、有性别人物／角色", "definition": "分发行动者以具有明确性别的人物、代词或角色直接出现。"},
+      {"id": "explicit_ungendered_person_or_role", "label": "显式、性别未指明人物／角色", "definition": "行动者直接出现，但没有足够性别线索。"},
+      {"id": "generic_or_collective_actor", "label": "泛指／集合行动者", "definition": "行动者是泛称人群、集体或机构。"},
+      {"id": "zero_anaphora_coreferential", "label": "零回指（标题内有先行词）", "definition": "分发谓词省略主语，但标题内部已有可明确回指的行动者。"},
+      {"id": "passive_agent_omitted", "label": "被动式省略行动者", "definition": "被动表达写出分发事件，但行动者被省略。"},
+      {"id": "nominalized_event_without_agent", "label": "名词化事件、无行动者", "definition": "以泄露、传播等事件名词表达，未写出行动者。"},
+      {"id": "no_actor_expression", "label": "无行动者表达", "definition": "事件可见，但没有其他可归类的行动者文字。"},
+      {"id": "unclear", "label": "不明", "definition": "行动者实现方式无法可靠判断。", "requires_note": true},
+      {"id": "not_applicable", "label": "不适用", "definition": "分发阶段不可见或记录不适用。"}
+    ],
+    "authorization": [
+      {"id": "authorized_explicit", "label": "明确获得授权", "definition": "标题直接说明同意、允许或授权传播。"},
+      {"id": "unauthorized_explicit", "label": "明确未经授权", "definition": "标题直接说明未经同意、偷传、泄露、报复性发布等。"},
+      {"id": "mixed_or_stage_conflict", "label": "混合／阶段冲突", "definition": "标题对不同阶段或参与者同时给出相互冲突的授权信息。"},
+      {"id": "no_visible_authorization_language", "label": "无可见授权语言", "definition": "分发可见，但标题没有直接说明有无授权；这不等于已授权或未授权。"},
+      {"id": "unclear", "label": "不明", "definition": "存在授权相关措辞但方向无法可靠判定。", "requires_note": true},
+      {"id": "not_applicable", "label": "不适用", "definition": "分发阶段不可见或记录不适用。"}
+    ],
+    "yes_no": [
+      {"id": "no", "label": "不需要裁决", "definition": "已能稳定按代码本完成判断。"},
+      {"id": "yes", "label": "需要裁决", "definition": "存在真正边界问题；请在证据与理由中说明。", "requires_note": true}
+    ]
+  },
+  "fields": [
+    {"id": "record_validity", "type": "single", "section": "A. 记录边界", "label": "记录是否有效？", "help": "先判断页面文字是否是可编码标题。", "option_set": "record_validity"},
+    {"id": "privacy_chain_relevance", "type": "single", "section": "B. 亲密材料隐私链", "label": "标题是否与亲密材料隐私链相关？", "help": "不要把一般性性行为或一般人物描述自动当成隐私链。", "option_set": "privacy_relevance"},
+    {"id": "material_creation_visibility", "type": "single", "section": "C. 制作阶段", "label": "材料制作／拍摄阶段是否可见？", "help": "只判断制作、拍摄、录制等阶段是否被直接写出。", "option_set": "stage_visibility"},
+    {"id": "material_creation_target_position", "type": "single", "section": "C. 制作阶段", "label": "制作对象的人物位置", "help": "对象是被制作、拍摄或录制其亲密材料的人。", "option_set": "position"},
+    {"id": "distribution_visibility", "type": "single", "section": "D. 分发阶段", "label": "传播／泄露／展示阶段是否可见？", "help": "包含发布、分享、发送、上传、泄露、公开展示等直接措辞。", "option_set": "stage_visibility"},
+    {"id": "distribution_actor_position", "type": "single", "section": "D. 分发阶段", "label": "分发行动者的人物位置", "help": "编码谁在分发；行动者存在但性别未写出时选“人物可见但性别未指明”。", "option_set": "position"},
+    {"id": "distribution_actor_realization", "type": "single", "section": "D. 分发阶段", "label": "分发行动者如何在语言中实现？", "help": "“零回指”必须能回指标题内部先行词，不能靠外部情节补全。", "option_set": "actor_realization"},
+    {"id": "distribution_target_position", "type": "single", "section": "D. 分发阶段", "label": "分发对象的人物位置", "help": "对象是其亲密材料或隐私被传播的人，不是观看材料的受众。", "option_set": "position"},
+    {"id": "distribution_authorization_visibility", "type": "single", "section": "D. 分发阶段", "label": "分发授权状态在标题中如何可见？", "help": "没有授权措辞时选“无可见授权语言”，不要推断为同意或非自愿。", "option_set": "authorization"},
+    {"id": "exposure_visibility", "type": "single", "section": "E. 暴露阶段", "label": "观看／暴露结果阶段是否可见？", "help": "判断标题是否直接写出被观看、被发现、被公开暴露等结果。", "option_set": "stage_visibility"},
+    {"id": "exposure_target_position", "type": "single", "section": "E. 暴露阶段", "label": "暴露对象的人物位置", "help": "对象是其亲密材料或隐私被观看、发现或暴露的人。", "option_set": "position"},
+    {"id": "objectification_target_position", "type": "single", "section": "F. 人物位置线索", "label": "被物化对象的人物位置", "help": "仅当标题把人物缩减为身体部位、商品、可替换类型或供使用的对象时编码；性描写本身不足以证明物化。", "option_set": "position"},
+    {"id": "desire_holder_position", "type": "single", "section": "F. 人物位置线索", "label": "欲望持有者的人物位置", "help": "必须有直接可见的欲望、想要或主动追求线索；参与行为本身不证明欲望。", "option_set": "position"},
+    {"id": "pleasure_holder_position", "type": "single", "section": "F. 人物位置线索", "label": "愉悦持有者的人物位置", "help": "必须有直接可见的享受、高潮、满足等线索；参与行为本身不证明愉悦。", "option_set": "position"},
+    {"id": "refusal_resistance_position", "type": "single", "section": "F. 人物位置线索", "label": "拒绝／抵抗者的人物位置", "help": "必须有直接可见的拒绝、抵抗、撤回或反对线索。", "option_set": "position"},
+    {"id": "attributed_speech_position", "type": "single", "section": "F. 人物位置线索", "label": "被归属话语者的人物位置", "help": "只编码标题中可归属于人物的直接或间接话语、请求、陈述等。", "option_set": "position"},
+    {"id": "needs_adjudication", "type": "single", "section": "G. 质量控制", "label": "这条记录是否需要后续裁决？", "help": "任一字段选择“不明”时必须选择“需要裁决”。", "option_set": "yes_no"},
+    {"id": "evidence_notes", "type": "text", "section": "G. 质量控制", "label": "证据与理由", "help": "粘贴最短必要标题片段并说明边界理由；不要补充外部情节。", "max_length": 2000}
+  ]
+}

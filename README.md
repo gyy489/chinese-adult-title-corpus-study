@@ -39,20 +39,23 @@
 
 ## 仓库内容
 
-- 可配置采集器、页面解析、分页、断点恢复、MySQL 存储与导出代码；
-- 按顺序执行的清洗规则引擎、语义长度门禁和最终文本去重；
+- 两轮实际共用的可配置采集器、页面解析、分页、断点恢复、MySQL 存储与导出代码；
+- 各轮清洗脚本、合并清洗编排、语义长度门禁和最终文本去重程序；
 - 固定随机种子分层抽样与独立标记的机制加量轨道；
 - v0.3 的完整 42 字段 Schema、码本、提示词和运行时校验器；
-- 精确区间替换、脱敏后重新去重、直接定位符扫描和人工复核聚合程序；
+- 两阶段 AI 编码的样本构建、批量运行、失败项恢复、合同审计和输出整合程序；
+- 精确区间替换、脱敏后重新去重、直接定位符扫描、本地审核界面和人工复核聚合程序；
+- 真实标题级分析、表格与图形的生成程序，以及不接触敏感数据的公开聚合复核程序；
 - 18 张聚合结果表、确定性图表、每个关键节点的最终状态清单、测试和 CI。
 
-请先看 **[研究管线图](PIPELINE.md)** 和
+请先看 **[研究管线图](PIPELINE.md)**、[权威程序索引](PROGRAM_INVENTORY.md) 和
 [节点状态清单](artifacts/stages/README.md)。仓库不展示多次修改的报告、失败记录或交接稿，
 但会展示研究者检查每个关键节点所需的最终代码、公开配置和聚合状态。
 
 ## 当前文件入口
 
 - 完整管线、数量流和公开边界：[`PIPELINE.md`](PIPELINE.md)
+- 每个节点实际使用的程序与公开状态：[`PROGRAM_INVENTORY.md`](PROGRAM_INVENTORY.md)
 - 每个关键节点的最终聚合状态：[`artifacts/stages/`](artifacts/stages/)
 - 采集、断点恢复、存储与导出：[`src/collection/`](src/collection/)
 - 清洗、语义长度门禁和精确文本去重：[`src/preprocessing/`](src/preprocessing/)
@@ -61,6 +64,8 @@
 - 42 字段码本、Schema、提示词和校验器：[`src/annotation/`](src/annotation/)
 - 精确区间隐私修复与直接定位符门禁：[`src/privacy/`](src/privacy/)
 - 人工复核一致性与 AI 准确性聚合：[`src/human_review/`](src/human_review/)
+- 本地盲审、完成后比较与隐私 span 审核界面：[`src/review_app/`](src/review_app/)
+- 两阶段 AI 编码、最终语料激活、分析和制表制图：[`src/analysis/`](src/analysis/)
 - 18 张公开聚合结果表：[`results/tables/`](results/tables/)
 - 确定性结果复现：[`scripts/reproduce_results.py`](scripts/reproduce_results.py)
 - 发布安全检查与 SHA-256 清单：[`scripts/verify_release.py`](scripts/verify_release.py)、[`results/release_manifest.json`](results/release_manifest.json)
@@ -89,10 +94,20 @@ python -m scripts.demo_privacy_gate
 python -m scripts.demo_human_review
 ```
 
+`requirements-public.txt` 是 CI 与合成示例所需的最小环境；
+`requirements-research-code.txt` 列出所公开生产程序的完整 Python 包层。后者不会提供真实语料、
+受限词表、浏览器二进制、NER 模型、审核队列或 API 凭据。
+
 ## 发布边界
 
 仓库不包含真实标题、单标题哈希、记录标识、来源名称与网址、证据片段、模型逐条回答、人工逐条
 审核记录、论文全文、投稿文件或第三方论文 PDF。更详细的边界见
 [数据可用性](DATA_AVAILABILITY.md)与[隐私及发布范围](PRIVACY_AND_ETHICS.md)。
+
+## 研究状态
+
+论文正在按 *Sexuality & Culture* 首投目标整理。上面的摘要展示当前分析结果，不表示研究问题、
+理论框架和解释性方法已经冻结；这些选择仍由研究者在论文阶段确认。仓库中的实验数量口径和
+处理流程以已冻结的权威实验标准为基础。
 
 作者：**谷梓阳（Ziyang Gu）** · [ORCID](https://orcid.org/0009-0002-9998-1568)

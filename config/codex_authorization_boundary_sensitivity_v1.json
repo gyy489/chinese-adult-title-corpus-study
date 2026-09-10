@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "status": "post_blind_adjudication_boundary_sensitivity",
+  "purpose": "Test whether C4 survives alternative explicit-unauthorized-language boundaries revealed by frozen Codex disagreements, without overwriting any v0.3 output.",
+  "opportunity": "record_validity=valid and distribution_visibility=visible",
+  "frozen_gate": {
+    "no_visible_authorization_language_min": 0.60
+  },
+  "boundaries": [
+    {
+      "id": "frozen_v03",
+      "description": "No reclassification; preserve frozen DeepSeek v0.3 authorization labels.",
+      "regex": null
+    },
+    {
+      "id": "narrow_explicit_victim_or_stealth",
+      "description": "Reclassify only explicit stealth capture or affected-party/passive disclosure wording.",
+      "regex": "偷拍|偷录|被.{0,8}(?:曝光|泄露|泄密|外泄|外流|流出|出卖)|惨遭.{0,6}(?:泄密|泄露|曝光|外流|流出)|遭.{0,6}(?:曝光|泄露|外泄)|手机丢失|出卖|背刺|分手.{0,4}(?:曝光|泄密|泄露)"
+    },
+    {
+      "id": "codex_broad_leakage_semantics",
+      "description": "Use the frozen Codex pass boundary: leakage lexemes themselves visibly mark unauthorized disclosure, while plain 流出 or 曝光 alone do not.",
+      "regex": "泄密|泄露|外泄|外流|偷拍|偷录|被.{0,8}(?:曝光|泄露|泄密|外泄|外流|流出|出卖)|惨遭.{0,6}(?:泄密|泄露|曝光|外流|流出)|遭.{0,6}(?:曝光|泄露|外泄)|手机丢失|出卖|背刺|分手.{0,4}(?:曝光|泄密|泄露)"
+    }
+  ],
+  "scopes": [
+    "all_5000",
+    "validation_3000"
+  ],
+  "tracks": [
+    "probability",
+    "mechanism"
+  ],
+  "warning": "This is a deterministic lexical boundary sensitivity, not a replacement human annotation and not a causal analysis."
+}

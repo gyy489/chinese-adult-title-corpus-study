@@ -1,0 +1,107 @@
+{
+  "version": "1.0.0",
+  "status": "paired_cost_quality_gate_not_production",
+  "experiment_id": "69_gendered_argument_visibility_v03_low_effort_gate_v1",
+  "purpose": "Test whether DeepSeek thinking effort low is non-inferior to the frozen high-effort v0.3 measurement while materially reducing reasoning tokens.",
+  "reference_role": "codex_single_coder_and_frozen_deepseek_comparators_not_human_gold",
+  "single_variable": "reasoning_effort_high_to_low_with_thinking_remaining_enabled",
+  "records": 100,
+  "stage_a_records": 20,
+  "source": {
+    "benchmark_items": "data/interim/58_gendered_argument_visibility_v03_nonthinking_equivalence_v1/private/benchmark_items.jsonl",
+    "codex_blind_mapping": "data/interim/68_codex_argument_visibility_blind_adjudication_v1/private/blind_mapping.jsonl",
+    "codex_labels": "data/interim/68_codex_argument_visibility_blind_adjudication_v1/private/codex_labels.csv",
+    "high_repeat_records": "data/interim/60_gendered_argument_visibility_v03_thinking_reproducibility_v1/private/final_records.jsonl",
+    "high_repeat_calls": "data/interim/60_gendered_argument_visibility_v03_thinking_reproducibility_v1/sealed/calls"
+  },
+  "contract": {
+    "codebook": "config/gendered_argument_visibility_codebook_v0_3.json",
+    "schema": "config/gendered_argument_visibility_output_schema_v0_3.json",
+    "prompt": "prompts/gendered_argument_visibility_annotation_v0_3.md",
+    "normalization": "config/gendered_argument_visibility_normalization_v0_3_0.json"
+  },
+  "model": {
+    "id": "deepseek_v4_flash_thinking_low_exact_v03",
+    "model": "deepseek-v4-flash",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "batch_size": 5,
+    "workers": 8,
+    "max_output_tokens": 64000
+  },
+  "runner": {
+    "endpoint": "https://api.deepseek.com/chat/completions",
+    "stream": false,
+    "max_attempts_per_item": 1,
+    "request_timeout_seconds": 600,
+    "hard_stop_http_statuses": [402],
+    "credential_env": "DEEPSEEK_API_KEY"
+  },
+  "pricing": {
+    "pricing_version": "deepseek_official_2026-08-15_cny_with_2026-08-17_peak_offpeak_schedule",
+    "unit": "CNY_per_million_tokens",
+    "transition_utc": "2026-08-16T16:00:00Z",
+    "new_peak_windows_utc": [["01:00", "04:00"], ["06:00", "10:00"]],
+    "profiles": {
+      "current": {
+        "effective": "before_2026-08-16T16:00:00Z",
+        "deepseek-v4-flash": {"cache_hit_input": 0.02, "cache_miss_input": 1.0, "output": 2.0}
+      },
+      "new_offpeak": {
+        "effective": "from_2026-08-16T16:00:00Z outside Beijing peak windows",
+        "deepseek-v4-flash": {"cache_hit_input": 0.05, "cache_miss_input": 1.5, "output": 4.5}
+      },
+      "new_peak": {
+        "effective": "from_2026-08-16T16:00:00Z in Beijing peak windows",
+        "deepseek-v4-flash": {"cache_hit_input": 0.10, "cache_miss_input": 3.0, "output": 9.0}
+      }
+    }
+  },
+  "scoring": {
+    "primary_fields": [
+      "record_validity",
+      "privacy_chain_relevance",
+      "material_creation_visibility",
+      "material_creation_target_position",
+      "distribution_visibility",
+      "distribution_actor_position",
+      "distribution_actor_realization",
+      "distribution_target_position",
+      "distribution_authorization_visibility",
+      "exposure_visibility",
+      "exposure_target_position",
+      "objectification_target_position",
+      "desire_holder_position",
+      "pleasure_holder_position",
+      "refusal_resistance_position",
+      "attributed_speech_position"
+    ],
+    "core_fields": [
+      "material_creation_visibility",
+      "material_creation_target_position",
+      "distribution_visibility",
+      "distribution_actor_position",
+      "distribution_actor_realization",
+      "distribution_target_position",
+      "exposure_visibility",
+      "exposure_target_position",
+      "objectification_target_position",
+      "desire_holder_position",
+      "pleasure_holder_position",
+      "refusal_resistance_position",
+      "attributed_speech_position"
+    ],
+    "gates": {
+      "stage_a_contract_valid_rate": 1.0,
+      "stage_a_micro_noninferiority_margin": 0.05,
+      "final_contract_valid_rate": 0.99,
+      "final_micro_noninferiority_margin": 0.02,
+      "maximum_core_field_drop": 0.10,
+      "minimum_reasoning_token_reduction": 0.25,
+      "required_conclusions": ["B1", "C1", "C2", "C5"],
+      "maximum_total_cost_cny": 3.0,
+      "allowed_finish_reasons": ["stop"]
+    }
+  },
+  "authorization_scope": "20-record catastrophic gate, then at most 100 records only if stage A passes; no production calls"
+}

@@ -11,6 +11,8 @@
     "repeated_text_groups": 267
   },
   "public_entry_points": [
+    "src/analysis/build_gendered_visibility_text_deduplicated_corpus_v2.py",
+    "src/analysis/audit_gendered_visibility_duplicate_representatives_v1.py",
     "src/preprocessing/pipeline.py"
   ],
   "validation": [

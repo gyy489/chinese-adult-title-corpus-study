@@ -1,0 +1,296 @@
+{
+  "version": "1.0.0",
+  "status": "frozen_for_ai_validation",
+  "date": "2026-08-11",
+  "derived_from": {
+    "path": "config/codebook_development_v0.3.json",
+    "sha256": "def7710a46a2b0404715bc3f95b8159def7e583be93fe5fdd0c0708858005f1e",
+    "human_pilot_records": 100,
+    "human_pilot_role": "development evidence only; not gold labels or reliability evidence"
+  },
+  "research_object": "Visible language in deidentified adult-film titles",
+  "analysis_unit": "one retained title",
+  "inference_boundary": [
+    "Code only language visible in the title.",
+    "Do not infer video content, real identities, real relationships, real age, consent, harm, or causality.",
+    "A relationship label never automatically creates an age or harm label.",
+    "An absence label means no visible title cue, not proof that the real-world attribute is absent."
+  ],
+  "output_policy": {
+    "presence_fields": "derived from substantive labels; the model must not predict them separately",
+    "unknown": "relevant evidence exists but cannot be assigned stably; it may coexist with known labels",
+    "other": "the construct is visibly present but no listed substantive label covers it",
+    "not_applicable": "used only when record_validity is technical_noise or unknown",
+    "confidence": "not collected as a paper label",
+    "development_metadata_excluded": [
+      "codebook_action",
+      "confidence",
+      "notes",
+      "new_category",
+      "none",
+      "uncertain"
+    ]
+  },
+  "fields": [
+    {
+      "id": "record_validity",
+      "type": "single",
+      "options": [
+        {
+          "id": "valid",
+          "rule_id": "V01",
+          "definition": "The title contains text that can be analysed as a research record."
+        },
+        {
+          "id": "technical_noise",
+          "rule_id": "V02",
+          "definition": "The record is only a parsing remnant, URL, serial marker, crawl error, or other non-title content."
+        },
+        {
+          "id": "unknown",
+          "rule_id": "V03",
+          "definition": "The visible text is insufficient to decide whether the record is analysable."
+        }
+      ]
+    },
+    {
+      "id": "social_script_codes",
+      "type": "multi",
+      "options": [
+        {
+          "id": "father_daughter",
+          "rule_id": "S01",
+          "definition": "An explicit father/father-generation male and daughter/daughter-generation female role pairing.",
+          "exclude": "A lone father or daughter, a different in-law pairing, or an isolated marketing nickname. This code does not prove age, a real relationship, taboo, or harm."
+        },
+        {
+          "id": "mother_son",
+          "rule_id": "S02",
+          "definition": "An explicit mother/mother-generation female and son/son-generation male role pairing.",
+          "exclude": "A lone mother or son, a different in-law pairing, or an isolated marketing nickname. This code does not prove age, a real relationship, taboo, or harm."
+        },
+        {
+          "id": "dating_partner",
+          "rule_id": "S03",
+          "definition": "An explicit current or former non-marital romantic partner relationship.",
+          "exclude": "Spouses belong to family_marriage; ordinary friends belong to intimate_peer_community; an ambiguous lover term requires context. Dating does not itself imply betrayal or harm."
+        },
+        {
+          "id": "family_marriage",
+          "rule_id": "S04",
+          "definition": "A residual family, kinship, in-law, marital, or household-family position other than father_daughter or mother_son.",
+          "exclude": "Do not duplicate S01 or S02 for the same cue. This residual category is not a complete or homogeneous kinship taxonomy."
+        },
+        {
+          "id": "intimate_peer_community",
+          "rule_id": "S05",
+          "definition": "A friend, acquaintance, peer, neighbour, co-resident, or other close/community relationship other than an explicit dating partner.",
+          "exclude": "Do not duplicate S03 for the same cue; spouses belong to S04."
+        },
+        {
+          "id": "education",
+          "rule_id": "S06",
+          "definition": "A student, teacher, school, teaching, or educational-training position.",
+          "exclude": "Costume alone is insufficient. Sexual discipline described as training is not education without an educational context."
+        },
+        {
+          "id": "workplace_organization",
+          "rule_id": "S07",
+          "definition": "An occupation, supervisor/subordinate, employment, recruitment, or organisational position.",
+          "exclude": "A costume alone is insufficient."
+        },
+        {
+          "id": "medical_care",
+          "rule_id": "S08",
+          "definition": "A medical, nursing, treatment, caregiving, or care-recipient position.",
+          "exclude": "Clothing or role-play without a medical/care context is insufficient."
+        },
+        {
+          "id": "service_economic",
+          "rule_id": "S09",
+          "definition": "A service, customer, paid-contact, commercial exchange, or economic-support relationship.",
+          "exclude": "Ordinary payment does not itself imply threat, coercion, or authority pressure."
+        },
+        {
+          "id": "media_platform_performance",
+          "rule_id": "S10",
+          "definition": "A platform, streamer, performer, producer, photographer, or dissemination-production role.",
+          "exclude": "Generic words such as video or filming do not suffice unless a media, platform, performance, or production identity is visible."
+        },
+        {
+          "id": "public_institution",
+          "rule_id": "S11",
+          "definition": "A law-enforcement, detention, religious, military, or other public-institution position.",
+          "exclude": "An isolated uniform or active-duty marketing phrase without institutional context is insufficient."
+        },
+        {
+          "id": "gender_age_class_status",
+          "rule_id": "S12",
+          "definition": "An explicitly socialised adult-age, marital/reproductive, class, or gender-expectation position.",
+          "exclude": "A demographic adjective, youthful marketing, or minor-age cue alone is insufficient. This heterogeneous code is exploratory until a theory specifies its use."
+        },
+        {
+          "id": "domination_submission_role",
+          "rule_id": "S13",
+          "definition": "An explicit master, subordinate, servant, pet, or comparable hierarchy identity.",
+          "exclude": "A hierarchy identity does not itself imply non-consent or a domination/discipline act."
+        }
+      ]
+    },
+    {
+      "id": "harm_script_codes",
+      "type": "multi",
+      "aggregate_name": "harm_or_boundary_script_presence",
+      "aggregate_warning": "The parent codes span direct harm, coercion, privacy violations, domination, aggressive style, and relational boundary scripts. Do not sum them into an unqualified severity score.",
+      "options": [
+        {
+          "id": "force_nonconsent",
+          "rule_id": "H01",
+          "layer": "direct_harm_or_coercion",
+          "definition": "Explicit force, assault, refusal, resistance, violation of will, or non-consent.",
+          "exclude": "Domination, BDSM, intensity, status difference, or missing consent language alone is insufficient."
+        },
+        {
+          "id": "incapacity_deception",
+          "rule_id": "H02",
+          "layer": "direct_harm_or_coercion",
+          "definition": "Visible language of incapacity or deception that weakens informed judgement or ability to consent.",
+          "exclude": "Ambiguous mild intoxication or unclear wording is insufficient without a visible incapacity/deception mechanism.",
+          "required_mechanisms": ["incapacity", "deception"]
+        },
+        {
+          "id": "physical_aggression_pain",
+          "rule_id": "H03",
+          "layer": "direct_harm_or_coercion",
+          "definition": "Explicit hitting, choking, torture, injury, pain, or fear-result language.",
+          "exclude": "Intense sexual style without attack, pain, injury, or fear language is insufficient."
+        },
+        {
+          "id": "restraint_confinement",
+          "rule_id": "H04",
+          "layer": "direct_harm_or_coercion",
+          "definition": "Explicit binding, confinement, device restraint, movement restriction, or control of liberty.",
+          "exclude": "Restraint does not automatically imply force_nonconsent."
+        },
+        {
+          "id": "threat_economic_authority",
+          "rule_id": "H05",
+          "layer": "direct_harm_or_coercion",
+          "definition": "A threat, debt, resource, occupational power, or authority is visibly used as a condition, pressure, or control mechanism.",
+          "exclude": "A boss, sponsor, teacher, paid service, or status difference alone is insufficient.",
+          "required_mechanisms": ["threat", "economic_pressure", "authority_pressure"]
+        },
+        {
+          "id": "privacy_surveillance_exposure",
+          "rule_id": "H06",
+          "layer": "direct_harm_or_coercion",
+          "definition": "The title claims covert capture/surveillance, distribution of private intimate material, or exposure of personal identifying information.",
+          "exclude": "Self-publication, ordinary public filming, publicity, or performance without a privacy-violation claim is insufficient.",
+          "required_mechanisms": ["covert_capture_surveillance", "intimate_media_distribution", "personal_information_exposure"]
+        },
+        {
+          "id": "domination_discipline",
+          "rule_id": "H07",
+          "layer": "boundary_or_dominance",
+          "definition": "An explicit domination, submission, discipline, punishment, kneeling, or pet-treatment act.",
+          "exclude": "An identity label alone is insufficient; this code does not automatically imply force_nonconsent."
+        },
+        {
+          "id": "humiliation_objectification",
+          "rule_id": "H08",
+          "layer": "boundary_or_dominance",
+          "definition": "A person is explicitly insulted, dehumanised, instrumentalised, fragmented into body parts, or framed as freely usable.",
+          "exclude": "An isolated swear word, colloquial act name, or body word that does not demean a person is insufficient."
+        },
+        {
+          "id": "aggressive_sexual_use",
+          "rule_id": "H09",
+          "layer": "boundary_or_dominance",
+          "definition": "Sexual activity is organised through explicit ruthless, mechanical, extreme, group-use, or comparable aggressive-use language.",
+          "exclude": "Physical aggression and non-consent must be coded separately and cannot be inferred from intensity alone."
+        },
+        {
+          "id": "relational_betrayal_taboo",
+          "rule_id": "H10",
+          "layer": "relational_boundary",
+          "definition": "An independent visible cue explicitly claims kinship taboo, partner betrayal, or exploitation of a close relationship.",
+          "exclude": "Father-daughter, mother-son, another kinship term, marriage, or dating alone never triggers H10; an independent taboo, betrayal, infidelity, boundary-crossing, or relationship-leverage cue is required.",
+          "required_mechanisms": ["kinship_taboo", "partner_betrayal", "relational_exploitation_other"]
+        }
+      ]
+    },
+    {
+      "id": "minor_age_reference_status",
+      "type": "single",
+      "options": [
+        {
+          "id": "explicit",
+          "rule_id": "A01",
+          "definition": "The title states a numeric age below 18 in a person-age context, uses an unambiguous minor/child legal-age identity term, or explicitly names a PRC compulsory-education stage limited here to primary or junior-high school. This is a title-language code and never establishes a real person's age.",
+          "required_cues": ["numeric_under_18", "explicit_minor_term", "compulsory_education_stage"],
+          "exclude": "Kinship, generic student/campus language, senior-high school, youthful appearance, and role-play do not by themselves qualify."
+        },
+        {
+          "id": "suggestive",
+          "rule_id": "A02",
+          "definition": "The title uses child-coded, non-tertiary/generic student, school-stage, role-play/costume, or youthful-marketing cues without enough evidence for explicit minor reference.",
+          "exclude": "An explicitly university/adult student without another youth cue is absent, not suggestive."
+        },
+        {
+          "id": "absent",
+          "rule_id": "A03",
+          "definition": "No visible minor-age or youth-coding cue appears; this does not prove adulthood."
+        },
+        {
+          "id": "unknown",
+          "rule_id": "A04",
+          "definition": "Age-relevant evidence exists, but its wording or referent is too ambiguous to distinguish explicit, suggestive, or absent."
+        },
+        {
+          "id": "not_applicable",
+          "rule_id": "A05",
+          "definition": "Used only when the record is technical noise or record validity is unknown."
+        }
+      ]
+    },
+    {
+      "id": "minor_age_cue_types",
+      "type": "multi",
+      "options": [
+        {"id": "numeric_under_18", "rule_id": "AC01", "definition": "A numeric age below 18 in a person-age context; years, episode numbers, and durations do not count."},
+        {"id": "explicit_minor_term", "rule_id": "AC02", "definition": "An unambiguous minor, child, or legal-age-status term."},
+        {"id": "child_youth_role_term", "rule_id": "AC03", "definition": "A child-coded or youth role term whose real age is not established."},
+        {"id": "school_stage_student", "rule_id": "AC04", "definition": "A tertiary-ambiguous or age-indeterminate school/student/campus cue (e.g. 学生/校园/高中 or an unspecified stage); an explicit university/adult student alone does not count. Excludes compulsory_education_stage (AC08)."},
+        {"id": "roleplay_costume", "rule_id": "AC05", "definition": "An explicit school-age-coded costume or role-play cue; a generic occupational uniform alone does not count."},
+        {"id": "youthful_marketing", "rule_id": "AC06", "definition": "Childlike appearance, youthful appearance, tenderness/youngness, or similar marketing language; it never proves real age."},
+        {"id": "other", "rule_id": "AC07", "definition": "Another visible age-relevant cue not covered above; a short description and evidence span are required."},
+        {"id": "compulsory_education_stage", "rule_id": "AC08", "definition": "A specific PRC compulsory-education-stage term limited to 小学 or 初中. It supports an explicit title-level minor reference, not an inference about a real person's age. 高中 and generic student/campus language remain AC04 because they are age-ambiguous."}
+      ]
+    }
+  ],
+  "harm_mechanisms": {
+    "incapacity_deception": ["incapacity", "deception"],
+    "threat_economic_authority": ["threat", "economic_pressure", "authority_pressure"],
+    "privacy_surveillance_exposure": ["covert_capture_surveillance", "intimate_media_distribution", "personal_information_exposure"],
+    "relational_betrayal_taboo": ["kinship_taboo", "partner_betrayal", "relational_exploitation_other"]
+  },
+  "dependency_rules": [
+    {"id": "D01", "if": "record_validity != valid", "then": "all semantic code arrays are empty and minor_age_reference_status=not_applicable"},
+    {"id": "D02", "if": "record_validity = valid", "then": "minor_age_reference_status != not_applicable"},
+    {"id": "D03", "if": "minor_age_reference_status = explicit", "then": "minor_age_cue_types contains numeric_under_18 or explicit_minor_term or compulsory_education_stage"},
+    {"id": "D04", "if": "minor_age_reference_status = suggestive", "then": "minor_age_cue_types is nonempty and excludes numeric_under_18 and explicit_minor_term and compulsory_education_stage"},
+    {"id": "D05", "if": "minor_age_reference_status = absent", "then": "minor_age_cue_types is empty"},
+    {"id": "D06", "if": "a harm code has required_mechanisms", "then": "at least one allowed mechanism for that parent is selected"},
+    {"id": "D07", "if": "a parent harm code is absent", "then": "its mechanism list is empty"},
+    {"id": "D08", "if": "a substantive code or cue is selected", "then": "at least one exact private evidence span and the matching rule_id are supplied"},
+    {"id": "D09", "if": "social_other or harm_other is supplied", "then": "description and exact evidence span are required"},
+    {"id": "D10", "if": "needs_adjudication = true", "then": "at least one short adjudication reason is required"}
+  ],
+  "freeze_basis": {
+    "researcher_decision_record": "data/interim/14_review_app/pilot_100_development_adjudication_v1.json",
+    "development_records": 100,
+    "development_only": true,
+    "frozen_interpretive_boundary": "Visible title language only; no inference to real age, relationship, consent, harm, or video content."
+  },
+  "freeze_blockers": []
+}

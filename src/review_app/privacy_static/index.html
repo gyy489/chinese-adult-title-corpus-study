@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>残余隐私人工审核台</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <div><strong>残余隐私人工审核台</strong><small>仅本机 · 自动保存 · 不连接外网</small></div>
+    <nav>
+      <button id="reviewTab" class="active" type="button">审核</button>
+      <button id="summaryTab" type="button">进度</button>
+      <button id="theme" type="button" aria-pressed="false">☾ 暗色</button>
+      <button id="export" type="button">导出当前结果</button>
+    </nav>
+  </header>
+
+  <main id="reviewView">
+    <section class="progress-panel">
+      <div class="progress-line"><span id="progressBar"></span></div>
+      <div class="progress-copy"><span id="position">—</span><span id="progressText">载入中</span></div>
+    </section>
+
+    <section class="review-card">
+      <div class="badges"><span id="queueBadge" class="badge">—</span><span id="recordStatus" class="status">—</span></div>
+      <h1 id="titleText">正在载入……</h1>
+      <section id="candidatePanel" class="candidate-panel" hidden>
+        <h2>机器标出的拉丁候选（只作定位提示，不等于敏感信息）</h2>
+        <div id="candidateList"></div>
+      </section>
+
+      <div class="decision-grid" aria-label="审核结论">
+        <button type="button" data-decision="false_positive" class="decision safe"><kbd>1</kbd><strong>无敏感信息</strong><small>误报、普通词、作品/虚构语境、占位符或编号</small></button>
+        <button type="button" data-decision="confirmed_identifier" class="decision sensitive"><kbd>2</kbd><strong>有敏感信息</strong><small>可识别或直接定位现实个人、账号、联系值或精确地址</small></button>
+        <button type="button" data-decision="unclear" class="decision unsure"><kbd>3</kbd><strong>不确定</strong><small>标题内证据不足，无法可靠排除身份或账号</small></button>
+      </div>
+
+      <label class="note-wrap" for="note">理由（“有敏感信息”或“不确定”必填）</label>
+      <textarea id="note" maxlength="2000" placeholder="简短写明是哪一段、为什么可识别或为什么不确定。Ctrl/⌘ + Enter提交。"></textarea>
+
+      <div class="actions">
+        <button id="prev" type="button">← 上一条</button>
+        <button id="save" class="primary" type="button">保存并到下一条</button>
+        <button id="nextIncomplete" type="button">下一条未审核 →</button>
+        <label class="jump">跳到 <input id="jumpPosition" type="number" min="1" max="857" inputmode="numeric"> <button id="jump" type="button">前往</button></label>
+      </div>
+      <p id="saveState" class="save-state">选择“无敏感信息”后会立即保存并进入下一条。</p>
+    </section>
+
+    <aside class="rules">
+      <h2>只做标题内判断</h2>
+      <ol id="instructions"></ol>
+      <p><b>快捷键：</b>1 无敏感信息；2 有敏感信息；3 不确定；Ctrl/⌘+Enter 保存。</p>
+    </aside>
+  </main>
+
+  <main id="summaryView" hidden>
+    <section class="summary-card">
+      <h1>审核进度</h1>
+      <div id="summaryCards" class="summary-cards"></div>
+      <p id="queueProgress"></p>
+      <button id="continueReview" class="primary" type="button">继续审核</button>
+    </section>
+  </main>
+  <div id="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

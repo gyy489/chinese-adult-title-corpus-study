@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>作者专用AI标注查看台</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/search.css">
+</head>
+<body>
+  <header>
+    <div><strong id="appTitle">作者专用AI标注查看台</strong><small>本机只读，不写入人工审核数据库</small></div>
+    <div class="header-actions"><button id="searchToggle" type="button">查找标题／条件</button><button id="theme" type="button" aria-pressed="false">☾ 暗色</button></div>
+  </header>
+  <section id="searchPanel" class="search-panel" hidden>
+    <div class="search-controls">
+      <label>标题包含<input id="titleQuery" type="search" placeholder="输入标题中的词，例如：偷拍、泄露"></label>
+      <label>标注字段<select id="fieldFilter"><option value="">不限字段</option></select></label>
+      <label>字段值<select id="valueFilter" disabled><option value="">不限取值</option></select></label>
+      <button id="runSearch" class="primary" type="button">查找</button>
+      <button id="clearSearch" type="button">清空</button>
+    </div>
+    <div class="presets"><span>常用条件：</span><button type="button" data-field="privacy_chain_relevance" data-value="relevant">隐私链相关</button><button type="button" data-field="material_creation_visibility" data-value="visible">拍摄／制作可见</button><button type="button" data-field="distribution_visibility" data-value="visible">传播／泄露可见</button><button type="button" data-field="exposure_visibility" data-value="visible">观看／曝光可见</button><button type="button" data-field="objectification_target_position" data-value="feminine">女性物化对象</button></div>
+    <div class="results-head"><strong id="resultCount">输入标题或选择条件后查找</strong><button id="closeSearch" type="button">收起</button></div>
+    <div id="searchResults" class="search-results"></div>
+  </section>
+  <section class="record-head">
+    <div class="warning" id="warning">这些是冻结模型输出，不是人工金标准。禁止向两位盲审员展示。</div>
+    <div class="record-nav">
+      <button class="prev" aria-label="上一条">← 上一条</button>
+      <strong id="position">—</strong>
+      <button class="next" aria-label="下一条">下一条 →</button>
+    </div>
+    <h1 id="title">正在载入……</h1>
+  </section>
+  <main>
+    <p class="scope">显示当前400条人工审核样本对应的冻结AI标注。代码是模型输出，不是人工正确答案。</p>
+    <div id="fields" class="fields"></div>
+  </main>
+  <footer>
+    <button class="prev" aria-label="上一条">← 上一条</button>
+    <span>键盘也可使用 ← → 切换</span>
+    <button class="next" aria-label="下一条">下一条 →</button>
+  </footer>
+  <div id="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

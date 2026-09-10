@@ -1,0 +1,136 @@
+{
+  "version": "1.0.0",
+  "status": "awaiting_researcher_approval_no_provider_calls_authorized",
+  "experiment_id": "55_gendered_asymmetric_visibility_full_annotation_v1",
+  "research_role": "versioned_argument_visibility_addon; does_not_replace_deepseek_full_coding_v1",
+  "approval": {
+    "provider_calls_authorized": false,
+    "approved_by": null,
+    "approved_at": null,
+    "approved_config_sha256": null,
+    "note": "This is the freeze-time snapshot and remains false. Executable per-operation approval is controlled only by config/provider_call_authorization_v1.json, with exact governing-config hashes."
+  },
+  "scope": {
+    "full_corpus_records": 66016,
+    "reuse_frozen_v0_3_records": 5000,
+    "new_router_records": 61016,
+    "deep_records": "dynamic: router privacy in {relevant, unclear}",
+    "raw_data_mutation": false
+  },
+  "inputs": {
+    "full_manifest": "data/interim/43_deepseek_v4_flash_full_run/private/full_manifest.csv",
+    "frozen_v0_3_sample_manifest": "data/interim/51_gendered_argument_visibility_scaleup_5000_v1/private/sample_manifest.csv",
+    "frozen_v0_3_final": "data/interim/51_gendered_argument_visibility_scaleup_5000_v1/private/validation_5000_final_records.jsonl",
+    "cluster_split_assignments": "data/interim/40_corpus_audit_v1/cluster_split_assignments_private.csv"
+  },
+  "contracts": {
+    "router_codebook": "config/gendered_privacy_router_codebook_v1.json",
+    "router_schema": "config/gendered_privacy_router_output_schema_v1.json",
+    "router_prompt": "prompts/gendered_privacy_router_model_benchmark_v1.md",
+    "deep_codebook_candidate": "config/gendered_argument_visibility_longfield_deep_codebook_v1.json",
+    "deep_schema_candidate": "config/gendered_argument_visibility_longfield_deep_output_schema_v1.json",
+    "deep_prompt_candidate": "prompts/gendered_argument_visibility_longfield_deep_validation_v1.md"
+  },
+  "preproduction_gates": {
+    "router_benchmark": {
+      "run": "53_gendered_privacy_router_model_benchmark_v1",
+      "selected_config": "flash_nonthinking",
+      "required_records": 200,
+      "privacy_relevant_recall_min": 0.98,
+      "specificity_min": 0.95,
+      "distribution_visible_recall_min": 0.95,
+      "contract_valid_rate_min": 0.99,
+      "pro_expansion": "stopped_after_failed_smoke"
+    },
+    "deep_bridge": {
+      "run": "54_gendered_argument_visibility_longfield_deep_validation_v1",
+      "first_gate_records": 20,
+      "privacy_negative_boundary_records": 10,
+      "contract_valid_rate_min": 1.0,
+      "informative_field_micro_accuracy_min": 0.8,
+      "each_informative_field_accuracy_min": 0.7,
+      "evidence_pair_precision_min": 1.0,
+      "evidence_pair_recall_min": 0.9
+    }
+  },
+  "sampling": {
+    "seed": 20260815055,
+    "router_strata": ["frozen_split", "source_site", "length_band"],
+    "router_waves": [
+      {"id": "router_gate_01000", "cumulative_records": 1000},
+      {"id": "router_ramp_10000", "cumulative_records": 10000},
+      {"id": "router_full_61016", "cumulative_records": 61016}
+    ],
+    "deep_eligibility": "router record_validity=valid and privacy_chain_relevance in {relevant, unclear}",
+    "deep_waves": [
+      {"id": "deep_gate_00500", "cumulative_records": 500},
+      {"id": "deep_ramp_05000", "cumulative_records": 5000},
+      {"id": "deep_full", "cumulative_records": "all_eligible"}
+    ],
+    "ordering": "deterministic stratified Hamilton allocation, then stable hash within cell"
+  },
+  "model_configs": {
+    "router": {
+      "id": "flash_nonthinking",
+      "model": "deepseek-v4-flash",
+      "thinking": "disabled",
+      "batch_size": 20,
+      "max_output_tokens": 4000
+    },
+    "deep": {
+      "id": "flash_nonthinking_longfield",
+      "model": "deepseek-v4-flash",
+      "thinking": "disabled",
+      "batch_size": 5,
+      "max_output_tokens": 6000
+    }
+  },
+  "runner": {
+    "endpoint": "https://api.deepseek.com/chat/completions",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "stream": false,
+    "workers_ladder": [12, 24, 36, 50],
+    "max_attempts_per_item": 3,
+    "request_timeout_seconds": 600,
+    "http_429_backoff_seconds": [2, 5, 15, 30, 60],
+    "hard_stop_http_statuses": [402],
+    "state_backend": "sqlite",
+    "sealed_provider_outputs": true,
+    "normalization_policy": "versioned_replay_only; exact echoed title may be removed when it equals the input title",
+    "credential_source": ".env.ai-coding:DEEPSEEK_API_KEY"
+  },
+  "wave_gates": {
+    "structural_valid_rate_min": 0.99,
+    "http_429_call_rate_max": 0.01,
+    "batch_failure_rate_max": 0.005,
+    "http_402_calls_max": 0,
+    "unresolved_record_rate_max": 0.01,
+    "manual_approval_required_between_waves": true
+  },
+  "pricing": {
+    "pricing_version": "deepseek_official_2026-08-15_with_announced_2026-08-16_schedule; recheck_required_before_approval",
+    "unit": "USD_per_million_tokens",
+    "transition_utc": "2026-08-16T16:00:00+00:00",
+    "new_peak_windows_utc": [["01:00", "04:00"], ["06:00", "10:00"]],
+    "profiles": {
+      "current": {
+        "effective": "before_2026-08-16T16:00:00Z",
+        "deepseek-v4-flash": {"cache_hit_input": 0.0028, "cache_miss_input": 0.14, "output": 0.28}
+      },
+      "new_offpeak": {
+        "effective": "from_2026-08-16T16:00:00Z outside UTC peak windows",
+        "deepseek-v4-flash": {"cache_hit_input": 0.007, "cache_miss_input": 0.22, "output": 0.66}
+      },
+      "new_peak": {
+        "effective": "from_2026-08-16T16:00:00Z at UTC 01:00-04:00 or 06:00-10:00",
+        "deepseek-v4-flash": {"cache_hit_input": 0.014, "cache_miss_input": 0.44, "output": 1.32}
+      }
+    }
+  },
+  "release": {
+    "private_integrated_records": "data/interim/55_gendered_asymmetric_visibility_full_annotation_v1/private/integrated_records_v1.jsonl",
+    "public_outputs": "aggregate counts, hashes, gate reports, and manifests only",
+    "human_review_role": "post-annotation quality audit and possible versioned calibration; not a writing or analysis gate"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "version": "0.2.2",
+  "status": "frozen_final_locked_replay",
+  "extends": "config/gendered_argument_visibility_normalization_v0_2_1.json",
+  "scope": "Deterministic representation repair only; no title interpretation and no substantive code invention.",
+  "additional_rules": {
+    "dependency_repairs": [
+      "Visible actor position plus omission realization uses an explicit actor realization selected from the already-coded position.",
+      "Visible event plus not_visible target position uses object_omitted target realization.",
+      "Out-of-schema privacy realization fields are removed while raw output remains sealed.",
+      "A visible person with an empty gender-position array inherits already-coded substantive positions, or gender_unspecified if none exists."
+    ],
+    "evidence_policy": "Evidence-row validity and selected-code coverage are recorded as derived QA flags; incomplete evidence does not invalidate semantic labels."
+  },
+  "prohibitions": [
+    "No change between substantive semantic codes.",
+    "No inference from title text inside the normalizer.",
+    "No overwrite of raw provider output."
+  ]
+}

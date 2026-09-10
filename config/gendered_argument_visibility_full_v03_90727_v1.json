@@ -1,0 +1,109 @@
+{
+  "version": "1.0.0",
+  "status": "prepared_not_authorized",
+  "experiment_id": "59_gendered_argument_visibility_full_v03_90727_v1",
+  "research_role": "versioned_argument_visibility_addon; does_not_replace_deepseek_full_coding_v1",
+  "measurement_decision": "preserve the exact frozen v0.3 codebook, schema, prompt, normalizer, and thinking-enabled model after all cheaper candidates failed semantic gates",
+  "inputs": {
+    "full_population_manifest": "data/interim/56_gendered_asymmetric_visibility_full_annotation_90727_v2/private/full_manifest_90727.csv",
+    "remaining_frame": "data/interim/56_gendered_asymmetric_visibility_full_annotation_90727_v2/private/remaining_frame.jsonl",
+    "legacy_v03_sample": "data/interim/51_gendered_argument_visibility_scaleup_5000_v1/private/sample_manifest.csv",
+    "legacy_v03_results": "data/interim/51_gendered_argument_visibility_scaleup_5000_v1/private/validation_5000_final_records.jsonl"
+  },
+  "scope": {
+    "full_corpus_records": 90727,
+    "reuse_frozen_v0_3_records": 5000,
+    "new_annotation_records": 85727,
+    "new_v03_records": 85727,
+    "raw_data_mutation": false
+  },
+  "sampling": {
+    "seed": 20260815059,
+    "annotation_waves": [
+      {"id": "v03_gate_01000", "cumulative_records": 1000},
+      {"id": "v03_ramp_10000", "cumulative_records": 10000},
+      {"id": "v03_ramp_40000", "cumulative_records": 40000},
+      {"id": "v03_full_85727", "cumulative_records": 85727}
+    ],
+    "ordering": "reuse the already frozen stratified production_item_index; split only by cumulative index",
+    "population_note": "former frozen_split remains provenance and dispatch balance only; it does not define separate research populations"
+  },
+  "model_configs": {
+    "annotation": {
+      "id": "flash_thinking_exact_v03",
+      "model": "deepseek-v4-flash",
+      "thinking": "enabled",
+      "batch_size": 10,
+      "max_output_tokens": 64000
+    }
+  },
+  "runner": {
+    "endpoint": "https://api.deepseek.com/chat/completions",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "stream": false,
+    "workers_ladder": [12, 24, 36, 50],
+    "max_attempts_per_item": 3,
+    "request_timeout_seconds": 600,
+    "http_429_backoff_seconds": [2, 5, 15, 30, 60],
+    "hard_stop_http_statuses": [402],
+    "state_backend": "sqlite",
+    "sealed_provider_outputs": true,
+    "normalization_policy": "argument_visibility_normalizer_v3_0; versioned replay only; never rewrite sealed provider output",
+    "credential_source": ".env.ai-coding:DEEPSEEK_API_KEY"
+  },
+  "wave_policy": {
+    "v03_gate_01000": {"workers": 12, "batch_size": 10},
+    "v03_ramp_10000": {"workers": 24, "batch_size": 10},
+    "v03_ramp_40000": {"workers": 36, "batch_size": 10},
+    "v03_full_85727": {"workers": 50, "batch_size": 10},
+    "failure_only_retry_batch_sizes": [5, 2, 1]
+  },
+  "quality_gates": {
+    "minimum_contract_valid_rate": 0.99,
+    "maximum_unresolved_rate": 0.01,
+    "maximum_http_429_call_rate": 0.01,
+    "maximum_batch_failure_rate": 0.005,
+    "maximum_http_402_calls": 0,
+    "minimum_evidence_complete_rate": 0.7,
+    "maximum_needs_adjudication_rate": 0.05,
+    "require_all_previous_waves_complete": true,
+    "require_researcher_approval_between_waves": true
+  },
+  "empirical_usage_baseline": {
+    "source_records": 5000,
+    "provider_calls": 714,
+    "cache_hit_input_tokens": 2125184,
+    "cache_miss_input_tokens": 367799,
+    "output_tokens": 28710900,
+    "reasoning_tokens": 24604480,
+    "historical_manifest_estimated_cost_usd": 8.38806962
+  },
+  "pricing": {
+    "pricing_version": "deepseek_official_2026-08-15_with_announced_2026-08-16_schedule; recheck_required_before_approval",
+    "unit": "USD_per_million_tokens",
+    "transition_utc": "2026-08-16T16:00:00+00:00",
+    "new_peak_windows_utc": [["01:00", "04:00"], ["06:00", "10:00"]],
+    "profiles": {
+      "current": {
+        "effective": "before_2026-08-16T16:00:00Z",
+        "deepseek-v4-flash": {"cache_hit_input": 0.0028, "cache_miss_input": 0.14, "output": 0.28}
+      },
+      "new_offpeak": {
+        "effective": "from_2026-08-16T16:00:00Z outside UTC peak windows",
+        "deepseek-v4-flash": {"cache_hit_input": 0.007, "cache_miss_input": 0.22, "output": 0.66}
+      },
+      "new_peak": {
+        "effective": "from_2026-08-16T16:00:00Z at UTC 01:00-04:00 or 06:00-10:00",
+        "deepseek-v4-flash": {"cache_hit_input": 0.014, "cache_miss_input": 0.44, "output": 1.32}
+      }
+    }
+  },
+  "approval": {
+    "provider_calls_authorized": false,
+    "approved_by": null,
+    "approved_at": null,
+    "approved_config_sha256": null,
+    "note": "The public release is fail-closed through config/provider_call_authorization_v1.public.example.json; real execution authorization is never distributed."
+  }
+}
